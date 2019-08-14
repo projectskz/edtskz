@@ -9,7 +9,7 @@
   </producedTypes>
   <name>ОценкаЗадачи</name>
   <synonym>
-    <key>en</key>
+    <key>ru</key>
     <value>Оценка задачи</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>

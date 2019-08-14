@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:BusinessProcess xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0db28c2a-87f0-47d3-a6e1-4d764d6f6398">
+  <producedTypes>
+    <objectType typeId="b8d7502e-aa73-4eb6-9650-3c99dd5238e1" valueTypeId="d27556df-8f48-4023-9d1e-480871c70c26"/>
+    <refType typeId="8a9cd0c7-b91e-4f5c-95a6-0f8a5a1b688e" valueTypeId="5777ddfb-c2aa-4095-920e-5f9eeb11848b"/>
+    <selectionType typeId="5254ca0c-d045-4d9e-9e9d-6c050aadc887" valueTypeId="0c05efee-1021-47b8-b54a-e41652216e19"/>
+    <listType typeId="9b808317-b4b8-45de-b54b-5f6730491bed" valueTypeId="99980f89-af1d-419d-9aa7-b4d4fe8d61f8"/>
+    <managerType typeId="e852f0c9-ff6e-481c-bd68-36f6ea7f6801" valueTypeId="885e7fbd-7be3-4f90-9b9d-1d76f95a68dd"/>
+    <routePointRef typeId="9770a3c0-0ce7-45b1-a533-329512fbdd2a" valueTypeId="3c094eed-4484-4f34-9b62-72c8a82f3fe3"/>
+  </producedTypes>
+  <name>ЗадачаВРаботе</name>
+  <synonym>
+    <key>en</key>
+    <value>Задача в работе</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>BusinessProcess.ЗадачаВРаботе.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>DontUse</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <editType>InDialog</editType>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <task>Task.ЗадачаИсполнителю</task>
+  <createTaskInPrivilegedMode>true</createTaskInPrivilegedMode>
+</mdclass:BusinessProcess>

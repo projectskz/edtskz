@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d774560a-dfef-4a25-b1df-588c382c5fd3">
+  <name>СистемаКонтроляЗаявок</name>
+  <synonym>
+    <key>ru</key>
+    <value>Система контроля заявок</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <content>Catalog.Пользователи</content>
+  <content>Catalog.Проекты</content>
+  <content>Catalog.ПроектнаяЗадача</content>
+  <content>Catalog.Контрагенты</content>
+  <content>Catalog.РольИсполнителя</content>
+  <content>Document.ПостановкаЗадачи</content>
+  <content>Document.ОценкаЗадачи</content>
+  <content>Document.ЗакрытиеЗадачи</content>
+  <content>Document.РаботаНадЗадачей</content>
+  <content>Task.ЗадачаИсполнителю</content>
+  <content>InformationRegister.РегистрАдресации</content>
+  <content>BusinessProcess.РаботаСЗаявкой</content>
+  <content>BusinessProcess.ОценкаЗаявки</content>
+  <content>BusinessProcess.РаспределениеЗадачи</content>
+  <content>BusinessProcess.ЗадачаВРаботе</content>
+  <content>BusinessProcess.ЗавершениеРаботыСЗаявкой</content>
+  <content>Catalog.Должности</content>
+  <content>Catalog.Грейды</content>
+</mdclass:Subsystem>

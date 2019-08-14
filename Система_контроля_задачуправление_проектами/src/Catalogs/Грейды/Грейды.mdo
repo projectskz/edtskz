@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b57076bb-4945-4914-983c-a0585023e27c">
+  <producedTypes>
+    <objectType typeId="2e2a7a08-2602-4cc0-b326-dca859354272" valueTypeId="0ff6d61a-2438-4db2-ba7b-8e73fe4b9be5"/>
+    <refType typeId="51be7d0a-6a4e-41b7-9004-e027c555e10a" valueTypeId="01dda73d-8336-4911-9a81-285e24b32998"/>
+    <selectionType typeId="8ef4abb4-88f3-4458-a5f1-2849b351bff1" valueTypeId="df02bda5-adb0-432c-b2a8-1aef25773815"/>
+    <listType typeId="919eba83-5c1c-4a9a-8363-59d2e72f315e" valueTypeId="b9110786-4785-4211-b01c-425a573773df"/>
+    <managerType typeId="1c39a270-8665-4f1d-90f7-99a2a1c10312" valueTypeId="fd8f5eb2-9a86-4cdc-ba34-c3956f668d2c"/>
+  </producedTypes>
+  <name>Грейды</name>
+  <synonym>
+    <key>ru</key>
+    <value>Грейды</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.Грейды.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.Грейды.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+</mdclass:Catalog>

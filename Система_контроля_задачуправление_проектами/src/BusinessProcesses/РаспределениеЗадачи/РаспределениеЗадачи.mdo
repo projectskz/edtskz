@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:BusinessProcess xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="22c8a024-b0cd-4a47-b913-532f26b447d0">
+  <producedTypes>
+    <objectType typeId="e606dc3d-0862-4a1b-8fae-a4d509f6127e" valueTypeId="07b5059b-4786-4504-b6c4-ca9ce31c792f"/>
+    <refType typeId="8316c990-fe47-40de-92ef-2bfa03e5752a" valueTypeId="fa344af2-8040-46b8-bec1-42edef7ae5a8"/>
+    <selectionType typeId="c95c60a3-06c0-46f0-94fe-5c5401e16606" valueTypeId="5597806b-e7b1-4535-8586-1bcc90a8ea2c"/>
+    <listType typeId="201aea17-f3e5-45ab-9d8b-7d789eb673f4" valueTypeId="b363948f-0ae4-4f56-8f23-ac28cf47ab96"/>
+    <managerType typeId="c2d03428-b1ae-43dc-a105-a35a1d99cc6f" valueTypeId="c4774928-2448-4932-b870-f9397e7496dc"/>
+    <routePointRef typeId="af8c93d9-b5e1-492c-abd0-c254a515dabb" valueTypeId="5301dc1a-8877-49e2-995c-fac40f79af68"/>
+  </producedTypes>
+  <name>РаспределениеЗадачи</name>
+  <synonym>
+    <key>en</key>
+    <value>Распределение задачи</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>BusinessProcess.РаспределениеЗадачи.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>DontUse</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <editType>InDialog</editType>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <task>Task.ЗадачаИсполнителю</task>
+  <createTaskInPrivilegedMode>true</createTaskInPrivilegedMode>
+</mdclass:BusinessProcess>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:BusinessProcess xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="723a8f00-9ac0-43a2-82a5-56a54bb2c79a">
+  <producedTypes>
+    <objectType typeId="97759ebf-dd68-411e-8c94-7b45a8db7a4d" valueTypeId="75e95e8a-f387-404e-ac9f-4f523f9b9dd8"/>
+    <refType typeId="73a99121-c63d-47a3-928c-912a84d9ea6a" valueTypeId="17b0c8db-b010-451b-b925-b759e3f3f460"/>
+    <selectionType typeId="7ee9c343-c967-4987-8a2b-fe29dc18ecea" valueTypeId="8925eedf-8306-4f9f-968c-ba4b2e1da386"/>
+    <listType typeId="7e59e4b5-05d0-40a9-bd0c-ce1fb0af4ebd" valueTypeId="2a54ed41-b6ef-4f36-9c2b-872e6f9428df"/>
+    <managerType typeId="b0eae9a0-b362-49f1-81fd-be312fa9fc79" valueTypeId="63d50948-a77c-48a0-b49b-212df0281a4e"/>
+    <routePointRef typeId="c699aedc-b2fc-4663-b20d-59099ade0e8f" valueTypeId="d1a24982-2c66-4438-9cf1-b696c74c459b"/>
+  </producedTypes>
+  <name>ЗавершениеРаботыСЗаявкой</name>
+  <synonym>
+    <key>en</key>
+    <value>Завершение работы с заявкой</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>BusinessProcess.ЗавершениеРаботыСЗаявкой.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>DontUse</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <editType>InDialog</editType>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <task>Task.ЗадачаИсполнителю</task>
+  <createTaskInPrivilegedMode>true</createTaskInPrivilegedMode>
+</mdclass:BusinessProcess>
