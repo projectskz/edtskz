@@ -9,7 +9,7 @@
   </producedTypes>
   <name>ЗакрытиеЗадачи</name>
   <synonym>
-    <key>en</key>
+    <key>ru</key>
     <value>Закрытие задачи</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>

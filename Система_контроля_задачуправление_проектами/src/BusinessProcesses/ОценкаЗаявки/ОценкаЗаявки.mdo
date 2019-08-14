@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:BusinessProcess xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3164e6e8-7ab9-4c4c-a977-bc146534cf8d">
+  <producedTypes>
+    <objectType typeId="f3db8166-bb75-4efd-a0dd-8f4c9efb31b1" valueTypeId="6c4da038-7212-4f33-876b-0449e5812f59"/>
+    <refType typeId="3810a2b5-5401-4ce1-97f9-c91c03635e43" valueTypeId="344281a1-83d1-4be6-bb5f-a5fbb741e7d8"/>
+    <selectionType typeId="54563e2a-8d62-46e7-8d2e-0afe33fc4c20" valueTypeId="883a1cd9-eef6-419b-b3da-64e25b5641be"/>
+    <listType typeId="ac6114ee-0af4-479e-9a52-7b5dd68433ea" valueTypeId="e17b18e3-5ff1-4174-bfa7-32aef48cba56"/>
+    <managerType typeId="fcace53c-3e72-4bd1-8eb9-18204765f0b2" valueTypeId="6478ab2d-399b-4434-b075-3000cea9b666"/>
+    <routePointRef typeId="bc7c6cfd-37f8-46dd-9e6d-8a5eb7976373" valueTypeId="71725559-092e-4b27-bb22-c13089aef872"/>
+  </producedTypes>
+  <name>ОценкаЗаявки</name>
+  <synonym>
+    <key>en</key>
+    <value>Оценка заявки</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>BusinessProcess.ОценкаЗаявки.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>DontUse</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <editType>InDialog</editType>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <task>Task.ЗадачаИсполнителю</task>
+  <createTaskInPrivilegedMode>true</createTaskInPrivilegedMode>
+</mdclass:BusinessProcess>

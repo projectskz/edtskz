@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cfa403c2-2e69-4007-aee2-6890866dce35">
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cfa403c2-2e69-4007-aee2-6890866dce35">
   <producedTypes>
     <objectType typeId="c4e79ce8-47de-4eb9-a0a6-1c017186b488" valueTypeId="91d84489-1aa9-4b05-bdc7-3786998db4d0"/>
     <refType typeId="3abd8514-6d1f-4633-aa2f-38e89887db30" valueTypeId="1971e011-1289-4d9a-96fe-3d163887cd48"/>
@@ -28,6 +28,22 @@
   <checkUnique>true</checkUnique>
   <autonumbering>true</autonumbering>
   <defaultPresentation>AsDescription</defaultPresentation>
+  <predefined>
+    <items id="5709c28e-7129-49a7-9147-fc862dd264bb">
+      <name>Программист</name>
+      <description>Программист</description>
+      <code xsi:type="core:StringValue">
+        <value>000000002</value>
+      </code>
+    </items>
+    <items id="2f8d01a9-c09d-403c-922a-11405247ec4c">
+      <name>РуководительОтдела</name>
+      <description>Руководитель отдела</description>
+      <code xsi:type="core:StringValue">
+        <value>000000001</value>
+      </code>
+    </items>
+  </predefined>
   <editType>InDialog</editType>
   <choiceMode>BothWays</choiceMode>
 </mdclass:Catalog>

@@ -14,7 +14,8 @@
   <configurationExtensionCompatibilityMode>8.3.14</configurationExtensionCompatibilityMode>
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <usePurposes>PersonalComputer</usePurposes>
-  <defaultLanguage>Language.English</defaultLanguage>
+  <scriptVariant>Russian</scriptVariant>
+  <defaultLanguage>Language.Русский</defaultLanguage>
   <dataLockControlMode>Managed</dataLockControlMode>
   <objectAutonumerationMode>NotAutoFree</objectAutonumerationMode>
   <modalityUseMode>DontUse</modalityUseMode>
@@ -36,17 +37,40 @@
     </synonym>
     <languageCode>ru</languageCode>
   </languages>
+  <languages uuid="e66972fe-632c-4499-9b9e-8b64d9636504">
+    <name>Русский</name>
+    <synonym>
+      <key>en</key>
+      <value>Русский</value>
+    </synonym>
+    <synonym>
+      <key>ru1</key>
+      <value>Русский</value>
+    </synonym>
+    <languageCode>ru</languageCode>
+  </languages>
+  <subsystems>Subsystem.СистемаКонтроляЗаявок</subsystems>
+  <sessionParameters>SessionParameter.ТекущийПользователь</sessionParameters>
+  <roles>Role.Администратор</roles>
   <catalogs>Catalog.Пользователи</catalogs>
   <catalogs>Catalog.Проекты</catalogs>
   <catalogs>Catalog.ПроектнаяЗадача</catalogs>
   <catalogs>Catalog.Контрагенты</catalogs>
   <catalogs>Catalog.РольИсполнителя</catalogs>
   <catalogs>Catalog.ВидыЗадач</catalogs>
+  <catalogs>Catalog.Должности</catalogs>
+  <catalogs>Catalog.Грейды</catalogs>
   <documents>Document.ПостановкаЗадачи</documents>
   <documents>Document.ОценкаЗадачи</documents>
   <documents>Document.ПринятиеЗадачи</documents>
+  <documents>Document.РаботаНадЗадачей</documents>
   <documents>Document.ЗакрытиеЗадачи</documents>
   <enums>Enum.ВариантыВажностиЗадачи</enums>
+  <informationRegisters>InformationRegister.РегистрАдресации</informationRegisters>
   <businessProcesses>BusinessProcess.РаботаСЗаявкой</businessProcesses>
+  <businessProcesses>BusinessProcess.ОценкаЗаявки</businessProcesses>
+  <businessProcesses>BusinessProcess.РаспределениеЗадачи</businessProcesses>
+  <businessProcesses>BusinessProcess.ЗадачаВРаботе</businessProcesses>
+  <businessProcesses>BusinessProcess.ЗавершениеРаботыСЗаявкой</businessProcesses>
   <tasks>Task.ЗадачаИсполнителю</tasks>
 </mdclass:Configuration>

@@ -25,9 +25,14 @@
   <checkUnique>true</checkUnique>
   <autonumbering>true</autonumbering>
   <taskNumberAutoPrefix>DontUse</taskNumberAutoPrefix>
-  <descriptionLength>25</descriptionLength>
+  <descriptionLength>125</descriptionLength>
+  <addressing>InformationRegister.РегистрАдресации</addressing>
+  <mainAddressingAttribute>Task.ЗадачаИсполнителю.AddressingAttribute.Исполнитель</mainAddressingAttribute>
+  <currentPerformer>SessionParameter.ТекущийПользователь</currentPerformer>
   <defaultPresentation>AsDescription</defaultPresentation>
   <editType>InDialog</editType>
+  <defaultObjectForm>Task.ЗадачаИсполнителю.Form.BusinessProcessTaskForm</defaultObjectForm>
+  <defaultListForm>Task.ЗадачаИсполнителю.Form.ListForm</defaultListForm>
   <attributes uuid="e13f1b0e-a412-43a1-94f6-bbaa9b1c239e">
     <name>Важность</name>
     <synonym>
@@ -420,6 +425,24 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <forms uuid="faba6d8c-6179-41d5-9a70-ca17e9b3e5f5">
+    <name>BusinessProcessTaskForm</name>
+    <synonym>
+      <key>en</key>
+      <value>Business process task form</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="7315b768-719a-4eff-9c9a-4ba0e1f3b64d">
+    <name>ListForm</name>
+    <synonym>
+      <key>en</key>
+      <value>List form</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
   <addressingAttributes uuid="c8239aea-0e2e-4ae5-a15d-5232f9c233eb">
     <name>РольИсполнителя</name>
     <synonym>
@@ -433,6 +456,7 @@
     <maxValue xsi:type="core:UndefinedValue"/>
     <dataHistory>Use</dataHistory>
     <fillValue xsi:type="core:UndefinedValue"/>
+    <addressingDimension>InformationRegister.РегистрАдресации.Dimension.РольИсполнителя</addressingDimension>
     <fullTextSearch>Use</fullTextSearch>
   </addressingAttributes>
   <addressingAttributes uuid="2bf1c994-82fd-4660-be8e-357e884100d0">
@@ -463,6 +487,7 @@
       <value>c1e8ed57-ba1d-4552-bcc8-20a989190767.00000000-0000-0000-0000-000000000000</value>
     </fillValue>
     <indexing>Index</indexing>
+    <addressingDimension>InformationRegister.РегистрАдресации.Dimension.Исполнитель</addressingDimension>
     <fullTextSearch>Use</fullTextSearch>
   </addressingAttributes>
 </mdclass:Task>
