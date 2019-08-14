@@ -36,6 +36,7 @@
     </synonym>
     <languageCode>ru</languageCode>
   </languages>
+  <commonModules>CommonModule.ОбщийМодульПроверкаРепозитория</commonModules>
   <catalogs>Catalog.Пользователи</catalogs>
   <catalogs>Catalog.Проекты</catalogs>
   <catalogs>Catalog.ПроектнаяЗадача</catalogs>
