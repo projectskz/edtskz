@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="25132064-9f5e-494b-802e-9b8516ba455f">
+  <producedTypes>
+    <refType typeId="6da3c99e-a369-4790-8f83-82480b6c3598" valueTypeId="43217f1e-f1f8-4751-8aa7-f669ef4b423d"/>
+    <listType typeId="435f533c-750c-4abe-960d-4ad8207307d6" valueTypeId="f790729f-11c0-494e-b0b7-9eb8d114e8d5"/>
+    <managerType typeId="178ace44-c80f-434d-a200-de920cd06b06" valueTypeId="d4de74cd-503d-4954-b35f-0611d31726fc"/>
+  </producedTypes>
+  <name>ВариантыВажностиЗадачи</name>
+  <synonym>
+    <key>ru</key>
+    <value>Варианты важности задачи</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>Task importance options</value>
+  </synonym>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Order</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="89516839-98d5-4873-8473-d877fc2793d8">
+    <name>Высокая</name>
+    <synonym>
+      <key>ru</key>
+      <value>Высокая важность</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>High importance</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="e85f6f7a-afbd-4e5d-97a4-ebc15521f4f0">
+    <name>Обычная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Обычная важность</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Normal importance</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="e6d10112-b868-4429-a6b4-f814a39e18f6">
+    <name>Низкая</name>
+    <synonym>
+      <key>ru</key>
+      <value>Низкая важность</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Low importance</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

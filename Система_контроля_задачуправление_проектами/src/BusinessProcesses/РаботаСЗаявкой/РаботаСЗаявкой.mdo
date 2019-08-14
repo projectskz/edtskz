@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:BusinessProcess xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="74e3f43d-5007-41df-a405-a3993c7ab2f6">
+  <producedTypes>
+    <objectType typeId="2e2c4e5b-d904-43bb-bc3b-898fd06c19e3" valueTypeId="87998462-6ce6-483e-8872-494c17658e98"/>
+    <refType typeId="91dc0fad-ca7d-49c0-9903-3128b10ea901" valueTypeId="9ff230a5-e78d-41e2-9be8-44a212e8687d"/>
+    <selectionType typeId="91a6e3be-9f9e-4a56-8b9d-2af3431f438e" valueTypeId="7cc9eae8-f61e-4d1e-a496-a51f62e3363c"/>
+    <listType typeId="80f29237-d636-46be-8948-01b17163a233" valueTypeId="f82913fd-9758-4a40-bbcb-e54551e38585"/>
+    <managerType typeId="8aa79269-4641-436b-89ee-55c2f98962ce" valueTypeId="11624c9b-e4c5-4eae-a71a-9b12b56ede49"/>
+    <routePointRef typeId="11734fef-d044-4a93-9c6d-9361f11182c6" valueTypeId="f1a742ca-6a45-4565-8213-5ce2376383b9"/>
+  </producedTypes>
+  <name>РаботаСЗаявкой</name>
+  <synonym>
+    <key>en</key>
+    <value>Работа с заявкой</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>BusinessProcess.РаботаСЗаявкой.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>DontUse</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <editType>InDialog</editType>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <task>Task.ЗадачаИсполнителю</task>
+  <createTaskInPrivilegedMode>true</createTaskInPrivilegedMode>
+</mdclass:BusinessProcess>

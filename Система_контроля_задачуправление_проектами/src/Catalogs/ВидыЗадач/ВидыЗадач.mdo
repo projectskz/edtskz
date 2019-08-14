@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="93c11c4e-85c4-4998-b8ef-c6bff5b34124">
+  <producedTypes>
+    <objectType typeId="0ea37b60-5568-425c-9d1d-f06360aee436" valueTypeId="974873a2-c211-4301-b0c2-4802683406b7"/>
+    <refType typeId="7eb7d30f-edda-4271-a098-aa00399423c8" valueTypeId="dedfde2b-a4b6-4b53-80f5-d96920f93c0c"/>
+    <selectionType typeId="7a55ee94-b448-4b82-b08e-c192b020b03a" valueTypeId="90e7b4c6-2e8e-4c16-ac68-91dc19a50707"/>
+    <listType typeId="661fa385-a85d-4e3b-bb53-2f52341577df" valueTypeId="1078565d-5432-4734-8854-7d2c3479f226"/>
+    <managerType typeId="88e5d568-796a-4b2c-9bd5-ee81c15e0461" valueTypeId="595181c8-9a76-4c17-9f96-51e9f5cf9865"/>
+  </producedTypes>
+  <name>ВидыЗадач</name>
+  <synonym>
+    <key>en</key>
+    <value>Виды задач</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ВидыЗадач.StandardAttribute.Code</inputByString>
+  <inputByString>Catalog.ВидыЗадач.StandardAttribute.Description</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+</mdclass:Catalog>

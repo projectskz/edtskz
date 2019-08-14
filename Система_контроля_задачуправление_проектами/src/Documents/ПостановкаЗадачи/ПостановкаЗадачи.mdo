@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0a99e16a-533f-4891-b0b5-d997ed4fe4fb">
+  <producedTypes>
+    <objectType typeId="1ba11858-8367-4289-b1dc-82cbb4a80ae7" valueTypeId="df2f101f-8c19-4e82-a80e-ad8b38565372"/>
+    <refType typeId="21b534d8-ad9c-48eb-bea4-a51415c753a9" valueTypeId="dc133e84-2f97-4b40-b208-15fe0b362b6d"/>
+    <selectionType typeId="d4c61462-ceaf-4d2d-8892-11100bb62382" valueTypeId="cbdb426d-88f5-4b20-ac49-14840d2c74a3"/>
+    <listType typeId="29598c13-2ef7-4af0-95f3-b817533ee358" valueTypeId="be943090-ad8c-4852-91ad-b0c50c54bf31"/>
+    <managerType typeId="f40d5ac3-25f4-45f0-be00-8428e7a1911c" valueTypeId="7ee9a8da-dad2-40f8-86a3-2b03f2ff9c06"/>
+  </producedTypes>
+  <name>ПостановкаЗадачи</name>
+  <synonym>
+    <key>en</key>
+    <value>Постановка задачи</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ПостановкаЗадачи.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+</mdclass:Document>

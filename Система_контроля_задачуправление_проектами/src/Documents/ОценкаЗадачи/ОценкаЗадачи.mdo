@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0a5fdc9e-5d66-42b9-83a6-fea0e98a94a0">
+  <producedTypes>
+    <objectType typeId="c074f006-bacd-43f1-9232-f62b4320b290" valueTypeId="346253ac-f481-4711-bc91-5782e74bc27a"/>
+    <refType typeId="10e5b645-be9f-467a-a5de-fdce06333ddc" valueTypeId="42ca9032-1a72-46ca-a28e-5f40c5461636"/>
+    <selectionType typeId="e6e48f40-613b-43a6-9d54-c4cb3ee3954e" valueTypeId="44ef27c3-d416-4abf-a03f-061281688ae2"/>
+    <listType typeId="64c0891f-569f-45c4-ab53-fb6f54b7d689" valueTypeId="6ff59ca7-b904-4f49-8544-68be9d5a8084"/>
+    <managerType typeId="589b6190-3901-42e4-bf80-7e32994c3c44" valueTypeId="8d56f240-6063-4ae2-889c-93f7d7a2a21f"/>
+  </producedTypes>
+  <name>ОценкаЗадачи</name>
+  <synonym>
+    <key>en</key>
+    <value>Оценка задачи</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ОценкаЗадачи.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+</mdclass:Document>

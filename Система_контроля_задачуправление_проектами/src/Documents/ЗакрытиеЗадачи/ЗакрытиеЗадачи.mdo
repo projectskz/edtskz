@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3be0fd90-bbe4-404d-8641-a862a0293469">
+  <producedTypes>
+    <objectType typeId="35e03767-4885-46d9-ad97-0fb106f31a03" valueTypeId="77fb8f12-0178-4adb-8da6-2c49afeada86"/>
+    <refType typeId="240c6cba-d790-440a-8fa0-9391dd090784" valueTypeId="8e9b5e86-7b28-4f17-a608-40cd5c18c2d1"/>
+    <selectionType typeId="582f8427-1048-4b81-ab15-2c9d588c49ae" valueTypeId="d775d12f-bf54-4fa3-a008-570e827227d9"/>
+    <listType typeId="9ca516be-95e4-4527-a4d9-397c4bf05d18" valueTypeId="903b40b8-c896-46b7-a19b-c7553cba92ba"/>
+    <managerType typeId="92cb2885-dab5-4b95-88e2-1fba682fe497" valueTypeId="69882cdf-44df-4989-bfe8-fc917a80e81d"/>
+  </producedTypes>
+  <name>ЗакрытиеЗадачи</name>
+  <synonym>
+    <key>en</key>
+    <value>Закрытие задачи</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ЗакрытиеЗадачи.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+</mdclass:Document>

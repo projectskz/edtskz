@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cfa403c2-2e69-4007-aee2-6890866dce35">
+  <producedTypes>
+    <objectType typeId="c4e79ce8-47de-4eb9-a0a6-1c017186b488" valueTypeId="91d84489-1aa9-4b05-bdc7-3786998db4d0"/>
+    <refType typeId="3abd8514-6d1f-4633-aa2f-38e89887db30" valueTypeId="1971e011-1289-4d9a-96fe-3d163887cd48"/>
+    <selectionType typeId="35c95c2c-a07b-4df2-a510-eb38659a0e3f" valueTypeId="2498dd75-e544-4a95-bf30-014613faf9d9"/>
+    <listType typeId="f751950f-a050-4869-908c-d3c7f50c9c2a" valueTypeId="3d790915-e01d-4d9c-98dd-0565f3b0388a"/>
+    <managerType typeId="5639a3dc-2183-4578-93e5-540d23e45766" valueTypeId="b4a786bc-d5b7-4f3a-8c9d-a39a702d2503"/>
+  </producedTypes>
+  <name>РольИсполнителя</name>
+  <synonym>
+    <key>en</key>
+    <value>Роль исполнителя</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.РольИсполнителя.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.РольИсполнителя.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+</mdclass:Catalog>
