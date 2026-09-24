@@ -170,7 +170,18 @@
 									<ContextMenu name="ЗадачиАвторКонтекстноеМеню" id="43"/>
 									<ExtendedTooltip name="ЗадачиАвторРасширеннаяПодсказка" id="44"/>
 								</InputField>
-								<InputField name="ЗадачиДатаСоздания" id="45">
+								<InputField name="ЗадачиЗаКого" id="45">
+									<DataPath>Задачи.ЗаКого</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>За кого (замещение)</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ЗадачиЗаКогоКонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="ЗадачиЗаКогоРасширеннаяПодсказка" id="47"/>
+								</InputField>
+								<InputField name="ЗадачиДатаСоздания" id="48">
 									<DataPath>Задачи.ДатаСоздания</DataPath>
 									<Title>
 										<v8:item>
@@ -179,23 +190,23 @@
 										</v8:item>
 									</Title>
 									<Width>12</Width>
-									<ContextMenu name="ЗадачиДатаСозданияКонтекстноеМеню" id="46"/>
-									<ExtendedTooltip name="ЗадачиДатаСозданияРасширеннаяПодсказка" id="47"/>
+									<ContextMenu name="ЗадачиДатаСозданияКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="ЗадачиДатаСозданияРасширеннаяПодсказка" id="50"/>
 								</InputField>
 							</ChildItems>
 						</Table>
 					</ChildItems>
 				</Page>
-				<Page name="СтраницаПроцессы" id="48">
+				<Page name="СтраницаПроцессы" id="51">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Мои процессы</v8:content>
 						</v8:item>
 					</Title>
-					<ExtendedTooltip name="СтраницаПроцессыРасширеннаяПодсказка" id="49"/>
+					<ExtendedTooltip name="СтраницаПроцессыРасширеннаяПодсказка" id="52"/>
 					<ChildItems>
-						<Table name="Процессы" id="50">
+						<Table name="Процессы" id="53">
 							<Representation>List</Representation>
 							<TitleLocation>None</TitleLocation>
 							<ReadOnly>true</ReadOnly>
@@ -203,40 +214,40 @@
 							<ChangeRowOrder>false</ChangeRowOrder>
 							<DataPath>Процессы</DataPath>
 							<RowFilter xsi:nil="true"/>
-							<ContextMenu name="ПроцессыКонтекстноеМеню" id="51"/>
-							<AutoCommandBar name="ПроцессыКоманднаяПанель" id="52">
+							<ContextMenu name="ПроцессыКонтекстноеМеню" id="54"/>
+							<AutoCommandBar name="ПроцессыКоманднаяПанель" id="55">
 								<Autofill>false</Autofill>
 							</AutoCommandBar>
-							<ExtendedTooltip name="ПроцессыРасширеннаяПодсказка" id="53"/>
-							<SearchStringAddition name="ПроцессыСтрокаПоиска" id="54">
+							<ExtendedTooltip name="ПроцессыРасширеннаяПодсказка" id="56"/>
+							<SearchStringAddition name="ПроцессыСтрокаПоиска" id="57">
 								<AdditionSource>
 									<Item>Процессы</Item>
 									<Type>SearchStringRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ПроцессыСтрокаПоискаКонтекстноеМеню" id="55"/>
-								<ExtendedTooltip name="ПроцессыСтрокаПоискаРасширеннаяПодсказка" id="56"/>
+								<ContextMenu name="ПроцессыСтрокаПоискаКонтекстноеМеню" id="58"/>
+								<ExtendedTooltip name="ПроцессыСтрокаПоискаРасширеннаяПодсказка" id="59"/>
 							</SearchStringAddition>
-							<ViewStatusAddition name="ПроцессыСостояниеПросмотра" id="57">
+							<ViewStatusAddition name="ПроцессыСостояниеПросмотра" id="60">
 								<AdditionSource>
 									<Item>Процессы</Item>
 									<Type>ViewStatusRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ПроцессыСостояниеПросмотраКонтекстноеМеню" id="58"/>
-								<ExtendedTooltip name="ПроцессыСостояниеПросмотраРасширеннаяПодсказка" id="59"/>
+								<ContextMenu name="ПроцессыСостояниеПросмотраКонтекстноеМеню" id="61"/>
+								<ExtendedTooltip name="ПроцессыСостояниеПросмотраРасширеннаяПодсказка" id="62"/>
 							</ViewStatusAddition>
-							<SearchControlAddition name="ПроцессыУправлениеПоиском" id="60">
+							<SearchControlAddition name="ПроцессыУправлениеПоиском" id="63">
 								<AdditionSource>
 									<Item>Процессы</Item>
 									<Type>SearchControl</Type>
 								</AdditionSource>
-								<ContextMenu name="ПроцессыУправлениеПоискомКонтекстноеМеню" id="61"/>
-								<ExtendedTooltip name="ПроцессыУправлениеПоискомРасширеннаяПодсказка" id="62"/>
+								<ContextMenu name="ПроцессыУправлениеПоискомКонтекстноеМеню" id="64"/>
+								<ExtendedTooltip name="ПроцессыУправлениеПоискомРасширеннаяПодсказка" id="65"/>
 							</SearchControlAddition>
 							<Events>
 								<Event name="Selection">ПроцессыВыбор</Event>
 							</Events>
 							<ChildItems>
-								<InputField name="ПроцессыСсылка" id="63">
+								<InputField name="ПроцессыСсылка" id="66">
 									<DataPath>Процессы.Ссылка</DataPath>
 									<Title>
 										<v8:item>
@@ -244,10 +255,10 @@
 											<v8:content>Процесс</v8:content>
 										</v8:item>
 									</Title>
-									<ContextMenu name="ПроцессыСсылкаКонтекстноеМеню" id="64"/>
-									<ExtendedTooltip name="ПроцессыСсылкаРасширеннаяПодсказка" id="65"/>
+									<ContextMenu name="ПроцессыСсылкаКонтекстноеМеню" id="67"/>
+									<ExtendedTooltip name="ПроцессыСсылкаРасширеннаяПодсказка" id="68"/>
 								</InputField>
-								<InputField name="ПроцессыСостояние" id="66">
+								<InputField name="ПроцессыСостояние" id="69">
 									<DataPath>Процессы.Состояние</DataPath>
 									<Title>
 										<v8:item>
@@ -256,10 +267,10 @@
 										</v8:item>
 									</Title>
 									<Width>10</Width>
-									<ContextMenu name="ПроцессыСостояниеКонтекстноеМеню" id="67"/>
-									<ExtendedTooltip name="ПроцессыСостояниеРасширеннаяПодсказка" id="68"/>
+									<ContextMenu name="ПроцессыСостояниеКонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="ПроцессыСостояниеРасширеннаяПодсказка" id="71"/>
 								</InputField>
-								<InputField name="ПроцессыТекущиеШаги" id="69">
+								<InputField name="ПроцессыТекущиеШаги" id="72">
 									<DataPath>Процессы.ТекущиеШаги</DataPath>
 									<Title>
 										<v8:item>
@@ -267,10 +278,10 @@
 											<v8:content>Сейчас у</v8:content>
 										</v8:item>
 									</Title>
-									<ContextMenu name="ПроцессыТекущиеШагиКонтекстноеМеню" id="70"/>
-									<ExtendedTooltip name="ПроцессыТекущиеШагиРасширеннаяПодсказка" id="71"/>
+									<ContextMenu name="ПроцессыТекущиеШагиКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="ПроцессыТекущиеШагиРасширеннаяПодсказка" id="74"/>
 								</InputField>
-								<InputField name="ПроцессыДатаСтарта" id="72">
+								<InputField name="ПроцессыДатаСтарта" id="75">
 									<DataPath>Процессы.ДатаСтарта</DataPath>
 									<Title>
 										<v8:item>
@@ -279,10 +290,10 @@
 										</v8:item>
 									</Title>
 									<Width>12</Width>
-									<ContextMenu name="ПроцессыДатаСтартаКонтекстноеМеню" id="73"/>
-									<ExtendedTooltip name="ПроцессыДатаСтартаРасширеннаяПодсказка" id="74"/>
+									<ContextMenu name="ПроцессыДатаСтартаКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="ПроцессыДатаСтартаРасширеннаяПодсказка" id="77"/>
 								</InputField>
-								<InputField name="ПроцессыДатаЗавершения" id="75">
+								<InputField name="ПроцессыДатаЗавершения" id="78">
 									<DataPath>Процессы.ДатаЗавершения</DataPath>
 									<Title>
 										<v8:item>
@@ -291,8 +302,8 @@
 										</v8:item>
 									</Title>
 									<Width>12</Width>
-									<ContextMenu name="ПроцессыДатаЗавершенияКонтекстноеМеню" id="76"/>
-									<ExtendedTooltip name="ПроцессыДатаЗавершенияРасширеннаяПодсказка" id="77"/>
+									<ContextMenu name="ПроцессыДатаЗавершенияКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="ПроцессыДатаЗавершенияРасширеннаяПодсказка" id="80"/>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -441,6 +452,17 @@
 					</Title>
 					<Type>
 						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЗаКого" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>За кого</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
 					</Type>
 				</Column>
 			</Columns>

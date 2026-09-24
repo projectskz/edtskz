@@ -52,6 +52,11 @@
 				<CommandName>Form.Command.СтруктураСхемы</CommandName>
 				<ExtendedTooltip name="ФормаСтруктураСхемыРасширеннаяПодсказка" id="20"/>
 			</Button>
+			<Button name="ФормаПравилаЗапуска" id="21">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПравилаЗапуска</CommandName>
+				<ExtendedTooltip name="ФормаПравилаЗапускаРасширеннаяПодсказка" id="22"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -59,7 +64,7 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<UsualGroup name="Шапка" id="21">
+		<UsualGroup name="Шапка" id="23">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -70,9 +75,9 @@
 			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="22"/>
+			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="24"/>
 			<ChildItems>
-				<InputField name="Схема" id="23">
+				<InputField name="Схема" id="25">
 					<DataPath>Схема</DataPath>
 					<Title>
 						<v8:item>
@@ -80,13 +85,13 @@
 							<v8:content>Схема</v8:content>
 						</v8:item>
 					</Title>
-					<ContextMenu name="СхемаКонтекстноеМеню" id="24"/>
-					<ExtendedTooltip name="СхемаРасширеннаяПодсказка" id="25"/>
+					<ContextMenu name="СхемаКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="СхемаРасширеннаяПодсказка" id="27"/>
 					<Events>
 						<Event name="OnChange">СхемаПриИзменении</Event>
 					</Events>
 				</InputField>
-				<InputField name="Версия" id="26">
+				<InputField name="Версия" id="28">
 					<DataPath>Версия</DataPath>
 					<Title>
 						<v8:item>
@@ -94,13 +99,13 @@
 							<v8:content>Версия</v8:content>
 						</v8:item>
 					</Title>
-					<ContextMenu name="ВерсияКонтекстноеМеню" id="27"/>
-					<ExtendedTooltip name="ВерсияРасширеннаяПодсказка" id="28"/>
+					<ContextMenu name="ВерсияКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ВерсияРасширеннаяПодсказка" id="30"/>
 					<Events>
 						<Event name="OnChange">ВерсияПриИзменении</Event>
 					</Events>
 				</InputField>
-				<InputField name="ТипПредмета" id="29">
+				<InputField name="ТипПредмета" id="31">
 					<DataPath>ТипПредмета</DataPath>
 					<Title>
 						<v8:item>
@@ -117,21 +122,21 @@
 					<Width>30</Width>
 					<HorizontalStretch>false</HorizontalStretch>
 					<ListChoiceMode>true</ListChoiceMode>
-					<ContextMenu name="ТипПредметаКонтекстноеМеню" id="30"/>
-					<ExtendedTooltip name="ТипПредметаРасширеннаяПодсказка" id="31"/>
+					<ContextMenu name="ТипПредметаКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ТипПредметаРасширеннаяПодсказка" id="33"/>
 					<Events>
 						<Event name="OnChange">ТипПредметаПриИзменении</Event>
 					</Events>
 				</InputField>
-				<LabelField name="Статус" id="32">
+				<LabelField name="Статус" id="34">
 					<DataPath>Статус</DataPath>
 					<TitleLocation>None</TitleLocation>
-					<ContextMenu name="СтатусКонтекстноеМеню" id="33"/>
-					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="34"/>
+					<ContextMenu name="СтатусКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="36"/>
 				</LabelField>
 			</ChildItems>
 		</UsualGroup>
-		<UsualGroup name="Основная" id="35">
+		<UsualGroup name="Основная" id="37">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -142,9 +147,9 @@
 			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ОсновнаяРасширеннаяПодсказка" id="36"/>
+			<ExtendedTooltip name="ОсновнаяРасширеннаяПодсказка" id="38"/>
 			<ChildItems>
-				<UsualGroup name="Левая" id="37">
+				<UsualGroup name="Левая" id="39">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -155,70 +160,70 @@
 					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ЛеваяРасширеннаяПодсказка" id="38"/>
+					<ExtendedTooltip name="ЛеваяРасширеннаяПодсказка" id="40"/>
 					<ChildItems>
-						<CommandBar name="ПалитраСхемы" id="39">
+						<CommandBar name="ПалитраСхемы" id="41">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Палитра</v8:content>
 								</v8:item>
 							</Title>
-							<ExtendedTooltip name="ПалитраСхемыРасширеннаяПодсказка" id="40"/>
+							<ExtendedTooltip name="ПалитраСхемыРасширеннаяПодсказка" id="42"/>
 							<ChildItems>
-								<Button name="ПалитраСтарт" id="41">
+								<Button name="ПалитраСтарт" id="43">
 									<Type>CommandBarButton</Type>
 									<CommandName>Form.Item.ГрафСхема.StandardCommand.InsertItemStart</CommandName>
-									<ExtendedTooltip name="ПалитраСтартРасширеннаяПодсказка" id="42"/>
+									<ExtendedTooltip name="ПалитраСтартРасширеннаяПодсказка" id="44"/>
 								</Button>
-								<Button name="ПалитраДействие" id="43">
+								<Button name="ПалитраДействие" id="45">
 									<Type>CommandBarButton</Type>
 									<CommandName>Form.Item.ГрафСхема.StandardCommand.InsertItemActivity</CommandName>
-									<ExtendedTooltip name="ПалитраДействиеРасширеннаяПодсказка" id="44"/>
+									<ExtendedTooltip name="ПалитраДействиеРасширеннаяПодсказка" id="46"/>
 								</Button>
-								<Button name="ПалитраУсловие" id="45">
+								<Button name="ПалитраУсловие" id="47">
 									<Type>CommandBarButton</Type>
 									<CommandName>Form.Item.ГрафСхема.StandardCommand.InsertItemCondition</CommandName>
-									<ExtendedTooltip name="ПалитраУсловиеРасширеннаяПодсказка" id="46"/>
+									<ExtendedTooltip name="ПалитраУсловиеРасширеннаяПодсказка" id="48"/>
 								</Button>
-								<Button name="ПалитраВыборВарианта" id="47">
+								<Button name="ПалитраВыборВарианта" id="49">
 									<Type>CommandBarButton</Type>
 									<CommandName>Form.Item.ГрафСхема.StandardCommand.InsertItemSwitch</CommandName>
-									<ExtendedTooltip name="ПалитраВыборВариантаРасширеннаяПодсказка" id="48"/>
+									<ExtendedTooltip name="ПалитраВыборВариантаРасширеннаяПодсказка" id="50"/>
 								</Button>
-								<Button name="ПалитраРазделение" id="49">
+								<Button name="ПалитраРазделение" id="51">
 									<Type>CommandBarButton</Type>
 									<CommandName>Form.Item.ГрафСхема.StandardCommand.InsertItemSplit</CommandName>
-									<ExtendedTooltip name="ПалитраРазделениеРасширеннаяПодсказка" id="50"/>
+									<ExtendedTooltip name="ПалитраРазделениеРасширеннаяПодсказка" id="52"/>
 								</Button>
-								<Button name="ПалитраСлияние" id="51">
+								<Button name="ПалитраСлияние" id="53">
 									<Type>CommandBarButton</Type>
 									<CommandName>Form.Item.ГрафСхема.StandardCommand.InsertItemJoin</CommandName>
-									<ExtendedTooltip name="ПалитраСлияниеРасширеннаяПодсказка" id="52"/>
+									<ExtendedTooltip name="ПалитраСлияниеРасширеннаяПодсказка" id="54"/>
 								</Button>
-								<Button name="ПалитраОбработка" id="53">
+								<Button name="ПалитраОбработка" id="55">
 									<Type>CommandBarButton</Type>
 									<CommandName>Form.Item.ГрафСхема.StandardCommand.InsertItemProcessing</CommandName>
-									<ExtendedTooltip name="ПалитраОбработкаРасширеннаяПодсказка" id="54"/>
+									<ExtendedTooltip name="ПалитраОбработкаРасширеннаяПодсказка" id="56"/>
 								</Button>
-								<Button name="ПалитраВложенныйПроцесс" id="55">
+								<Button name="ПалитраВложенныйПроцесс" id="57">
 									<Type>CommandBarButton</Type>
 									<CommandName>Form.Item.ГрафСхема.StandardCommand.InsertItemSubBusinessProcess</CommandName>
-									<ExtendedTooltip name="ПалитраВложенныйПроцессРасширеннаяПодсказка" id="56"/>
+									<ExtendedTooltip name="ПалитраВложенныйПроцессРасширеннаяПодсказка" id="58"/>
 								</Button>
-								<Button name="ПалитраЗавершение" id="57">
+								<Button name="ПалитраЗавершение" id="59">
 									<Type>CommandBarButton</Type>
 									<CommandName>Form.Item.ГрафСхема.StandardCommand.InsertItemCompletion</CommandName>
-									<ExtendedTooltip name="ПалитраЗавершениеРасширеннаяПодсказка" id="58"/>
+									<ExtendedTooltip name="ПалитраЗавершениеРасширеннаяПодсказка" id="60"/>
 								</Button>
-								<Button name="ПалитраДекорация" id="59">
+								<Button name="ПалитраДекорация" id="61">
 									<Type>CommandBarButton</Type>
 									<CommandName>Form.Item.ГрафСхема.StandardCommand.InsertItemDecoration</CommandName>
-									<ExtendedTooltip name="ПалитраДекорацияРасширеннаяПодсказка" id="60"/>
+									<ExtendedTooltip name="ПалитраДекорацияРасширеннаяПодсказка" id="62"/>
 								</Button>
 							</ChildItems>
 						</CommandBar>
-						<GraphicalSchemaField name="ГрафСхема" id="61">
+						<GraphicalSchemaField name="ГрафСхема" id="63">
 							<DataPath>ГрафСхема</DataPath>
 							<Title>
 								<v8:item>
@@ -230,15 +235,15 @@
 							<Width>100</Width>
 							<Height>30</Height>
 							<Edit>true</Edit>
-							<ContextMenu name="ГрафСхемаКонтекстноеМеню" id="62"/>
-							<ExtendedTooltip name="ГрафСхемаРасширеннаяПодсказка" id="63"/>
+							<ContextMenu name="ГрафСхемаКонтекстноеМеню" id="64"/>
+							<ExtendedTooltip name="ГрафСхемаРасширеннаяПодсказка" id="65"/>
 							<Events>
 								<Event name="Selection">ГрафСхемаВыбор</Event>
 							</Events>
 						</GraphicalSchemaField>
 					</ChildItems>
 				</UsualGroup>
-				<UsualGroup name="Правая" id="64">
+				<UsualGroup name="Правая" id="66">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -251,9 +256,9 @@
 					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ПраваяРасширеннаяПодсказка" id="65"/>
+					<ExtendedTooltip name="ПраваяРасширеннаяПодсказка" id="67"/>
 					<ChildItems>
-						<Table name="Шаги" id="66">
+						<Table name="Шаги" id="68">
 							<Representation>List</Representation>
 							<TitleLocation>Top</TitleLocation>
 							<ReadOnly>true</ReadOnly>
@@ -269,41 +274,41 @@
 								</v8:item>
 							</Title>
 							<RowFilter xsi:nil="true"/>
-							<ContextMenu name="ШагиКонтекстноеМеню" id="67"/>
-							<AutoCommandBar name="ШагиКоманднаяПанель" id="68">
+							<ContextMenu name="ШагиКонтекстноеМеню" id="69"/>
+							<AutoCommandBar name="ШагиКоманднаяПанель" id="70">
 								<Autofill>false</Autofill>
 							</AutoCommandBar>
-							<ExtendedTooltip name="ШагиРасширеннаяПодсказка" id="69"/>
-							<SearchStringAddition name="ШагиСтрокаПоиска" id="70">
+							<ExtendedTooltip name="ШагиРасширеннаяПодсказка" id="71"/>
+							<SearchStringAddition name="ШагиСтрокаПоиска" id="72">
 								<AdditionSource>
 									<Item>Шаги</Item>
 									<Type>SearchStringRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ШагиСтрокаПоискаКонтекстноеМеню" id="71"/>
-								<ExtendedTooltip name="ШагиСтрокаПоискаРасширеннаяПодсказка" id="72"/>
+								<ContextMenu name="ШагиСтрокаПоискаКонтекстноеМеню" id="73"/>
+								<ExtendedTooltip name="ШагиСтрокаПоискаРасширеннаяПодсказка" id="74"/>
 							</SearchStringAddition>
-							<ViewStatusAddition name="ШагиСостояниеПросмотра" id="73">
+							<ViewStatusAddition name="ШагиСостояниеПросмотра" id="75">
 								<AdditionSource>
 									<Item>Шаги</Item>
 									<Type>ViewStatusRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ШагиСостояниеПросмотраКонтекстноеМеню" id="74"/>
-								<ExtendedTooltip name="ШагиСостояниеПросмотраРасширеннаяПодсказка" id="75"/>
+								<ContextMenu name="ШагиСостояниеПросмотраКонтекстноеМеню" id="76"/>
+								<ExtendedTooltip name="ШагиСостояниеПросмотраРасширеннаяПодсказка" id="77"/>
 							</ViewStatusAddition>
-							<SearchControlAddition name="ШагиУправлениеПоиском" id="76">
+							<SearchControlAddition name="ШагиУправлениеПоиском" id="78">
 								<AdditionSource>
 									<Item>Шаги</Item>
 									<Type>SearchControl</Type>
 								</AdditionSource>
-								<ContextMenu name="ШагиУправлениеПоискомКонтекстноеМеню" id="77"/>
-								<ExtendedTooltip name="ШагиУправлениеПоискомРасширеннаяПодсказка" id="78"/>
+								<ContextMenu name="ШагиУправлениеПоискомКонтекстноеМеню" id="79"/>
+								<ExtendedTooltip name="ШагиУправлениеПоискомРасширеннаяПодсказка" id="80"/>
 							</SearchControlAddition>
 							<Events>
 								<Event name="Selection">ШагиВыбор</Event>
 								<Event name="OnActivateRow">ШагиПриАктивизацииСтроки</Event>
 							</Events>
 							<ChildItems>
-								<InputField name="ШагиМетка" id="79">
+								<InputField name="ШагиМетка" id="81">
 									<DataPath>Шаги.Метка</DataPath>
 									<Title>
 										<v8:item>
@@ -318,10 +323,10 @@
 										</v8:item>
 									</ToolTip>
 									<Width>2</Width>
-									<ContextMenu name="ШагиМеткаКонтекстноеМеню" id="80"/>
-									<ExtendedTooltip name="ШагиМеткаРасширеннаяПодсказка" id="81"/>
+									<ContextMenu name="ШагиМеткаКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="ШагиМеткаРасширеннаяПодсказка" id="83"/>
 								</InputField>
-								<InputField name="ШагиНаименование" id="82">
+								<InputField name="ШагиНаименование" id="84">
 									<DataPath>Шаги.Наименование</DataPath>
 									<Title>
 										<v8:item>
@@ -329,10 +334,10 @@
 											<v8:content>Элемент</v8:content>
 										</v8:item>
 									</Title>
-									<ContextMenu name="ШагиНаименованиеКонтекстноеМеню" id="83"/>
-									<ExtendedTooltip name="ШагиНаименованиеРасширеннаяПодсказка" id="84"/>
+									<ContextMenu name="ШагиНаименованиеКонтекстноеМеню" id="85"/>
+									<ExtendedTooltip name="ШагиНаименованиеРасширеннаяПодсказка" id="86"/>
 								</InputField>
-								<InputField name="ШагиВид" id="85">
+								<InputField name="ШагиВид" id="87">
 									<DataPath>Шаги.Вид</DataPath>
 									<Title>
 										<v8:item>
@@ -341,12 +346,12 @@
 										</v8:item>
 									</Title>
 									<Width>10</Width>
-									<ContextMenu name="ШагиВидКонтекстноеМеню" id="86"/>
-									<ExtendedTooltip name="ШагиВидРасширеннаяПодсказка" id="87"/>
+									<ContextMenu name="ШагиВидКонтекстноеМеню" id="88"/>
+									<ExtendedTooltip name="ШагиВидРасширеннаяПодсказка" id="89"/>
 								</InputField>
 							</ChildItems>
 						</Table>
-						<UsualGroup name="Свойства" id="88">
+						<UsualGroup name="Свойства" id="90">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -358,43 +363,43 @@
 							<Representation>NormalSeparation</Representation>
 							<ShowTitle>true</ShowTitle>
 							<TitleDataPath>ЗаголовокСвойств</TitleDataPath>
-							<ExtendedTooltip name="СвойстваРасширеннаяПодсказка" id="89"/>
+							<ExtendedTooltip name="СвойстваРасширеннаяПодсказка" id="91"/>
 							<ChildItems>
-								<Pages name="СтраницыСвойств" id="90">
+								<Pages name="СтраницыСвойств" id="92">
 									<PagesRepresentation>TabsOnTop</PagesRepresentation>
-									<ExtendedTooltip name="СтраницыСвойствРасширеннаяПодсказка" id="91"/>
+									<ExtendedTooltip name="СтраницыСвойствРасширеннаяПодсказка" id="93"/>
 									<ChildItems>
-										<Page name="СтраницаПусто" id="92">
+										<Page name="СтраницаПусто" id="94">
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Нет элемента</v8:content>
 												</v8:item>
 											</Title>
-											<ExtendedTooltip name="СтраницаПустоРасширеннаяПодсказка" id="93"/>
+											<ExtendedTooltip name="СтраницаПустоРасширеннаяПодсказка" id="95"/>
 											<ChildItems>
-												<LabelDecoration name="ПодсказкаПусто" id="94">
+												<LabelDecoration name="ПодсказкаПусто" id="96">
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Выберите шаг или линию в списке выше или дважды щёлкните элемент на схеме.</v8:content>
 														</v8:item>
 													</Title>
-													<ContextMenu name="ПодсказкаПустоКонтекстноеМеню" id="95"/>
-													<ExtendedTooltip name="ПодсказкаПустоРасширеннаяПодсказка" id="96"/>
+													<ContextMenu name="ПодсказкаПустоКонтекстноеМеню" id="97"/>
+													<ExtendedTooltip name="ПодсказкаПустоРасширеннаяПодсказка" id="98"/>
 												</LabelDecoration>
 											</ChildItems>
 										</Page>
-										<Page name="СтраницаШаг" id="97">
+										<Page name="СтраницаШаг" id="99">
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Шаг</v8:content>
 												</v8:item>
 											</Title>
-											<ExtendedTooltip name="СтраницаШагРасширеннаяПодсказка" id="98"/>
+											<ExtendedTooltip name="СтраницаШагРасширеннаяПодсказка" id="100"/>
 											<ChildItems>
-												<InputField name="ЭлементШагаНаименование" id="99">
+												<InputField name="ЭлементШагаНаименование" id="101">
 													<DataPath>ЭлементШага.Description</DataPath>
 													<Title>
 														<v8:item>
@@ -408,13 +413,13 @@
 															<v8:content>Название шага на схеме и в задачах</v8:content>
 														</v8:item>
 													</ToolTip>
-													<ContextMenu name="ЭлементШагаНаименованиеКонтекстноеМеню" id="100"/>
-													<ExtendedTooltip name="ЭлементШагаНаименованиеРасширеннаяПодсказка" id="101"/>
+													<ContextMenu name="ЭлементШагаНаименованиеКонтекстноеМеню" id="102"/>
+													<ExtendedTooltip name="ЭлементШагаНаименованиеРасширеннаяПодсказка" id="103"/>
 													<Events>
 														<Event name="OnChange">СвойствоПриИзменении</Event>
 													</Events>
 												</InputField>
-												<LabelField name="ЭлементШагаТипШага" id="102">
+												<LabelField name="ЭлементШагаТипШага" id="104">
 													<DataPath>ЭлементШага.ТипШага</DataPath>
 													<Title>
 														<v8:item>
@@ -422,10 +427,10 @@
 															<v8:content>Тип шага</v8:content>
 														</v8:item>
 													</Title>
-													<ContextMenu name="ЭлементШагаТипШагаКонтекстноеМеню" id="103"/>
-													<ExtendedTooltip name="ЭлементШагаТипШагаРасширеннаяПодсказка" id="104"/>
+													<ContextMenu name="ЭлементШагаТипШагаКонтекстноеМеню" id="105"/>
+													<ExtendedTooltip name="ЭлементШагаТипШагаРасширеннаяПодсказка" id="106"/>
 												</LabelField>
-												<InputField name="ЭлементШагаВидАвтошага" id="105">
+												<InputField name="ЭлементШагаВидАвтошага" id="107">
 													<DataPath>ЭлементШага.ТипШага</DataPath>
 													<Title>
 														<v8:item>
@@ -440,20 +445,20 @@
 														</v8:item>
 													</ToolTip>
 													<ListChoiceMode>true</ListChoiceMode>
-													<ContextMenu name="ЭлементШагаВидАвтошагаКонтекстноеМеню" id="106"/>
-													<ExtendedTooltip name="ЭлементШагаВидАвтошагаРасширеннаяПодсказка" id="107"/>
+													<ContextMenu name="ЭлементШагаВидАвтошагаКонтекстноеМеню" id="108"/>
+													<ExtendedTooltip name="ЭлементШагаВидАвтошагаРасширеннаяПодсказка" id="109"/>
 													<Events>
 														<Event name="OnChange">ВидШагаПриИзменении</Event>
 													</Events>
 												</InputField>
-												<LabelField name="ПодсказкаШага" id="108">
+												<LabelField name="ПодсказкаШага" id="110">
 													<DataPath>ПодсказкаШага</DataPath>
 													<TitleLocation>None</TitleLocation>
 													<Height>2</Height>
-													<ContextMenu name="ПодсказкаШагаКонтекстноеМеню" id="109"/>
-													<ExtendedTooltip name="ПодсказкаШагаРасширеннаяПодсказка" id="110"/>
+													<ContextMenu name="ПодсказкаШагаКонтекстноеМеню" id="111"/>
+													<ExtendedTooltip name="ПодсказкаШагаРасширеннаяПодсказка" id="112"/>
 												</LabelField>
-												<InputField name="ЭлементШагаИнструкция" id="111">
+												<InputField name="ЭлементШагаИнструкция" id="113">
 													<DataPath>ЭлементШага.Инструкция</DataPath>
 													<Title>
 														<v8:item>
@@ -464,13 +469,13 @@
 													<TitleLocation>Top</TitleLocation>
 													<Height>3</Height>
 													<MultiLine>true</MultiLine>
-													<ContextMenu name="ЭлементШагаИнструкцияКонтекстноеМеню" id="112"/>
-													<ExtendedTooltip name="ЭлементШагаИнструкцияРасширеннаяПодсказка" id="113"/>
+													<ContextMenu name="ЭлементШагаИнструкцияКонтекстноеМеню" id="114"/>
+													<ExtendedTooltip name="ЭлементШагаИнструкцияРасширеннаяПодсказка" id="115"/>
 													<Events>
 														<Event name="OnChange">СвойствоПриИзменении</Event>
 													</Events>
 												</InputField>
-												<UsualGroup name="ГруппаСрок" id="114">
+												<UsualGroup name="ГруппаСрок" id="116">
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -481,9 +486,9 @@
 													<Behavior>Usual</Behavior>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
-													<ExtendedTooltip name="ГруппаСрокРасширеннаяПодсказка" id="115"/>
+													<ExtendedTooltip name="ГруппаСрокРасширеннаяПодсказка" id="117"/>
 													<ChildItems>
-														<InputField name="ЭлементШагаСрокЗначение" id="116">
+														<InputField name="ЭлементШагаСрокЗначение" id="118">
 															<DataPath>ЭлементШага.СрокЗначение</DataPath>
 															<Title>
 																<v8:item>
@@ -493,24 +498,24 @@
 															</Title>
 															<Width>6</Width>
 															<HorizontalStretch>false</HorizontalStretch>
-															<ContextMenu name="ЭлементШагаСрокЗначениеКонтекстноеМеню" id="117"/>
-															<ExtendedTooltip name="ЭлементШагаСрокЗначениеРасширеннаяПодсказка" id="118"/>
+															<ContextMenu name="ЭлементШагаСрокЗначениеКонтекстноеМеню" id="119"/>
+															<ExtendedTooltip name="ЭлементШагаСрокЗначениеРасширеннаяПодсказка" id="120"/>
 															<Events>
 																<Event name="OnChange">СвойствоПриИзменении</Event>
 															</Events>
 														</InputField>
-														<InputField name="ЭлементШагаСрокЕдиница" id="119">
+														<InputField name="ЭлементШагаСрокЕдиница" id="121">
 															<DataPath>ЭлементШага.СрокЕдиница</DataPath>
 															<TitleLocation>None</TitleLocation>
-															<ContextMenu name="ЭлементШагаСрокЕдиницаКонтекстноеМеню" id="120"/>
-															<ExtendedTooltip name="ЭлементШагаСрокЕдиницаРасширеннаяПодсказка" id="121"/>
+															<ContextMenu name="ЭлементШагаСрокЕдиницаКонтекстноеМеню" id="122"/>
+															<ExtendedTooltip name="ЭлементШагаСрокЕдиницаРасширеннаяПодсказка" id="123"/>
 															<Events>
 																<Event name="OnChange">СвойствоПриИзменении</Event>
 															</Events>
 														</InputField>
 													</ChildItems>
 												</UsualGroup>
-												<InputField name="ЭлементШагаРежимНазначения" id="122">
+												<InputField name="ЭлементШагаРежимНазначения" id="124">
 													<DataPath>ЭлементШага.РежимНазначения</DataPath>
 													<Title>
 														<v8:item>
@@ -524,13 +529,13 @@
 															<v8:content>Каждому — задача каждому исполнителю, шаг завершается, когда выполнят все; любому из — первый выполнивший завершает шаг</v8:content>
 														</v8:item>
 													</ToolTip>
-													<ContextMenu name="ЭлементШагаРежимНазначенияКонтекстноеМеню" id="123"/>
-													<ExtendedTooltip name="ЭлементШагаРежимНазначенияРасширеннаяПодсказка" id="124"/>
+													<ContextMenu name="ЭлементШагаРежимНазначенияКонтекстноеМеню" id="125"/>
+													<ExtendedTooltip name="ЭлементШагаРежимНазначенияРасширеннаяПодсказка" id="126"/>
 													<Events>
 														<Event name="OnChange">СвойствоПриИзменении</Event>
 													</Events>
 												</InputField>
-												<CheckBoxField name="ЭлементШагаВзятьВРаботу" id="125">
+												<CheckBoxField name="ЭлементШагаВзятьВРаботу" id="127">
 													<DataPath>ЭлементШага.ВзятьВРаботу</DataPath>
 													<Title>
 														<v8:item>
@@ -540,13 +545,13 @@
 													</Title>
 													<TitleLocation>Right</TitleLocation>
 													<CheckBoxType>Auto</CheckBoxType>
-													<ContextMenu name="ЭлементШагаВзятьВРаботуКонтекстноеМеню" id="126"/>
-													<ExtendedTooltip name="ЭлементШагаВзятьВРаботуРасширеннаяПодсказка" id="127"/>
+													<ContextMenu name="ЭлементШагаВзятьВРаботуКонтекстноеМеню" id="128"/>
+													<ExtendedTooltip name="ЭлементШагаВзятьВРаботуРасширеннаяПодсказка" id="129"/>
 													<Events>
 														<Event name="OnChange">СвойствоПриИзменении</Event>
 													</Events>
 												</CheckBoxField>
-												<CheckBoxField name="ЭлементШагаРазрешенВозврат" id="128">
+												<CheckBoxField name="ЭлементШагаРазрешенВозврат" id="130">
 													<DataPath>ЭлементШага.РазрешенВозврат</DataPath>
 													<Title>
 														<v8:item>
@@ -556,13 +561,13 @@
 													</Title>
 													<TitleLocation>Right</TitleLocation>
 													<CheckBoxType>Auto</CheckBoxType>
-													<ContextMenu name="ЭлементШагаРазрешенВозвратКонтекстноеМеню" id="129"/>
-													<ExtendedTooltip name="ЭлементШагаРазрешенВозвратРасширеннаяПодсказка" id="130"/>
+													<ContextMenu name="ЭлементШагаРазрешенВозвратКонтекстноеМеню" id="131"/>
+													<ExtendedTooltip name="ЭлементШагаРазрешенВозвратРасширеннаяПодсказка" id="132"/>
 													<Events>
 														<Event name="OnChange">СвойствоПриИзменении</Event>
 													</Events>
 												</CheckBoxField>
-												<InputField name="ЭлементШагаРежимВозврата" id="131">
+												<InputField name="ЭлементШагаРежимВозврата" id="133">
 													<DataPath>ЭлементШага.РежимВозврата</DataPath>
 													<Title>
 														<v8:item>
@@ -570,13 +575,13 @@
 															<v8:content>После доработки</v8:content>
 														</v8:item>
 													</Title>
-													<ContextMenu name="ЭлементШагаРежимВозвратаКонтекстноеМеню" id="132"/>
-													<ExtendedTooltip name="ЭлементШагаРежимВозвратаРасширеннаяПодсказка" id="133"/>
+													<ContextMenu name="ЭлементШагаРежимВозвратаКонтекстноеМеню" id="134"/>
+													<ExtendedTooltip name="ЭлементШагаРежимВозвратаРасширеннаяПодсказка" id="135"/>
 													<Events>
 														<Event name="OnChange">СвойствоПриИзменении</Event>
 													</Events>
 												</InputField>
-												<CheckBoxField name="ЭлементШагаТотЖеИсполнительПриВозврате" id="134">
+												<CheckBoxField name="ЭлементШагаТотЖеИсполнительПриВозврате" id="136">
 													<DataPath>ЭлементШага.ТотЖеИсполнительПриВозврате</DataPath>
 													<Title>
 														<v8:item>
@@ -586,13 +591,130 @@
 													</Title>
 													<TitleLocation>Right</TitleLocation>
 													<CheckBoxType>Auto</CheckBoxType>
-													<ContextMenu name="ЭлементШагаТотЖеИсполнительПриВозвратеКонтекстноеМеню" id="135"/>
-													<ExtendedTooltip name="ЭлементШагаТотЖеИсполнительПриВозвратеРасширеннаяПодсказка" id="136"/>
+													<ContextMenu name="ЭлементШагаТотЖеИсполнительПриВозвратеКонтекстноеМеню" id="137"/>
+													<ExtendedTooltip name="ЭлементШагаТотЖеИсполнительПриВозвратеРасширеннаяПодсказка" id="138"/>
 													<Events>
 														<Event name="OnChange">СвойствоПриИзменении</Event>
 													</Events>
 												</CheckBoxField>
-												<InputField name="ЭлементШагаОбработчик" id="137">
+												<CheckBoxField name="ЭлементШагаРазрешенаПереадресация" id="139">
+													<DataPath>ЭлементШага.РазрешенаПереадресация</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Разрешена переадресация другому пользователю</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ЭлементШагаРазрешенаПереадресацияКонтекстноеМеню" id="140"/>
+													<ExtendedTooltip name="ЭлементШагаРазрешенаПереадресацияРасширеннаяПодсказка" id="141"/>
+													<Events>
+														<Event name="OnChange">СвойствоПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<UsualGroup name="ГруппаПросрочка" id="142">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Просрочка</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаПросрочкаРасширеннаяПодсказка" id="143"/>
+													<ChildItems>
+														<InputField name="ЭлементШагаДействиеПриПросрочке" id="144">
+															<DataPath>ЭлементШага.ДействиеПриПросрочке</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Если срок истёк</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Ничего — только оповещение о просрочке; эскалация — задача передаётся эскалационной роли (или руководителю); автовыполнение — задача выполняется кнопкой по умолчанию</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ContextMenu name="ЭлементШагаДействиеПриПросрочкеКонтекстноеМеню" id="145"/>
+															<ExtendedTooltip name="ЭлементШагаДействиеПриПросрочкеРасширеннаяПодсказка" id="146"/>
+															<Events>
+																<Event name="OnChange">ВидШагаПриИзменении</Event>
+															</Events>
+														</InputField>
+														<InputField name="ЭлементШагаЭскалационнаяРоль" id="147">
+															<DataPath>ЭлементШага.ЭскалационнаяРоль</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Эскалационная роль</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Пусто — эскалационная роль роли задачи или руководитель исполнителя</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ContextMenu name="ЭлементШагаЭскалационнаяРольКонтекстноеМеню" id="148"/>
+															<ExtendedTooltip name="ЭлементШагаЭскалационнаяРольРасширеннаяПодсказка" id="149"/>
+															<Events>
+																<Event name="OnChange">СвойствоПриИзменении</Event>
+															</Events>
+														</InputField>
+														<UsualGroup name="ГруппаАвтовыполнение" id="150">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Автовыполнение</v8:content>
+																</v8:item>
+															</Title>
+															<Group>Horizontal</Group>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаАвтовыполнениеРасширеннаяПодсказка" id="151"/>
+															<ChildItems>
+																<InputField name="ЭлементШагаДнейДоАвтовыполнения" id="152">
+																	<DataPath>ЭлементШага.ДнейДоАвтовыполнения</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Через, дней</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Width>4</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<ContextMenu name="ЭлементШагаДнейДоАвтовыполненияКонтекстноеМеню" id="153"/>
+																	<ExtendedTooltip name="ЭлементШагаДнейДоАвтовыполненияРасширеннаяПодсказка" id="154"/>
+																	<Events>
+																		<Event name="OnChange">СвойствоПриИзменении</Event>
+																	</Events>
+																</InputField>
+																<InputField name="ЭлементШагаКнопкаАвтовыполнения" id="155">
+																	<DataPath>ЭлементШага.КнопкаАвтовыполнения</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>кнопкой</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ListChoiceMode>true</ListChoiceMode>
+																	<ContextMenu name="ЭлементШагаКнопкаАвтовыполненияКонтекстноеМеню" id="156"/>
+																	<ExtendedTooltip name="ЭлементШагаКнопкаАвтовыполненияРасширеннаяПодсказка" id="157"/>
+																	<Events>
+																		<Event name="OnChange">СвойствоПриИзменении</Event>
+																	</Events>
+																</InputField>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+												<InputField name="ЭлементШагаОбработчик" id="158">
 													<DataPath>ЭлементШага.Обработчик</DataPath>
 													<Title>
 														<v8:item>
@@ -600,13 +722,13 @@
 															<v8:content>Обработчик</v8:content>
 														</v8:item>
 													</Title>
-													<ContextMenu name="ЭлементШагаОбработчикКонтекстноеМеню" id="138"/>
-													<ExtendedTooltip name="ЭлементШагаОбработчикРасширеннаяПодсказка" id="139"/>
+													<ContextMenu name="ЭлементШагаОбработчикКонтекстноеМеню" id="159"/>
+													<ExtendedTooltip name="ЭлементШагаОбработчикРасширеннаяПодсказка" id="160"/>
 													<Events>
 														<Event name="OnChange">СвойствоПриИзменении</Event>
 													</Events>
 												</InputField>
-												<UsualGroup name="ГруппаТаймер" id="140">
+												<UsualGroup name="ГруппаТаймер" id="161">
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -617,9 +739,9 @@
 													<Behavior>Usual</Behavior>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
-													<ExtendedTooltip name="ГруппаТаймерРасширеннаяПодсказка" id="141"/>
+													<ExtendedTooltip name="ГруппаТаймерРасширеннаяПодсказка" id="162"/>
 													<ChildItems>
-														<UsualGroup name="ГруппаТаймерСрок" id="142">
+														<UsualGroup name="ГруппаТаймерСрок" id="163">
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
@@ -630,9 +752,9 @@
 															<Behavior>Usual</Behavior>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
-															<ExtendedTooltip name="ГруппаТаймерСрокРасширеннаяПодсказка" id="143"/>
+															<ExtendedTooltip name="ГруппаТаймерСрокРасширеннаяПодсказка" id="164"/>
 															<ChildItems>
-																<InputField name="ЭлементШагаТаймерЗначение" id="144">
+																<InputField name="ЭлементШагаТаймерЗначение" id="165">
 																	<DataPath>ЭлементШага.ТаймерЗначение</DataPath>
 																	<Title>
 																		<v8:item>
@@ -642,24 +764,24 @@
 																	</Title>
 																	<Width>6</Width>
 																	<HorizontalStretch>false</HorizontalStretch>
-																	<ContextMenu name="ЭлементШагаТаймерЗначениеКонтекстноеМеню" id="145"/>
-																	<ExtendedTooltip name="ЭлементШагаТаймерЗначениеРасширеннаяПодсказка" id="146"/>
+																	<ContextMenu name="ЭлементШагаТаймерЗначениеКонтекстноеМеню" id="166"/>
+																	<ExtendedTooltip name="ЭлементШагаТаймерЗначениеРасширеннаяПодсказка" id="167"/>
 																	<Events>
 																		<Event name="OnChange">СвойствоПриИзменении</Event>
 																	</Events>
 																</InputField>
-																<InputField name="ЭлементШагаТаймерЕдиница" id="147">
+																<InputField name="ЭлементШагаТаймерЕдиница" id="168">
 																	<DataPath>ЭлементШага.ТаймерЕдиница</DataPath>
 																	<TitleLocation>None</TitleLocation>
-																	<ContextMenu name="ЭлементШагаТаймерЕдиницаКонтекстноеМеню" id="148"/>
-																	<ExtendedTooltip name="ЭлементШагаТаймерЕдиницаРасширеннаяПодсказка" id="149"/>
+																	<ContextMenu name="ЭлементШагаТаймерЕдиницаКонтекстноеМеню" id="169"/>
+																	<ExtendedTooltip name="ЭлементШагаТаймерЕдиницаРасширеннаяПодсказка" id="170"/>
 																	<Events>
 																		<Event name="OnChange">СвойствоПриИзменении</Event>
 																	</Events>
 																</InputField>
 															</ChildItems>
 														</UsualGroup>
-														<InputField name="ЭлементШагаТаймерИзПеременной" id="150">
+														<InputField name="ЭлементШагаТаймерИзПеременной" id="171">
 															<DataPath>ЭлементШага.ТаймерИзПеременной</DataPath>
 															<Title>
 																<v8:item>
@@ -673,15 +795,15 @@
 																	<v8:content>Переменная процесса с датой; если заполнена, время ожидания не используется</v8:content>
 																</v8:item>
 															</ToolTip>
-															<ContextMenu name="ЭлементШагаТаймерИзПеременнойКонтекстноеМеню" id="151"/>
-															<ExtendedTooltip name="ЭлементШагаТаймерИзПеременнойРасширеннаяПодсказка" id="152"/>
+															<ContextMenu name="ЭлементШагаТаймерИзПеременнойКонтекстноеМеню" id="172"/>
+															<ExtendedTooltip name="ЭлементШагаТаймерИзПеременнойРасширеннаяПодсказка" id="173"/>
 															<Events>
 																<Event name="OnChange">СвойствоПриИзменении</Event>
 															</Events>
 														</InputField>
 													</ChildItems>
 												</UsualGroup>
-												<UsualGroup name="ГруппаСлияние" id="153">
+												<UsualGroup name="ГруппаСлияние" id="174">
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -692,9 +814,9 @@
 													<Behavior>Usual</Behavior>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
-													<ExtendedTooltip name="ГруппаСлияниеРасширеннаяПодсказка" id="154"/>
+													<ExtendedTooltip name="ГруппаСлияниеРасширеннаяПодсказка" id="175"/>
 													<ChildItems>
-														<InputField name="ЭлементШагаРежимСлияния" id="155">
+														<InputField name="ЭлементШагаРежимСлияния" id="176">
 															<DataPath>ЭлементШага.РежимСлияния</DataPath>
 															<Title>
 																<v8:item>
@@ -708,13 +830,13 @@
 																	<v8:content>Все ветки — ждать все; любая ветка — первая пришедшая закрывает остальные; N из M — после N веток остальные закрываются</v8:content>
 																</v8:item>
 															</ToolTip>
-															<ContextMenu name="ЭлементШагаРежимСлиянияКонтекстноеМеню" id="156"/>
-															<ExtendedTooltip name="ЭлементШагаРежимСлиянияРасширеннаяПодсказка" id="157"/>
+															<ContextMenu name="ЭлементШагаРежимСлиянияКонтекстноеМеню" id="177"/>
+															<ExtendedTooltip name="ЭлементШагаРежимСлиянияРасширеннаяПодсказка" id="178"/>
 															<Events>
 																<Event name="OnChange">СвойствоПриИзменении</Event>
 															</Events>
 														</InputField>
-														<InputField name="ЭлементШагаКоличествоДляСлияния" id="158">
+														<InputField name="ЭлементШагаКоличествоДляСлияния" id="179">
 															<DataPath>ЭлементШага.КоличествоДляСлияния</DataPath>
 															<Title>
 																<v8:item>
@@ -724,15 +846,15 @@
 															</Title>
 															<Width>4</Width>
 															<HorizontalStretch>false</HorizontalStretch>
-															<ContextMenu name="ЭлементШагаКоличествоДляСлиянияКонтекстноеМеню" id="159"/>
-															<ExtendedTooltip name="ЭлементШагаКоличествоДляСлиянияРасширеннаяПодсказка" id="160"/>
+															<ContextMenu name="ЭлементШагаКоличествоДляСлиянияКонтекстноеМеню" id="180"/>
+															<ExtendedTooltip name="ЭлементШагаКоличествоДляСлиянияРасширеннаяПодсказка" id="181"/>
 															<Events>
 																<Event name="OnChange">СвойствоПриИзменении</Event>
 															</Events>
 														</InputField>
 													</ChildItems>
 												</UsualGroup>
-												<UsualGroup name="ГруппаВложенный" id="161">
+												<UsualGroup name="ГруппаВложенный" id="182">
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -743,9 +865,9 @@
 													<Behavior>Usual</Behavior>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
-													<ExtendedTooltip name="ГруппаВложенныйРасширеннаяПодсказка" id="162"/>
+													<ExtendedTooltip name="ГруппаВложенныйРасширеннаяПодсказка" id="183"/>
 													<ChildItems>
-														<InputField name="ЭлементШагаВложеннаяСхема" id="163">
+														<InputField name="ЭлементШагаВложеннаяСхема" id="184">
 															<DataPath>ЭлементШага.ВложеннаяСхема</DataPath>
 															<Title>
 																<v8:item>
@@ -753,13 +875,13 @@
 																	<v8:content>Схема вложенного процесса</v8:content>
 																</v8:item>
 															</Title>
-															<ContextMenu name="ЭлементШагаВложеннаяСхемаКонтекстноеМеню" id="164"/>
-															<ExtendedTooltip name="ЭлементШагаВложеннаяСхемаРасширеннаяПодсказка" id="165"/>
+															<ContextMenu name="ЭлементШагаВложеннаяСхемаКонтекстноеМеню" id="185"/>
+															<ExtendedTooltip name="ЭлементШагаВложеннаяСхемаРасширеннаяПодсказка" id="186"/>
 															<Events>
 																<Event name="OnChange">СвойствоПриИзменении</Event>
 															</Events>
 														</InputField>
-														<InputField name="ЭлементШагаРежимВложенного" id="166">
+														<InputField name="ЭлементШагаРежимВложенного" id="187">
 															<DataPath>ЭлементШага.РежимВложенного</DataPath>
 															<Title>
 																<v8:item>
@@ -773,13 +895,13 @@
 																	<v8:content>Синхронно — шаг ждёт завершения вложенного процесса; асинхронно — процесс идёт дальше сразу</v8:content>
 																</v8:item>
 															</ToolTip>
-															<ContextMenu name="ЭлементШагаРежимВложенногоКонтекстноеМеню" id="167"/>
-															<ExtendedTooltip name="ЭлементШагаРежимВложенногоРасширеннаяПодсказка" id="168"/>
+															<ContextMenu name="ЭлементШагаРежимВложенногоКонтекстноеМеню" id="188"/>
+															<ExtendedTooltip name="ЭлементШагаРежимВложенногоРасширеннаяПодсказка" id="189"/>
 															<Events>
 																<Event name="OnChange">СвойствоПриИзменении</Event>
 															</Events>
 														</InputField>
-														<Table name="ПараметрыВложенного" id="169">
+														<Table name="ПараметрыВложенного" id="190">
 															<Representation>List</Representation>
 															<TitleLocation>Top</TitleLocation>
 															<Height>3</Height>
@@ -791,39 +913,39 @@
 																</v8:item>
 															</Title>
 															<RowFilter xsi:nil="true"/>
-															<ContextMenu name="ПараметрыВложенногоКонтекстноеМеню" id="170"/>
-															<AutoCommandBar name="ПараметрыВложенногоКоманднаяПанель" id="171">
+															<ContextMenu name="ПараметрыВложенногоКонтекстноеМеню" id="191"/>
+															<AutoCommandBar name="ПараметрыВложенногоКоманднаяПанель" id="192">
 															</AutoCommandBar>
-															<ExtendedTooltip name="ПараметрыВложенногоРасширеннаяПодсказка" id="172"/>
-															<SearchStringAddition name="ПараметрыВложенногоСтрокаПоиска" id="173">
+															<ExtendedTooltip name="ПараметрыВложенногоРасширеннаяПодсказка" id="193"/>
+															<SearchStringAddition name="ПараметрыВложенногоСтрокаПоиска" id="194">
 																<AdditionSource>
 																	<Item>ПараметрыВложенного</Item>
 																	<Type>SearchStringRepresentation</Type>
 																</AdditionSource>
-																<ContextMenu name="ПараметрыВложенногоСтрокаПоискаКонтекстноеМеню" id="174"/>
-																<ExtendedTooltip name="ПараметрыВложенногоСтрокаПоискаРасширеннаяПодсказка" id="175"/>
+																<ContextMenu name="ПараметрыВложенногоСтрокаПоискаКонтекстноеМеню" id="195"/>
+																<ExtendedTooltip name="ПараметрыВложенногоСтрокаПоискаРасширеннаяПодсказка" id="196"/>
 															</SearchStringAddition>
-															<ViewStatusAddition name="ПараметрыВложенногоСостояниеПросмотра" id="176">
+															<ViewStatusAddition name="ПараметрыВложенногоСостояниеПросмотра" id="197">
 																<AdditionSource>
 																	<Item>ПараметрыВложенного</Item>
 																	<Type>ViewStatusRepresentation</Type>
 																</AdditionSource>
-																<ContextMenu name="ПараметрыВложенногоСостояниеПросмотраКонтекстноеМеню" id="177"/>
-																<ExtendedTooltip name="ПараметрыВложенногоСостояниеПросмотраРасширеннаяПодсказка" id="178"/>
+																<ContextMenu name="ПараметрыВложенногоСостояниеПросмотраКонтекстноеМеню" id="198"/>
+																<ExtendedTooltip name="ПараметрыВложенногоСостояниеПросмотраРасширеннаяПодсказка" id="199"/>
 															</ViewStatusAddition>
-															<SearchControlAddition name="ПараметрыВложенногоУправлениеПоиском" id="179">
+															<SearchControlAddition name="ПараметрыВложенногоУправлениеПоиском" id="200">
 																<AdditionSource>
 																	<Item>ПараметрыВложенного</Item>
 																	<Type>SearchControl</Type>
 																</AdditionSource>
-																<ContextMenu name="ПараметрыВложенногоУправлениеПоискомКонтекстноеМеню" id="180"/>
-																<ExtendedTooltip name="ПараметрыВложенногоУправлениеПоискомРасширеннаяПодсказка" id="181"/>
+																<ContextMenu name="ПараметрыВложенногоУправлениеПоискомКонтекстноеМеню" id="201"/>
+																<ExtendedTooltip name="ПараметрыВложенногоУправлениеПоискомРасширеннаяПодсказка" id="202"/>
 															</SearchControlAddition>
 															<Events>
 																<Event name="OnChange">СвойствоТаблицыПриИзменении</Event>
 															</Events>
 															<ChildItems>
-																<InputField name="ПараметрыВложенногоПеременнаяРодителя" id="182">
+																<InputField name="ПараметрыВложенногоПеременнаяРодителя" id="203">
 																	<DataPath>ЭлементШага.ПараметрыВложенного.ПеременнаяРодителя</DataPath>
 																	<Title>
 																		<v8:item>
@@ -831,10 +953,10 @@
 																			<v8:content>Переменная этого процесса</v8:content>
 																		</v8:item>
 																	</Title>
-																	<ContextMenu name="ПараметрыВложенногоПеременнаяРодителяКонтекстноеМеню" id="183"/>
-																	<ExtendedTooltip name="ПараметрыВложенногоПеременнаяРодителяРасширеннаяПодсказка" id="184"/>
+																	<ContextMenu name="ПараметрыВложенногоПеременнаяРодителяКонтекстноеМеню" id="204"/>
+																	<ExtendedTooltip name="ПараметрыВложенногоПеременнаяРодителяРасширеннаяПодсказка" id="205"/>
 																</InputField>
-																<InputField name="ПараметрыВложенногоПеременнаяДочернего" id="185">
+																<InputField name="ПараметрыВложенногоПеременнаяДочернего" id="206">
 																	<DataPath>ЭлементШага.ПараметрыВложенного.ПеременнаяДочернего</DataPath>
 																	<Title>
 																		<v8:item>
@@ -842,10 +964,10 @@
 																			<v8:content>Переменная вложенного</v8:content>
 																		</v8:item>
 																	</Title>
-																	<ContextMenu name="ПараметрыВложенногоПеременнаяДочернегоКонтекстноеМеню" id="186"/>
-																	<ExtendedTooltip name="ПараметрыВложенногоПеременнаяДочернегоРасширеннаяПодсказка" id="187"/>
+																	<ContextMenu name="ПараметрыВложенногоПеременнаяДочернегоКонтекстноеМеню" id="207"/>
+																	<ExtendedTooltip name="ПараметрыВложенногоПеременнаяДочернегоРасширеннаяПодсказка" id="208"/>
 																</InputField>
-																<CheckBoxField name="ПараметрыВложенногоВход" id="188">
+																<CheckBoxField name="ПараметрыВложенногоВход" id="209">
 																	<DataPath>ЭлементШага.ПараметрыВложенного.Вход</DataPath>
 																	<Title>
 																		<v8:item>
@@ -855,10 +977,10 @@
 																	</Title>
 																	<TitleLocation>Right</TitleLocation>
 																	<CheckBoxType>Auto</CheckBoxType>
-																	<ContextMenu name="ПараметрыВложенногоВходКонтекстноеМеню" id="189"/>
-																	<ExtendedTooltip name="ПараметрыВложенногоВходРасширеннаяПодсказка" id="190"/>
+																	<ContextMenu name="ПараметрыВложенногоВходКонтекстноеМеню" id="210"/>
+																	<ExtendedTooltip name="ПараметрыВложенногоВходРасширеннаяПодсказка" id="211"/>
 																</CheckBoxField>
-																<CheckBoxField name="ПараметрыВложенногоВыход" id="191">
+																<CheckBoxField name="ПараметрыВложенногоВыход" id="212">
 																	<DataPath>ЭлементШага.ПараметрыВложенного.Выход</DataPath>
 																	<Title>
 																		<v8:item>
@@ -868,73 +990,73 @@
 																	</Title>
 																	<TitleLocation>Right</TitleLocation>
 																	<CheckBoxType>Auto</CheckBoxType>
-																	<ContextMenu name="ПараметрыВложенногоВыходКонтекстноеМеню" id="192"/>
-																	<ExtendedTooltip name="ПараметрыВложенногоВыходРасширеннаяПодсказка" id="193"/>
+																	<ContextMenu name="ПараметрыВложенногоВыходКонтекстноеМеню" id="213"/>
+																	<ExtendedTooltip name="ПараметрыВложенногоВыходРасширеннаяПодсказка" id="214"/>
 																</CheckBoxField>
 															</ChildItems>
 														</Table>
-														<LabelDecoration name="ПодсказкаВложенный" id="194">
+														<LabelDecoration name="ПодсказкаВложенный" id="215">
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
 																	<v8:content>Если таблица пуста, передаются переменные с одинаковыми именами: в вложенный — отмеченные «Вход», обратно — отмеченные «Выход».</v8:content>
 																</v8:item>
 															</Title>
-															<ContextMenu name="ПодсказкаВложенныйКонтекстноеМеню" id="195"/>
-															<ExtendedTooltip name="ПодсказкаВложенныйРасширеннаяПодсказка" id="196"/>
+															<ContextMenu name="ПодсказкаВложенныйКонтекстноеМеню" id="216"/>
+															<ExtendedTooltip name="ПодсказкаВложенныйРасширеннаяПодсказка" id="217"/>
 														</LabelDecoration>
 													</ChildItems>
 												</UsualGroup>
 											</ChildItems>
 										</Page>
-										<Page name="СтраницаИсполнители" id="197">
+										<Page name="СтраницаИсполнители" id="218">
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Исполнители</v8:content>
 												</v8:item>
 											</Title>
-											<ExtendedTooltip name="СтраницаИсполнителиРасширеннаяПодсказка" id="198"/>
+											<ExtendedTooltip name="СтраницаИсполнителиРасширеннаяПодсказка" id="219"/>
 											<ChildItems>
-												<Table name="ИсполнителиШага" id="199">
+												<Table name="ИсполнителиШага" id="220">
 													<Representation>List</Representation>
 													<TitleLocation>None</TitleLocation>
 													<Height>5</Height>
 													<DataPath>ИсполнителиШага</DataPath>
 													<RowFilter xsi:nil="true"/>
-													<ContextMenu name="ИсполнителиШагаКонтекстноеМеню" id="200"/>
-													<AutoCommandBar name="ИсполнителиШагаКоманднаяПанель" id="201">
+													<ContextMenu name="ИсполнителиШагаКонтекстноеМеню" id="221"/>
+													<AutoCommandBar name="ИсполнителиШагаКоманднаяПанель" id="222">
 													</AutoCommandBar>
-													<ExtendedTooltip name="ИсполнителиШагаРасширеннаяПодсказка" id="202"/>
-													<SearchStringAddition name="ИсполнителиШагаСтрокаПоиска" id="203">
+													<ExtendedTooltip name="ИсполнителиШагаРасширеннаяПодсказка" id="223"/>
+													<SearchStringAddition name="ИсполнителиШагаСтрокаПоиска" id="224">
 														<AdditionSource>
 															<Item>ИсполнителиШага</Item>
 															<Type>SearchStringRepresentation</Type>
 														</AdditionSource>
-														<ContextMenu name="ИсполнителиШагаСтрокаПоискаКонтекстноеМеню" id="204"/>
-														<ExtendedTooltip name="ИсполнителиШагаСтрокаПоискаРасширеннаяПодсказка" id="205"/>
+														<ContextMenu name="ИсполнителиШагаСтрокаПоискаКонтекстноеМеню" id="225"/>
+														<ExtendedTooltip name="ИсполнителиШагаСтрокаПоискаРасширеннаяПодсказка" id="226"/>
 													</SearchStringAddition>
-													<ViewStatusAddition name="ИсполнителиШагаСостояниеПросмотра" id="206">
+													<ViewStatusAddition name="ИсполнителиШагаСостояниеПросмотра" id="227">
 														<AdditionSource>
 															<Item>ИсполнителиШага</Item>
 															<Type>ViewStatusRepresentation</Type>
 														</AdditionSource>
-														<ContextMenu name="ИсполнителиШагаСостояниеПросмотраКонтекстноеМеню" id="207"/>
-														<ExtendedTooltip name="ИсполнителиШагаСостояниеПросмотраРасширеннаяПодсказка" id="208"/>
+														<ContextMenu name="ИсполнителиШагаСостояниеПросмотраКонтекстноеМеню" id="228"/>
+														<ExtendedTooltip name="ИсполнителиШагаСостояниеПросмотраРасширеннаяПодсказка" id="229"/>
 													</ViewStatusAddition>
-													<SearchControlAddition name="ИсполнителиШагаУправлениеПоиском" id="209">
+													<SearchControlAddition name="ИсполнителиШагаУправлениеПоиском" id="230">
 														<AdditionSource>
 															<Item>ИсполнителиШага</Item>
 															<Type>SearchControl</Type>
 														</AdditionSource>
-														<ContextMenu name="ИсполнителиШагаУправлениеПоискомКонтекстноеМеню" id="210"/>
-														<ExtendedTooltip name="ИсполнителиШагаУправлениеПоискомРасширеннаяПодсказка" id="211"/>
+														<ContextMenu name="ИсполнителиШагаУправлениеПоискомКонтекстноеМеню" id="231"/>
+														<ExtendedTooltip name="ИсполнителиШагаУправлениеПоискомРасширеннаяПодсказка" id="232"/>
 													</SearchControlAddition>
 													<Events>
 														<Event name="OnChange">СвойствоТаблицыПриИзменении</Event>
 													</Events>
 													<ChildItems>
-														<InputField name="ИсполнителиШагаСпособАдресации" id="212">
+														<InputField name="ИсполнителиШагаСпособАдресации" id="233">
 															<DataPath>ИсполнителиШага.СпособАдресации</DataPath>
 															<Title>
 																<v8:item>
@@ -942,10 +1064,10 @@
 																	<v8:content>Способ</v8:content>
 																</v8:item>
 															</Title>
-															<ContextMenu name="ИсполнителиШагаСпособАдресацииКонтекстноеМеню" id="213"/>
-															<ExtendedTooltip name="ИсполнителиШагаСпособАдресацииРасширеннаяПодсказка" id="214"/>
+															<ContextMenu name="ИсполнителиШагаСпособАдресацииКонтекстноеМеню" id="234"/>
+															<ExtendedTooltip name="ИсполнителиШагаСпособАдресацииРасширеннаяПодсказка" id="235"/>
 														</InputField>
-														<InputField name="ИсполнителиШагаРоль" id="215">
+														<InputField name="ИсполнителиШагаРоль" id="236">
 															<DataPath>ИсполнителиШага.Роль</DataPath>
 															<Title>
 																<v8:item>
@@ -953,10 +1075,10 @@
 																	<v8:content>Роль</v8:content>
 																</v8:item>
 															</Title>
-															<ContextMenu name="ИсполнителиШагаРольКонтекстноеМеню" id="216"/>
-															<ExtendedTooltip name="ИсполнителиШагаРольРасширеннаяПодсказка" id="217"/>
+															<ContextMenu name="ИсполнителиШагаРольКонтекстноеМеню" id="237"/>
+															<ExtendedTooltip name="ИсполнителиШагаРольРасширеннаяПодсказка" id="238"/>
 														</InputField>
-														<InputField name="ИсполнителиШагаПользователь" id="218">
+														<InputField name="ИсполнителиШагаПользователь" id="239">
 															<DataPath>ИсполнителиШага.Пользователь</DataPath>
 															<Title>
 																<v8:item>
@@ -964,10 +1086,10 @@
 																	<v8:content>Пользователь</v8:content>
 																</v8:item>
 															</Title>
-															<ContextMenu name="ИсполнителиШагаПользовательКонтекстноеМеню" id="219"/>
-															<ExtendedTooltip name="ИсполнителиШагаПользовательРасширеннаяПодсказка" id="220"/>
+															<ContextMenu name="ИсполнителиШагаПользовательКонтекстноеМеню" id="240"/>
+															<ExtendedTooltip name="ИсполнителиШагаПользовательРасширеннаяПодсказка" id="241"/>
 														</InputField>
-														<InputField name="ИсполнителиШагаПутьОбъектаАдресации1" id="221">
+														<InputField name="ИсполнителиШагаПутьОбъектаАдресации1" id="242">
 															<DataPath>ИсполнителиШага.ПутьОбъектаАдресации1</DataPath>
 															<Title>
 																<v8:item>
@@ -975,10 +1097,10 @@
 																	<v8:content>Объект адресации (путь)</v8:content>
 																</v8:item>
 															</Title>
-															<ContextMenu name="ИсполнителиШагаПутьОбъектаАдресации1КонтекстноеМеню" id="222"/>
-															<ExtendedTooltip name="ИсполнителиШагаПутьОбъектаАдресации1РасширеннаяПодсказка" id="223"/>
+															<ContextMenu name="ИсполнителиШагаПутьОбъектаАдресации1КонтекстноеМеню" id="243"/>
+															<ExtendedTooltip name="ИсполнителиШагаПутьОбъектаАдресации1РасширеннаяПодсказка" id="244"/>
 														</InputField>
-														<InputField name="ИсполнителиШагаРеквизитПредмета" id="224">
+														<InputField name="ИсполнителиШагаРеквизитПредмета" id="245">
 															<DataPath>ИсполнителиШага.РеквизитПредмета</DataPath>
 															<Title>
 																<v8:item>
@@ -986,10 +1108,10 @@
 																	<v8:content>Реквизит предмета</v8:content>
 																</v8:item>
 															</Title>
-															<ContextMenu name="ИсполнителиШагаРеквизитПредметаКонтекстноеМеню" id="225"/>
-															<ExtendedTooltip name="ИсполнителиШагаРеквизитПредметаРасширеннаяПодсказка" id="226"/>
+															<ContextMenu name="ИсполнителиШагаРеквизитПредметаКонтекстноеМеню" id="246"/>
+															<ExtendedTooltip name="ИсполнителиШагаРеквизитПредметаРасширеннаяПодсказка" id="247"/>
 														</InputField>
-														<InputField name="ИсполнителиШагаОбработчик" id="227">
+														<InputField name="ИсполнителиШагаОбработчик" id="248">
 															<DataPath>ИсполнителиШага.Обработчик</DataPath>
 															<Title>
 																<v8:item>
@@ -997,71 +1119,71 @@
 																	<v8:content>Обработчик</v8:content>
 																</v8:item>
 															</Title>
-															<ContextMenu name="ИсполнителиШагаОбработчикКонтекстноеМеню" id="228"/>
-															<ExtendedTooltip name="ИсполнителиШагаОбработчикРасширеннаяПодсказка" id="229"/>
+															<ContextMenu name="ИсполнителиШагаОбработчикКонтекстноеМеню" id="249"/>
+															<ExtendedTooltip name="ИсполнителиШагаОбработчикРасширеннаяПодсказка" id="250"/>
 														</InputField>
 													</ChildItems>
 												</Table>
-												<LabelDecoration name="ПодсказкаИсполнители" id="230">
+												<LabelDecoration name="ПодсказкаИсполнители" id="251">
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Путь — от предмета через точку («Контрагент.ОсновнойМенеджер») или «Переменные.Имя».</v8:content>
 														</v8:item>
 													</Title>
-													<ContextMenu name="ПодсказкаИсполнителиКонтекстноеМеню" id="231"/>
-													<ExtendedTooltip name="ПодсказкаИсполнителиРасширеннаяПодсказка" id="232"/>
+													<ContextMenu name="ПодсказкаИсполнителиКонтекстноеМеню" id="252"/>
+													<ExtendedTooltip name="ПодсказкаИсполнителиРасширеннаяПодсказка" id="253"/>
 												</LabelDecoration>
 											</ChildItems>
 										</Page>
-										<Page name="СтраницаКнопки" id="233">
+										<Page name="СтраницаКнопки" id="254">
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Кнопки</v8:content>
 												</v8:item>
 											</Title>
-											<ExtendedTooltip name="СтраницаКнопкиРасширеннаяПодсказка" id="234"/>
+											<ExtendedTooltip name="СтраницаКнопкиРасширеннаяПодсказка" id="255"/>
 											<ChildItems>
-												<Table name="КнопкиШага" id="235">
+												<Table name="КнопкиШага" id="256">
 													<Representation>List</Representation>
 													<TitleLocation>None</TitleLocation>
 													<Height>5</Height>
 													<DataPath>КнопкиШага</DataPath>
 													<RowFilter xsi:nil="true"/>
-													<ContextMenu name="КнопкиШагаКонтекстноеМеню" id="236"/>
-													<AutoCommandBar name="КнопкиШагаКоманднаяПанель" id="237">
+													<ContextMenu name="КнопкиШагаКонтекстноеМеню" id="257"/>
+													<AutoCommandBar name="КнопкиШагаКоманднаяПанель" id="258">
 													</AutoCommandBar>
-													<ExtendedTooltip name="КнопкиШагаРасширеннаяПодсказка" id="238"/>
-													<SearchStringAddition name="КнопкиШагаСтрокаПоиска" id="239">
+													<ExtendedTooltip name="КнопкиШагаРасширеннаяПодсказка" id="259"/>
+													<SearchStringAddition name="КнопкиШагаСтрокаПоиска" id="260">
 														<AdditionSource>
 															<Item>КнопкиШага</Item>
 															<Type>SearchStringRepresentation</Type>
 														</AdditionSource>
-														<ContextMenu name="КнопкиШагаСтрокаПоискаКонтекстноеМеню" id="240"/>
-														<ExtendedTooltip name="КнопкиШагаСтрокаПоискаРасширеннаяПодсказка" id="241"/>
+														<ContextMenu name="КнопкиШагаСтрокаПоискаКонтекстноеМеню" id="261"/>
+														<ExtendedTooltip name="КнопкиШагаСтрокаПоискаРасширеннаяПодсказка" id="262"/>
 													</SearchStringAddition>
-													<ViewStatusAddition name="КнопкиШагаСостояниеПросмотра" id="242">
+													<ViewStatusAddition name="КнопкиШагаСостояниеПросмотра" id="263">
 														<AdditionSource>
 															<Item>КнопкиШага</Item>
 															<Type>ViewStatusRepresentation</Type>
 														</AdditionSource>
-														<ContextMenu name="КнопкиШагаСостояниеПросмотраКонтекстноеМеню" id="243"/>
-														<ExtendedTooltip name="КнопкиШагаСостояниеПросмотраРасширеннаяПодсказка" id="244"/>
+														<ContextMenu name="КнопкиШагаСостояниеПросмотраКонтекстноеМеню" id="264"/>
+														<ExtendedTooltip name="КнопкиШагаСостояниеПросмотраРасширеннаяПодсказка" id="265"/>
 													</ViewStatusAddition>
-													<SearchControlAddition name="КнопкиШагаУправлениеПоиском" id="245">
+													<SearchControlAddition name="КнопкиШагаУправлениеПоиском" id="266">
 														<AdditionSource>
 															<Item>КнопкиШага</Item>
 															<Type>SearchControl</Type>
 														</AdditionSource>
-														<ContextMenu name="КнопкиШагаУправлениеПоискомКонтекстноеМеню" id="246"/>
-														<ExtendedTooltip name="КнопкиШагаУправлениеПоискомРасширеннаяПодсказка" id="247"/>
+														<ContextMenu name="КнопкиШагаУправлениеПоискомКонтекстноеМеню" id="267"/>
+														<ExtendedTooltip name="КнопкиШагаУправлениеПоискомРасширеннаяПодсказка" id="268"/>
 													</SearchControlAddition>
 													<Events>
 														<Event name="OnChange">СвойствоТаблицыПриИзменении</Event>
 													</Events>
 													<ChildItems>
-														<InputField name="КнопкиШагаЗаголовок" id="248">
+														<InputField name="КнопкиШагаЗаголовок" id="269">
 															<DataPath>КнопкиШага.Заголовок</DataPath>
 															<Title>
 																<v8:item>
@@ -1069,10 +1191,10 @@
 																	<v8:content>Кнопка</v8:content>
 																</v8:item>
 															</Title>
-															<ContextMenu name="КнопкиШагаЗаголовокКонтекстноеМеню" id="249"/>
-															<ExtendedTooltip name="КнопкиШагаЗаголовокРасширеннаяПодсказка" id="250"/>
+															<ContextMenu name="КнопкиШагаЗаголовокКонтекстноеМеню" id="270"/>
+															<ExtendedTooltip name="КнопкиШагаЗаголовокРасширеннаяПодсказка" id="271"/>
 														</InputField>
-														<InputField name="КнопкиШагаВид" id="251">
+														<InputField name="КнопкиШагаВид" id="272">
 															<DataPath>КнопкиШага.Вид</DataPath>
 															<Title>
 																<v8:item>
@@ -1080,10 +1202,10 @@
 																	<v8:content>Вид</v8:content>
 																</v8:item>
 															</Title>
-															<ContextMenu name="КнопкиШагаВидКонтекстноеМеню" id="252"/>
-															<ExtendedTooltip name="КнопкиШагаВидРасширеннаяПодсказка" id="253"/>
+															<ContextMenu name="КнопкиШагаВидКонтекстноеМеню" id="273"/>
+															<ExtendedTooltip name="КнопкиШагаВидРасширеннаяПодсказка" id="274"/>
 														</InputField>
-														<InputField name="КнопкиШагаДействие" id="254">
+														<InputField name="КнопкиШагаДействие" id="275">
 															<DataPath>КнопкиШага.Действие</DataPath>
 															<Title>
 																<v8:item>
@@ -1091,10 +1213,10 @@
 																	<v8:content>Действие</v8:content>
 																</v8:item>
 															</Title>
-															<ContextMenu name="КнопкиШагаДействиеКонтекстноеМеню" id="255"/>
-															<ExtendedTooltip name="КнопкиШагаДействиеРасширеннаяПодсказка" id="256"/>
+															<ContextMenu name="КнопкиШагаДействиеКонтекстноеМеню" id="276"/>
+															<ExtendedTooltip name="КнопкиШагаДействиеРасширеннаяПодсказка" id="277"/>
 														</InputField>
-														<InputField name="КнопкиШагаИдПерехода" id="257">
+														<InputField name="КнопкиШагаИдПерехода" id="278">
 															<DataPath>КнопкиШага.ИдПерехода</DataPath>
 															<Title>
 																<v8:item>
@@ -1103,10 +1225,10 @@
 																</v8:item>
 															</Title>
 															<ListChoiceMode>true</ListChoiceMode>
-															<ContextMenu name="КнопкиШагаИдПереходаКонтекстноеМеню" id="258"/>
-															<ExtendedTooltip name="КнопкиШагаИдПереходаРасширеннаяПодсказка" id="259"/>
+															<ContextMenu name="КнопкиШагаИдПереходаКонтекстноеМеню" id="279"/>
+															<ExtendedTooltip name="КнопкиШагаИдПереходаРасширеннаяПодсказка" id="280"/>
 														</InputField>
-														<CheckBoxField name="КнопкиШагаКомментарийОбязателен" id="260">
+														<CheckBoxField name="КнопкиШагаКомментарийОбязателен" id="281">
 															<DataPath>КнопкиШага.КомментарийОбязателен</DataPath>
 															<Title>
 																<v8:item>
@@ -1116,10 +1238,10 @@
 															</Title>
 															<TitleLocation>Right</TitleLocation>
 															<CheckBoxType>Auto</CheckBoxType>
-															<ContextMenu name="КнопкиШагаКомментарийОбязателенКонтекстноеМеню" id="261"/>
-															<ExtendedTooltip name="КнопкиШагаКомментарийОбязателенРасширеннаяПодсказка" id="262"/>
+															<ContextMenu name="КнопкиШагаКомментарийОбязателенКонтекстноеМеню" id="282"/>
+															<ExtendedTooltip name="КнопкиШагаКомментарийОбязателенРасширеннаяПодсказка" id="283"/>
 														</CheckBoxField>
-														<CheckBoxField name="КнопкиШагаПодтверждение" id="263">
+														<CheckBoxField name="КнопкиШагаПодтверждение" id="284">
 															<DataPath>КнопкиШага.Подтверждение</DataPath>
 															<Title>
 																<v8:item>
@@ -1129,10 +1251,10 @@
 															</Title>
 															<TitleLocation>Right</TitleLocation>
 															<CheckBoxType>Auto</CheckBoxType>
-															<ContextMenu name="КнопкиШагаПодтверждениеКонтекстноеМеню" id="264"/>
-															<ExtendedTooltip name="КнопкиШагаПодтверждениеРасширеннаяПодсказка" id="265"/>
+															<ContextMenu name="КнопкиШагаПодтверждениеКонтекстноеМеню" id="285"/>
+															<ExtendedTooltip name="КнопкиШагаПодтверждениеРасширеннаяПодсказка" id="286"/>
 														</CheckBoxField>
-														<InputField name="КнопкиШагаТекстПодтверждения" id="266">
+														<InputField name="КнопкиШагаТекстПодтверждения" id="287">
 															<DataPath>КнопкиШага.ТекстПодтверждения</DataPath>
 															<Title>
 																<v8:item>
@@ -1140,10 +1262,10 @@
 																	<v8:content>Текст подтверждения</v8:content>
 																</v8:item>
 															</Title>
-															<ContextMenu name="КнопкиШагаТекстПодтвержденияКонтекстноеМеню" id="267"/>
-															<ExtendedTooltip name="КнопкиШагаТекстПодтвержденияРасширеннаяПодсказка" id="268"/>
+															<ContextMenu name="КнопкиШагаТекстПодтвержденияКонтекстноеМеню" id="288"/>
+															<ExtendedTooltip name="КнопкиШагаТекстПодтвержденияРасширеннаяПодсказка" id="289"/>
 														</InputField>
-														<InputField name="КнопкиШагаОбработчик" id="269">
+														<InputField name="КнопкиШагаОбработчик" id="290">
 															<DataPath>КнопкиШага.Обработчик</DataPath>
 															<Title>
 																<v8:item>
@@ -1151,71 +1273,115 @@
 																	<v8:content>Обработчик</v8:content>
 																</v8:item>
 															</Title>
-															<ContextMenu name="КнопкиШагаОбработчикКонтекстноеМеню" id="270"/>
-															<ExtendedTooltip name="КнопкиШагаОбработчикРасширеннаяПодсказка" id="271"/>
+															<ContextMenu name="КнопкиШагаОбработчикКонтекстноеМеню" id="291"/>
+															<ExtendedTooltip name="КнопкиШагаОбработчикРасширеннаяПодсказка" id="292"/>
 														</InputField>
+														<InputField name="КнопкиШагаИмяФормы" id="293">
+															<DataPath>КнопкиШага.ИмяФормы</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Форма / отчёт</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Для действия «Открыть форму»: «Предмет» или полное имя формы, например «Отчет.ВаловаяПрибыль.Форма»</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ContextMenu name="КнопкиШагаИмяФормыКонтекстноеМеню" id="294"/>
+															<ExtendedTooltip name="КнопкиШагаИмяФормыРасширеннаяПодсказка" id="295"/>
+														</InputField>
+														<InputField name="КнопкиШагаВложеннаяСхема" id="296">
+															<DataPath>КнопкиШага.ВложеннаяСхема</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Схема процесса</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="КнопкиШагаВложеннаяСхемаКонтекстноеМеню" id="297"/>
+															<ExtendedTooltip name="КнопкиШагаВложеннаяСхемаРасширеннаяПодсказка" id="298"/>
+														</InputField>
+														<LabelField name="КнопкиШагаТекстВидимости" id="299">
+															<DataPath>КнопкиШага.ТекстВидимости</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Видна, если</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="КнопкиШагаТекстВидимостиКонтекстноеМеню" id="300"/>
+															<ExtendedTooltip name="КнопкиШагаТекстВидимостиРасширеннаяПодсказка" id="301"/>
+														</LabelField>
 													</ChildItems>
 												</Table>
-												<LabelDecoration name="ПодсказкаКнопки" id="272">
+												<Button name="ФормаУсловиеВидимости" id="302">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.УсловиеВидимости</CommandName>
+													<ExtendedTooltip name="ФормаУсловиеВидимостиРасширеннаяПодсказка" id="303"/>
+												</Button>
+												<LabelDecoration name="ПодсказкаКнопки" id="304">
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Без настроенных кнопок каждая линия из задачи становится кнопкой (заголовок — подпись линии), при одной линии — «Выполнено».</v8:content>
 														</v8:item>
 													</Title>
-													<ContextMenu name="ПодсказкаКнопкиКонтекстноеМеню" id="273"/>
-													<ExtendedTooltip name="ПодсказкаКнопкиРасширеннаяПодсказка" id="274"/>
+													<ContextMenu name="ПодсказкаКнопкиКонтекстноеМеню" id="305"/>
+													<ExtendedTooltip name="ПодсказкаКнопкиРасширеннаяПодсказка" id="306"/>
 												</LabelDecoration>
 											</ChildItems>
 										</Page>
-										<Page name="СтраницаПоля" id="275">
+										<Page name="СтраницаПоля" id="307">
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Поля</v8:content>
 												</v8:item>
 											</Title>
-											<ExtendedTooltip name="СтраницаПоляРасширеннаяПодсказка" id="276"/>
+											<ExtendedTooltip name="СтраницаПоляРасширеннаяПодсказка" id="308"/>
 											<ChildItems>
-												<Table name="ПоляЗаполнения" id="277">
+												<Table name="ПоляЗаполнения" id="309">
 													<Representation>List</Representation>
 													<TitleLocation>None</TitleLocation>
 													<Height>5</Height>
 													<DataPath>ЭлементШага.ПоляЗаполнения</DataPath>
 													<RowFilter xsi:nil="true"/>
-													<ContextMenu name="ПоляЗаполненияКонтекстноеМеню" id="278"/>
-													<AutoCommandBar name="ПоляЗаполненияКоманднаяПанель" id="279">
+													<ContextMenu name="ПоляЗаполненияКонтекстноеМеню" id="310"/>
+													<AutoCommandBar name="ПоляЗаполненияКоманднаяПанель" id="311">
 													</AutoCommandBar>
-													<ExtendedTooltip name="ПоляЗаполненияРасширеннаяПодсказка" id="280"/>
-													<SearchStringAddition name="ПоляЗаполненияСтрокаПоиска" id="281">
+													<ExtendedTooltip name="ПоляЗаполненияРасширеннаяПодсказка" id="312"/>
+													<SearchStringAddition name="ПоляЗаполненияСтрокаПоиска" id="313">
 														<AdditionSource>
 															<Item>ПоляЗаполнения</Item>
 															<Type>SearchStringRepresentation</Type>
 														</AdditionSource>
-														<ContextMenu name="ПоляЗаполненияСтрокаПоискаКонтекстноеМеню" id="282"/>
-														<ExtendedTooltip name="ПоляЗаполненияСтрокаПоискаРасширеннаяПодсказка" id="283"/>
+														<ContextMenu name="ПоляЗаполненияСтрокаПоискаКонтекстноеМеню" id="314"/>
+														<ExtendedTooltip name="ПоляЗаполненияСтрокаПоискаРасширеннаяПодсказка" id="315"/>
 													</SearchStringAddition>
-													<ViewStatusAddition name="ПоляЗаполненияСостояниеПросмотра" id="284">
+													<ViewStatusAddition name="ПоляЗаполненияСостояниеПросмотра" id="316">
 														<AdditionSource>
 															<Item>ПоляЗаполнения</Item>
 															<Type>ViewStatusRepresentation</Type>
 														</AdditionSource>
-														<ContextMenu name="ПоляЗаполненияСостояниеПросмотраКонтекстноеМеню" id="285"/>
-														<ExtendedTooltip name="ПоляЗаполненияСостояниеПросмотраРасширеннаяПодсказка" id="286"/>
+														<ContextMenu name="ПоляЗаполненияСостояниеПросмотраКонтекстноеМеню" id="317"/>
+														<ExtendedTooltip name="ПоляЗаполненияСостояниеПросмотраРасширеннаяПодсказка" id="318"/>
 													</ViewStatusAddition>
-													<SearchControlAddition name="ПоляЗаполненияУправлениеПоиском" id="287">
+													<SearchControlAddition name="ПоляЗаполненияУправлениеПоиском" id="319">
 														<AdditionSource>
 															<Item>ПоляЗаполнения</Item>
 															<Type>SearchControl</Type>
 														</AdditionSource>
-														<ContextMenu name="ПоляЗаполненияУправлениеПоискомКонтекстноеМеню" id="288"/>
-														<ExtendedTooltip name="ПоляЗаполненияУправлениеПоискомРасширеннаяПодсказка" id="289"/>
+														<ContextMenu name="ПоляЗаполненияУправлениеПоискомКонтекстноеМеню" id="320"/>
+														<ExtendedTooltip name="ПоляЗаполненияУправлениеПоискомРасширеннаяПодсказка" id="321"/>
 													</SearchControlAddition>
 													<Events>
 														<Event name="OnChange">СвойствоТаблицыПриИзменении</Event>
 													</Events>
 													<ChildItems>
-														<InputField name="ПоляЗаполненияПеременная" id="290">
+														<InputField name="ПоляЗаполненияПеременная" id="322">
 															<DataPath>ЭлементШага.ПоляЗаполнения.Переменная</DataPath>
 															<Title>
 																<v8:item>
@@ -1223,10 +1389,10 @@
 																	<v8:content>Переменная</v8:content>
 																</v8:item>
 															</Title>
-															<ContextMenu name="ПоляЗаполненияПеременнаяКонтекстноеМеню" id="291"/>
-															<ExtendedTooltip name="ПоляЗаполненияПеременнаяРасширеннаяПодсказка" id="292"/>
+															<ContextMenu name="ПоляЗаполненияПеременнаяКонтекстноеМеню" id="323"/>
+															<ExtendedTooltip name="ПоляЗаполненияПеременнаяРасширеннаяПодсказка" id="324"/>
 														</InputField>
-														<InputField name="ПоляЗаполненияЗаголовок" id="293">
+														<InputField name="ПоляЗаполненияЗаголовок" id="325">
 															<DataPath>ЭлементШага.ПоляЗаполнения.Заголовок</DataPath>
 															<Title>
 																<v8:item>
@@ -1234,10 +1400,10 @@
 																	<v8:content>Заголовок в задаче</v8:content>
 																</v8:item>
 															</Title>
-															<ContextMenu name="ПоляЗаполненияЗаголовокКонтекстноеМеню" id="294"/>
-															<ExtendedTooltip name="ПоляЗаполненияЗаголовокРасширеннаяПодсказка" id="295"/>
+															<ContextMenu name="ПоляЗаполненияЗаголовокКонтекстноеМеню" id="326"/>
+															<ExtendedTooltip name="ПоляЗаполненияЗаголовокРасширеннаяПодсказка" id="327"/>
 														</InputField>
-														<CheckBoxField name="ПоляЗаполненияОбязательное" id="296">
+														<CheckBoxField name="ПоляЗаполненияОбязательное" id="328">
 															<DataPath>ЭлементШага.ПоляЗаполнения.Обязательное</DataPath>
 															<Title>
 																<v8:item>
@@ -1247,10 +1413,10 @@
 															</Title>
 															<TitleLocation>Right</TitleLocation>
 															<CheckBoxType>Auto</CheckBoxType>
-															<ContextMenu name="ПоляЗаполненияОбязательноеКонтекстноеМеню" id="297"/>
-															<ExtendedTooltip name="ПоляЗаполненияОбязательноеРасширеннаяПодсказка" id="298"/>
+															<ContextMenu name="ПоляЗаполненияОбязательноеКонтекстноеМеню" id="329"/>
+															<ExtendedTooltip name="ПоляЗаполненияОбязательноеРасширеннаяПодсказка" id="330"/>
 														</CheckBoxField>
-														<CheckBoxField name="ПоляЗаполненияТолькоПросмотр" id="299">
+														<CheckBoxField name="ПоляЗаполненияТолькоПросмотр" id="331">
 															<DataPath>ЭлементШага.ПоляЗаполнения.ТолькоПросмотр</DataPath>
 															<Title>
 																<v8:item>
@@ -1260,33 +1426,33 @@
 															</Title>
 															<TitleLocation>Right</TitleLocation>
 															<CheckBoxType>Auto</CheckBoxType>
-															<ContextMenu name="ПоляЗаполненияТолькоПросмотрКонтекстноеМеню" id="300"/>
-															<ExtendedTooltip name="ПоляЗаполненияТолькоПросмотрРасширеннаяПодсказка" id="301"/>
+															<ContextMenu name="ПоляЗаполненияТолькоПросмотрКонтекстноеМеню" id="332"/>
+															<ExtendedTooltip name="ПоляЗаполненияТолькоПросмотрРасширеннаяПодсказка" id="333"/>
 														</CheckBoxField>
 													</ChildItems>
 												</Table>
-												<LabelDecoration name="ПодсказкаПоля" id="302">
+												<LabelDecoration name="ПодсказкаПоля" id="334">
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Исполнитель видит эти переменные в задаче и заполняет их. Создать переменную — кнопка «Переменные схемы» вверху.</v8:content>
 														</v8:item>
 													</Title>
-													<ContextMenu name="ПодсказкаПоляКонтекстноеМеню" id="303"/>
-													<ExtendedTooltip name="ПодсказкаПоляРасширеннаяПодсказка" id="304"/>
+													<ContextMenu name="ПодсказкаПоляКонтекстноеМеню" id="335"/>
+													<ExtendedTooltip name="ПодсказкаПоляРасширеннаяПодсказка" id="336"/>
 												</LabelDecoration>
 											</ChildItems>
 										</Page>
-										<Page name="СтраницаЛиния" id="305">
+										<Page name="СтраницаЛиния" id="337">
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Линия</v8:content>
 												</v8:item>
 											</Title>
-											<ExtendedTooltip name="СтраницаЛинияРасширеннаяПодсказка" id="306"/>
+											<ExtendedTooltip name="СтраницаЛинияРасширеннаяПодсказка" id="338"/>
 											<ChildItems>
-												<LabelField name="Лин_Наименование" id="307">
+												<LabelField name="Лин_Наименование" id="339">
 													<DataPath>Лин_Наименование</DataPath>
 													<Title>
 														<v8:item>
@@ -1294,10 +1460,10 @@
 															<v8:content>Линия</v8:content>
 														</v8:item>
 													</Title>
-													<ContextMenu name="Лин_НаименованиеКонтекстноеМеню" id="308"/>
-													<ExtendedTooltip name="Лин_НаименованиеРасширеннаяПодсказка" id="309"/>
+													<ContextMenu name="Лин_НаименованиеКонтекстноеМеню" id="340"/>
+													<ExtendedTooltip name="Лин_НаименованиеРасширеннаяПодсказка" id="341"/>
 												</LabelField>
-												<InputField name="Лин_Подпись" id="310">
+												<InputField name="Лин_Подпись" id="342">
 													<DataPath>Лин_Подпись</DataPath>
 													<Title>
 														<v8:item>
@@ -1311,13 +1477,13 @@
 															<v8:content>Подпись линии на схеме; у линии из задачи без настроенных кнопок — заголовок кнопки</v8:content>
 														</v8:item>
 													</ToolTip>
-													<ContextMenu name="Лин_ПодписьКонтекстноеМеню" id="311"/>
-													<ExtendedTooltip name="Лин_ПодписьРасширеннаяПодсказка" id="312"/>
+													<ContextMenu name="Лин_ПодписьКонтекстноеМеню" id="343"/>
+													<ExtendedTooltip name="Лин_ПодписьРасширеннаяПодсказка" id="344"/>
 													<Events>
 														<Event name="OnChange">СвойствоПриИзменении</Event>
 													</Events>
 												</InputField>
-												<CheckBoxField name="Лин_ПоУмолчанию" id="313">
+												<CheckBoxField name="Лин_ПоУмолчанию" id="345">
 													<DataPath>Лин_ПоУмолчанию</DataPath>
 													<Title>
 														<v8:item>
@@ -1327,13 +1493,13 @@
 													</Title>
 													<TitleLocation>Right</TitleLocation>
 													<CheckBoxType>Auto</CheckBoxType>
-													<ContextMenu name="Лин_ПоУмолчаниюКонтекстноеМеню" id="314"/>
-													<ExtendedTooltip name="Лин_ПоУмолчаниюРасширеннаяПодсказка" id="315"/>
+													<ContextMenu name="Лин_ПоУмолчаниюКонтекстноеМеню" id="346"/>
+													<ExtendedTooltip name="Лин_ПоУмолчаниюРасширеннаяПодсказка" id="347"/>
 													<Events>
 														<Event name="OnChange">СвойствоПриИзменении</Event>
 													</Events>
 												</CheckBoxField>
-												<InputField name="Лин_ИдКнопки" id="316">
+												<InputField name="Лин_ИдКнопки" id="348">
 													<DataPath>Лин_ИдКнопки</DataPath>
 													<Title>
 														<v8:item>
@@ -1348,13 +1514,13 @@
 														</v8:item>
 													</ToolTip>
 													<ListChoiceMode>true</ListChoiceMode>
-													<ContextMenu name="Лин_ИдКнопкиКонтекстноеМеню" id="317"/>
-													<ExtendedTooltip name="Лин_ИдКнопкиРасширеннаяПодсказка" id="318"/>
+													<ContextMenu name="Лин_ИдКнопкиКонтекстноеМеню" id="349"/>
+													<ExtendedTooltip name="Лин_ИдКнопкиРасширеннаяПодсказка" id="350"/>
 													<Events>
 														<Event name="OnChange">СвойствоПриИзменении</Event>
 													</Events>
 												</InputField>
-												<InputField name="Лин_ВидУсловия" id="319">
+												<InputField name="Лин_ВидУсловия" id="351">
 													<DataPath>Лин_ВидУсловия</DataPath>
 													<Title>
 														<v8:item>
@@ -1362,13 +1528,13 @@
 															<v8:content>Условие</v8:content>
 														</v8:item>
 													</Title>
-													<ContextMenu name="Лин_ВидУсловияКонтекстноеМеню" id="320"/>
-													<ExtendedTooltip name="Лин_ВидУсловияРасширеннаяПодсказка" id="321"/>
+													<ContextMenu name="Лин_ВидУсловияКонтекстноеМеню" id="352"/>
+													<ExtendedTooltip name="Лин_ВидУсловияРасширеннаяПодсказка" id="353"/>
 													<Events>
 														<Event name="OnChange">ВидУсловияПриИзменении</Event>
 													</Events>
 												</InputField>
-												<InputField name="Лин_ОбработчикУсловия" id="322">
+												<InputField name="Лин_ОбработчикУсловия" id="354">
 													<DataPath>Лин_ОбработчикУсловия</DataPath>
 													<Title>
 														<v8:item>
@@ -1376,13 +1542,13 @@
 															<v8:content>Обработчик условия</v8:content>
 														</v8:item>
 													</Title>
-													<ContextMenu name="Лин_ОбработчикУсловияКонтекстноеМеню" id="323"/>
-													<ExtendedTooltip name="Лин_ОбработчикУсловияРасширеннаяПодсказка" id="324"/>
+													<ContextMenu name="Лин_ОбработчикУсловияКонтекстноеМеню" id="355"/>
+													<ExtendedTooltip name="Лин_ОбработчикУсловияРасширеннаяПодсказка" id="356"/>
 													<Events>
 														<Event name="OnChange">СвойствоПриИзменении</Event>
 													</Events>
 												</InputField>
-												<UsualGroup name="ГруппаУсловиеОтбор" id="325">
+												<UsualGroup name="ГруппаУсловиеОтбор" id="357">
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -1393,9 +1559,9 @@
 													<Behavior>Usual</Behavior>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
-													<ExtendedTooltip name="ГруппаУсловиеОтборРасширеннаяПодсказка" id="326"/>
+													<ExtendedTooltip name="ГруппаУсловиеОтборРасширеннаяПодсказка" id="358"/>
 													<ChildItems>
-														<LabelField name="Лин_ТекстУсловия" id="327">
+														<LabelField name="Лин_ТекстУсловия" id="359">
 															<DataPath>Лин_ТекстУсловия</DataPath>
 															<Title>
 																<v8:item>
@@ -1404,17 +1570,17 @@
 																</v8:item>
 															</Title>
 															<Height>2</Height>
-															<ContextMenu name="Лин_ТекстУсловияКонтекстноеМеню" id="328"/>
-															<ExtendedTooltip name="Лин_ТекстУсловияРасширеннаяПодсказка" id="329"/>
+															<ContextMenu name="Лин_ТекстУсловияКонтекстноеМеню" id="360"/>
+															<ExtendedTooltip name="Лин_ТекстУсловияРасширеннаяПодсказка" id="361"/>
 														</LabelField>
-														<Button name="ФормаНастроитьУсловие" id="330">
+														<Button name="ФормаНастроитьУсловие" id="362">
 															<Type>UsualButton</Type>
 															<CommandName>Form.Command.НастроитьУсловие</CommandName>
-															<ExtendedTooltip name="ФормаНастроитьУсловиеРасширеннаяПодсказка" id="331"/>
+															<ExtendedTooltip name="ФормаНастроитьУсловиеРасширеннаяПодсказка" id="363"/>
 														</Button>
 													</ChildItems>
 												</UsualGroup>
-												<CheckBoxField name="Лин_ЭтоВозврат" id="332">
+												<CheckBoxField name="Лин_ЭтоВозврат" id="364">
 													<DataPath>Лин_ЭтоВозврат</DataPath>
 													<Title>
 														<v8:item>
@@ -1424,13 +1590,13 @@
 													</Title>
 													<TitleLocation>Right</TitleLocation>
 													<CheckBoxType>Auto</CheckBoxType>
-													<ContextMenu name="Лин_ЭтоВозвратКонтекстноеМеню" id="333"/>
-													<ExtendedTooltip name="Лин_ЭтоВозвратРасширеннаяПодсказка" id="334"/>
+													<ContextMenu name="Лин_ЭтоВозвратКонтекстноеМеню" id="365"/>
+													<ExtendedTooltip name="Лин_ЭтоВозвратРасширеннаяПодсказка" id="366"/>
 													<Events>
 														<Event name="OnChange">СвойствоПриИзменении</Event>
 													</Events>
 												</CheckBoxField>
-												<InputField name="Лин_Порядок" id="335">
+												<InputField name="Лин_Порядок" id="367">
 													<DataPath>Лин_Порядок</DataPath>
 													<Title>
 														<v8:item>
@@ -1440,27 +1606,27 @@
 													</Title>
 													<Width>5</Width>
 													<HorizontalStretch>false</HorizontalStretch>
-													<ContextMenu name="Лин_ПорядокКонтекстноеМеню" id="336"/>
-													<ExtendedTooltip name="Лин_ПорядокРасширеннаяПодсказка" id="337"/>
+													<ContextMenu name="Лин_ПорядокКонтекстноеМеню" id="368"/>
+													<ExtendedTooltip name="Лин_ПорядокРасширеннаяПодсказка" id="369"/>
 													<Events>
 														<Event name="OnChange">СвойствоПриИзменении</Event>
 													</Events>
 												</InputField>
-												<LabelField name="ПодсказкаЛинии" id="338">
+												<LabelField name="ПодсказкаЛинии" id="370">
 													<DataPath>ПодсказкаЛинии</DataPath>
 													<TitleLocation>None</TitleLocation>
 													<Height>2</Height>
-													<ContextMenu name="ПодсказкаЛинииКонтекстноеМеню" id="339"/>
-													<ExtendedTooltip name="ПодсказкаЛинииРасширеннаяПодсказка" id="340"/>
+													<ContextMenu name="ПодсказкаЛинииКонтекстноеМеню" id="371"/>
+													<ExtendedTooltip name="ПодсказкаЛинииРасширеннаяПодсказка" id="372"/>
 												</LabelField>
 											</ChildItems>
 										</Page>
 									</ChildItems>
 								</Pages>
-								<Button name="ФормаЗаписатьСвойства" id="341">
+								<Button name="ФормаЗаписатьСвойства" id="373">
 									<Type>UsualButton</Type>
 									<CommandName>Form.Command.ЗаписатьСвойства</CommandName>
-									<ExtendedTooltip name="ФормаЗаписатьСвойстваРасширеннаяПодсказка" id="342"/>
+									<ExtendedTooltip name="ФормаЗаписатьСвойстваРасширеннаяПодсказка" id="374"/>
 								</Button>
 							</ChildItems>
 						</UsualGroup>
@@ -1468,7 +1634,7 @@
 				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
-		<InputField name="ТекстПроверки" id="343">
+		<InputField name="ТекстПроверки" id="375">
 			<DataPath>ТекстПроверки</DataPath>
 			<ReadOnly>true</ReadOnly>
 			<Title>
@@ -1480,8 +1646,8 @@
 			<TitleLocation>Top</TitleLocation>
 			<Height>4</Height>
 			<MultiLine>true</MultiLine>
-			<ContextMenu name="ТекстПроверкиКонтекстноеМеню" id="344"/>
-			<ExtendedTooltip name="ТекстПроверкиРасширеннаяПодсказка" id="345"/>
+			<ContextMenu name="ТекстПроверкиКонтекстноеМеню" id="376"/>
+			<ExtendedTooltip name="ТекстПроверкиРасширеннаяПодсказка" id="377"/>
 		</InputField>
 	</ChildItems>
 	<Attributes>
@@ -1936,6 +2102,47 @@
 						<v8:Type>cfg:CatalogRef.кбп_ОбработчикиПроцессов</v8:Type>
 					</Type>
 				</Column>
+				<Column name="ИмяФормы" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Форма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>255</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВложеннаяСхема" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Схема процесса</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.кбп_СхемыПроцессов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТекстВидимости" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Видна, если</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="ТекущийИд" id="13">
@@ -2372,6 +2579,38 @@
 				</v8:item>
 			</ToolTip>
 			<Action>НастроитьУсловие</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УсловиеВидимости" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Условие видимости…</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Когда показывать выбранную кнопку (по предмету и переменным)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УсловиеВидимости</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПравилаЗапуска" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Правила запуска</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автоматический запуск процесса при записи или проведении объекта, по расписанию; исключения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПравилаЗапуска</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
