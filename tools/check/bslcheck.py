@@ -173,7 +173,7 @@ def check_form(path, raw, local):
             print(path, f"действие команды {el.text} не найдено"); problems += 1
     for mm in re.finditer(rf"Элементы\.({ID})", raw):
         n = mm.group(1)
-        if n not in names and n not in ("Добавить", "Удалить", "Найти", "Переместить"):
+        if n not in names and n not in ("Добавить", "Вставить", "Удалить", "Найти", "Переместить"):
             print(path, f"элемент {n} не найден в форме"); problems += 1
     attrs = {a.attrib["name"] for a in r.iter() if a.tag.endswith("}Attribute")}
     # директивы: у каждой процедуры формы должна быть директива

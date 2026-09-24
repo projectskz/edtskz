@@ -253,6 +253,7 @@ class TableEl(El):
 
 
 def table(name, path, columns, events=None, bar=None, **kw):
+    """RowFilter=None — без отбора строк (таблицы отбора компоновщика настроек)."""
     p = dict(Representation="List", RowFilter=Raw(lambda i: f'{T(i)}<RowFilter xsi:nil="true"/>\n'))
     p.update(kw)
     return TableEl(name, path, columns, events, bar, **p)
@@ -284,6 +285,16 @@ T_DATETIME = "<v8:Type>xs:dateTime</v8:Type>\n<v8:DateQualifiers>\n\t<v8:DateFra
 T_ANYREF = "<v8:TypeSet>cfg:AnyIBRef</v8:TypeSet>\n"
 T_VT = "<v8:Type>v8:ValueTable</v8:Type>\n"
 T_VL = "<v8:Type>v8:ValueListType</v8:Type>\n"
+T_COMPOSER = "<v8:Type>dcsset:SettingsComposer</v8:Type>\n"
+T_TYPEDESC = "<v8:Type>v8:TypeDescription</v8:Type>\n"
+# Составной тип переменных процессов (как у ПВХ кбп_ПеременныеПроцессов).
+T_VARVALUE = ("<v8:Type>xs:boolean</v8:Type>\n<v8:Type>xs:string</v8:Type>\n<v8:Type>xs:dateTime</v8:Type>\n"
+              "<v8:Type>xs:decimal</v8:Type>\n<v8:TypeSet>cfg:AnyIBRef</v8:TypeSet>\n"
+              "<v8:NumberQualifiers>\n\t<v8:Digits>17</v8:Digits>\n\t<v8:FractionDigits>5</v8:FractionDigits>\n"
+              "\t<v8:AllowedSign>Any</v8:AllowedSign>\n</v8:NumberQualifiers>\n"
+              "<v8:StringQualifiers>\n\t<v8:Length>1024</v8:Length>\n\t<v8:AllowedLength>Variable</v8:AllowedLength>\n"
+              "</v8:StringQualifiers>\n"
+              "<v8:DateQualifiers>\n\t<v8:DateFractions>DateTime</v8:DateFractions>\n</v8:DateQualifiers>\n")
 T_GRAPH = '<v8:Type xmlns:d5p1="http://v8.1c.ru/8.2/data/graphscheme">d5p1:FlowchartContextType</v8:Type>\n'
 
 

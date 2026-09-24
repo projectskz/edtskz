@@ -12,7 +12,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from formlib import (Attr, Cmd, SRC, T_ANYREF, T_BOOL, T_DATETIME, T_GRAPH, T_VT, button, check, data_processor_md,
+from formlib import (Attr, Cmd, Raw, SRC, T, T_ANYREF, T_BOOL, T_COMPOSER, T_DATETIME, T_GRAPH, T_VARVALUE, T_VT, button, check, data_processor_md,
                      command_bar, deco, field, form, form_md, group, label, page, pages, schema_field, t_cfg, t_num, t_str, table,
                      write)
 
@@ -51,11 +51,14 @@ KONSTR_COMMANDS = [
     Cmd("Опубликовать", "Опубликовать", "Проверить и опубликовать черновик"),
     Cmd("ИзменитьСхему", "Изменить схему", "Создать черновик из опубликованной версии"),
     Cmd("ЗапуститьПроцесс", "Запустить процесс", "Запустить процесс по опубликованной версии схемы"),
+    Cmd("Переменные", "Переменные схемы", "Переменные процесса: данные, которые заполняют в задачах, передают во вложенные "
+                                         "процессы и проверяют в условиях"),
     Cmd("Редактирование", "Редактирование", "Включить или выключить правку схемы", "StdPicture.Change"),
     Cmd("СвойстваЭлемента", "Свойства элемента", "Показать свойства выделенного элемента схемы"),
     Cmd("Перечитать", "Перечитать", "Перечитать версию из базы", "StdPicture.Refresh"),
     Cmd("СтруктураСхемы", "Структура схемы", "Диагностика: виды и свойства элементов графической схемы"),
     Cmd("ЗаписатьСвойства", "Записать свойства", "Записать свойства выбранного шага или линии", "StdPicture.Write"),
+    Cmd("НастроитьУсловие", "Настроить условие…", "Условие по реквизитам предмета и переменным процесса"),
 ]
 
 
@@ -71,16 +74,22 @@ def konstruktor_form():
     ], horizontal=True)
 
     steps = table("Шаги", "Шаги", cols("Шаги", [
-        ("Ошибка", "!", "check"),
+        ("Метка", "!", "field", {"Width": 2, "ToolTip": "Есть ошибка проверки"}),
         ("Наименование", "Элемент", "field"),
         ("Вид", "Вид", "field", {"Width": 10}),
     ]), events={"Selection": "ШагиВыбор", "OnActivateRow": "ШагиПриАктивизацииСтроки"}, bar=[],
         ReadOnly=True, ChangeRowSet=False, ChangeRowOrder=False, Height=8, Title="Шаги и линии схемы",
         TitleLocation="Top", Header=False)
 
+    tch = {"OnChange": "СвойствоТаблицыПриИзменении"}
     page_step = page("СтраницаШаг", "Шаг", [
-        label("ЭлементШагаНаименование", "ЭлементШага.Description", "Наименование"),
+        field("ЭлементШагаНаименование", "ЭлементШага.Description", "Название", events=ch,
+              ToolTip="Название шага на схеме и в задачах"),
         label("ЭлементШагаТипШага", "ЭлементШага.ТипШага", "Тип шага"),
+        field("ЭлементШагаВидАвтошага", "ЭлементШага.ТипШага", "Вид шага", events=on_change("ВидШагаПриИзменении"),
+              ListChoiceMode=True,
+              ToolTip="Элемент «Обработка» на схеме может быть обработкой (автоматическое действие) или таймером"),
+        label("ПодсказкаШага", "ПодсказкаШага", TitleLocation="None", Height=2),
         field("ЭлементШагаИнструкция", "ЭлементШага.Инструкция", "Инструкция исполнителю", events=ch,
               TitleLocation="Top", MultiLine=True, Height=3),
         group("ГруппаСрок", [
@@ -98,9 +107,38 @@ def konstruktor_form():
         check("ЭлементШагаТотЖеИсполнительПриВозврате", "ЭлементШага.ТотЖеИсполнительПриВозврате",
               "При возврате на этот шаг — тому же исполнителю", events=ch),
         field("ЭлементШагаОбработчик", "ЭлементШага.Обработчик", "Обработчик", events=ch),
+        group("ГруппаТаймер", [
+            group("ГруппаТаймерСрок", [
+                field("ЭлементШагаТаймерЗначение", "ЭлементШага.ТаймерЗначение", "Ждать", events=ch, Width=6,
+                      HorizontalStretch=False),
+                field("ЭлементШагаТаймерЕдиница", "ЭлементШага.ТаймерЕдиница", None, events=ch, TitleLocation="None"),
+            ], title="Ждать", horizontal=True),
+            field("ЭлементШагаТаймерИзПеременной", "ЭлементШага.ТаймерИзПеременной", "или до даты из переменной",
+                  events=ch, ToolTip="Переменная процесса с датой; если заполнена, время ожидания не используется"),
+        ], title="Таймер"),
+        group("ГруппаСлияние", [
+            field("ЭлементШагаРежимСлияния", "ЭлементШага.РежимСлияния", "Продолжить, когда пришли", events=ch,
+                  ToolTip="Все ветки — ждать все; любая ветка — первая пришедшая закрывает остальные; "
+                          "N из M — после N веток остальные закрываются"),
+            field("ЭлементШагаКоличествоДляСлияния", "ЭлементШага.КоличествоДляСлияния", "N", events=ch, Width=4,
+                  HorizontalStretch=False),
+        ], title="Слияние"),
+        group("ГруппаВложенный", [
+            field("ЭлементШагаВложеннаяСхема", "ЭлементШага.ВложеннаяСхема", "Схема вложенного процесса", events=ch),
+            field("ЭлементШагаРежимВложенного", "ЭлементШага.РежимВложенного", "Режим", events=ch,
+                  ToolTip="Синхронно — шаг ждёт завершения вложенного процесса; асинхронно — процесс идёт дальше сразу"),
+            table("ПараметрыВложенного", "ЭлементШага.ПараметрыВложенного", cols("ПараметрыВложенного", [
+                ("ПеременнаяРодителя", "Переменная этого процесса", "field"),
+                ("ПеременнаяДочернего", "Переменная вложенного", "field"),
+                ("Вход", "Передать", "check"),
+                ("Выход", "Вернуть", "check"),
+            ], path="ЭлементШага.ПараметрыВложенного"), events=tch, Height=3, Title="Передача переменных",
+                TitleLocation="Top"),
+            deco("ПодсказкаВложенный", "Если таблица пуста, передаются переменные с одинаковыми именами: "
+                                      "в вложенный — отмеченные «Вход», обратно — отмеченные «Выход»."),
+        ], title="Вложенный процесс"),
     ])
 
-    tch = {"OnChange": "СвойствоТаблицыПриИзменении"}
     page_exec = page("СтраницаИсполнители", "Исполнители", [
         table("ИсполнителиШага", "ИсполнителиШага", cols("ИсполнителиШага", [
             ("СпособАдресации", "Способ", "field"),
@@ -127,33 +165,52 @@ def konstruktor_form():
         deco("ПодсказкаКнопки", "Без настроенных кнопок каждая линия из задачи становится кнопкой "
                                 "(заголовок — подпись линии), при одной линии — «Выполнено»."),
     ])
+    page_fields = page("СтраницаПоля", "Поля", [
+        table("ПоляЗаполнения", "ЭлементШага.ПоляЗаполнения", cols("ПоляЗаполнения", [
+            ("Переменная", "Переменная", "field"),
+            ("Заголовок", "Заголовок в задаче", "field"),
+            ("Обязательное", "Обязательное", "check"),
+            ("ТолькоПросмотр", "Только просмотр", "check"),
+        ], path="ЭлементШага.ПоляЗаполнения"), events=tch, Height=5, TitleLocation="None"),
+        deco("ПодсказкаПоля", "Исполнитель видит эти переменные в задаче и заполняет их. "
+                              "Создать переменную — кнопка «Переменные схемы» вверху."),
+    ])
     page_line = page("СтраницаЛиния", "Линия", [
         label("Лин_Наименование", "Лин_Наименование", "Линия"),
-        check("Лин_ПоУмолчанию", "Лин_ПоУмолчанию", "По умолчанию (ветка «Нет» у Условия)", events=ch),
+        field("Лин_Подпись", "Лин_Подпись", "Подпись", events=ch,
+              ToolTip="Подпись линии на схеме; у линии из задачи без настроенных кнопок — заголовок кнопки"),
+        check("Лин_ПоУмолчанию", "Лин_ПоУмолчанию", "По умолчанию (если другие условия не выполнены)", events=ch),
         field("Лин_ИдКнопки", "Лин_ИдКнопки", "Результат задачи", events=ch, ListChoiceMode=True,
               ToolTip="Ветка выбирается, если задача выполнена этой кнопкой"),
-        field("Лин_ВидУсловия", "Лин_ВидУсловия", "Условие", events=ch),
+        field("Лин_ВидУсловия", "Лин_ВидУсловия", "Условие", events=on_change("ВидУсловияПриИзменении")),
         field("Лин_ОбработчикУсловия", "Лин_ОбработчикУсловия", "Обработчик условия", events=ch),
-        check("Лин_ЭтоВозврат", "Лин_ЭтоВозврат", "Это возврат (учитывать в статистике)", events=ch),
+        group("ГруппаУсловиеОтбор", [
+            label("Лин_ТекстУсловия", "Лин_ТекстУсловия", "Условие", Height=2),
+            button("ФормаНастроитьУсловие", "НастроитьУсловие"),
+        ], title="Условие-отбор"),
+        check("Лин_ЭтоВозврат", "Лин_ЭтоВозврат", "Это возврат (линия назад по маршруту)", events=ch),
         field("Лин_Порядок", "Лин_Порядок", "Порядок проверки", events=ch, Width=5, HorizontalStretch=False),
+        label("ПодсказкаЛинии", "ПодсказкаЛинии", TitleLocation="None", Height=2),
     ])
     page_none = page("СтраницаПусто", "Нет элемента", [
         deco("ПодсказкаПусто", "Выберите шаг или линию в списке выше или дважды щёлкните элемент на схеме."),
     ])
 
     props = group("Свойства", [
-        pages("СтраницыСвойств", [page_none, page_step, page_exec, page_buttons, page_line],
+        pages("СтраницыСвойств", [page_none, page_step, page_exec, page_buttons, page_fields, page_line],
               PagesRepresentation="TabsOnTop"),
         button("ФормаЗаписатьСвойства", "ЗаписатьСвойства"),
     ], title="Свойства", show_title=True, representation="NormalSeparation", TitleDataPath="ЗаголовокСвойств")
 
-    right = group("Правая", [steps, props], Width=48, HorizontalStretch=False)
+    right = group("Правая", [steps, props], Width=52, HorizontalStretch=False)
 
     # Палитра: стандартные команды поля графической схемы (имена подтверждены формами типовых конфигураций).
     palette = command_bar("ПалитраСхемы", [
         button(f"Палитра{name}", f"Form.Item.ГрафСхема.StandardCommand.InsertItem{cmd}", usual=False)
         for name, cmd in (("Старт", "Start"), ("Действие", "Activity"), ("Условие", "Condition"),
-                          ("Обработка", "Processing"), ("Завершение", "Completion"), ("Декорация", "Decoration"))
+                          ("ВыборВарианта", "Switch"), ("Разделение", "Split"), ("Слияние", "Join"),
+                          ("Обработка", "Processing"), ("ВложенныйПроцесс", "SubBusinessProcess"),
+                          ("Завершение", "Completion"), ("Декорация", "Decoration"))
     ], title="Палитра")
     left = group("Левая", [
         palette,
@@ -165,7 +222,8 @@ def konstruktor_form():
     check_text = field("ТекстПроверки", "ТекстПроверки", "Результат проверки", ReadOnly=True, TitleLocation="Top",
                        Height=4, MultiLine=True)
 
-    bar = [button(f"Форма{c.name}", c.name, usual=False) for c in KONSTR_COMMANDS if c.name != "ЗаписатьСвойства"]
+    bar = [button(f"Форма{c.name}", c.name, usual=False) for c in KONSTR_COMMANDS
+           if c.name not in ("ЗаписатьСвойства", "НастроитьУсловие")]
 
     str0 = t_str(0)
     attrs = [
@@ -182,6 +240,7 @@ def konstruktor_form():
             ("Наименование", str0, "Элемент"),
             ("ТипШага", t_cfg("EnumRef.кбп_ТипыШагов"), "Тип"),
             ("Ошибка", T_BOOL, "Ошибка"),
+            ("Метка", t_str(2), "!"),
             ("Вид", str0, "Вид"),
             ("ЭтоЛиния", T_BOOL, "Это линия"),
         ]),
@@ -211,6 +270,8 @@ def konstruktor_form():
         Attr("ТекущийВид", t_str(10), "Вид текущего элемента"),
         Attr("СвойстваИзменены", T_BOOL, "Свойства изменены"),
         Attr("ЗаголовокСвойств", str0, "Заголовок свойств"),
+        Attr("ПодсказкаШага", str0, "Подсказка"),
+        Attr("ПодсказкаЛинии", str0, "Подсказка"),
         Attr("Лин_Наименование", str0, "Линия"),
         Attr("Лин_ПоУмолчанию", T_BOOL, "По умолчанию"),
         Attr("Лин_ИдКнопки", t_str(36), "Результат задачи"),
@@ -218,10 +279,71 @@ def konstruktor_form():
         Attr("Лин_ОбработчикУсловия", t_cfg("CatalogRef.кбп_ОбработчикиПроцессов"), "Обработчик условия"),
         Attr("Лин_ЭтоВозврат", T_BOOL, "Это возврат"),
         Attr("Лин_Порядок", t_num(5, 0, True), "Порядок"),
+        Attr("Лин_ТекстУсловия", str0, "Условие"),
+        Attr("Лин_Подпись", t_str(150), "Подпись"),
+        Attr("Лин_ТипОткуда", t_cfg("EnumRef.кбп_ТипыШагов"), "Откуда"),
     ]
     return form([header, main, check_text], attrs, KONSTR_COMMANDS,
                 params=[("Схема", t_cfg("CatalogRef.кбп_СхемыПроцессов"))],
                 events={"BeforeClose": "ПередЗакрытием", "OnCreateAtServer": "ПриСозданииНаСервере"}, bar=bar)
+
+
+def uslovie_form():
+    """Редактор условия-отбора линии (СКД): поля предмета, переменные, автор, результат задачи."""
+    commands = [
+        Cmd("ОК", "ОК", "Сохранить условие"),
+        Cmd("Очистить", "Очистить условие", "Убрать все элементы условия"),
+    ]
+    items = [
+        deco("Пояснение", "Добавьте элементы условия: поле, вид сравнения и значение. «Предмет» раскрывается до "
+                          "реквизитов объекта процесса, «Переменные процесса» — значения, заполненные в задачах. "
+                          "Группы «И», «ИЛИ», «НЕ» — через контекстное меню."),
+        table("КомпоновщикНастройкиОтбор", "Компоновщик.Settings.Filter", [], RowFilter=None, Representation="Tree",
+              Autofill=True, InitialTreeView="ExpandAllLevels", ViewMode="All",
+              SettingsNamedItemDetailedRepresentation=False, TitleLocation="None", Height=10),
+    ]
+    attrs = [
+        Attr("Объект", t_cfg(f"DataProcessorObject.{KONSTR}"), main=True),
+        Attr("Компоновщик", T_COMPOSER, "Условие"),
+        Attr("АдресСхемы", t_str(0), None),
+        Attr("ИдентификаторВладельца", "<v8:Type>v8:UUID</v8:Type>\n", None),
+    ]
+    bar = [button("ФормаОК", "ОК", usual=False, DefaultButton=True),
+           button("ФормаОчистить", "Очистить", usual=False),
+           button("ФормаОтмена", "Form.StandardCommand.Cancel", usual=False)]
+    return form(items, attrs, commands, bar=bar, bar_autofill=False, Title="Условие перехода",
+                WindowOpeningMode="LockOwnerWindow", Width=80, Height=20,
+                params=[("Схема", t_cfg("CatalogRef.кбп_СхемыПроцессов")), ("АдресНастроек", t_str(0)),
+                        ("ИдентификаторВладельца", "<v8:Type>v8:UUID</v8:Type>\n"), ("ЗаголовокЛинии", t_str(0))],
+                events={"OnCreateAtServer": "ПриСозданииНаСервере"})
+
+
+def peremennaya_form():
+    """Форма переменной процесса (ПВХ кбп_ПеременныеПроцессов)."""
+    items = [
+        field("Наименование", "Объект.Description", "Название", events=on_change("НаименованиеПриИзменении"),
+              InputHint="Например: Сумма согласования"),
+        field("Имя", "Объект.Имя", "Имя (для условий и шаблонов)",
+              ToolTip="Идентификатор без пробелов: Переменные.<Имя>. Заполняется по названию автоматически"),
+        field("ТипЗначения", "Объект.ValueType", "Тип значения", events=on_change("ТипЗначенияПриИзменении"),
+              TypeDomainEnabled=False),
+        field("ЗначениеПоУмолчанию", "ЗначениеПоУмолчанию", "Значение по умолчанию"),
+        group("Передача", [
+            check("Вход", "Объект.Вход", "Вход — заполняется при запуске (из родительского процесса или API)"),
+            check("Выход", "Объект.Выход", "Выход — возвращается в родительский процесс"),
+            check("ПоказыватьВЗадаче", "Объект.ПоказыватьВЗадаче", "Показывать во всех задачах процесса"),
+        ], title="Передача и показ", show_title=True, representation="NormalSeparation"),
+        field("Схема", "Объект.Схема", "Схема"),
+        field("Порядок", "Объект.Порядок", "Порядок", Width=5, HorizontalStretch=False),
+    ]
+    attrs = [
+        Attr("Объект", t_cfg("ChartOfCharacteristicTypesObject.кбп_ПеременныеПроцессов"), main=True, saved=True),
+        Attr("ЗначениеПоУмолчанию", T_VARVALUE, "Значение по умолчанию", saved=True),
+        Attr("ПрежнееНаименование", t_str(0), None),
+    ]
+    return form(items, attrs, [], events={"OnCreateAtServer": "ПриСозданииНаСервере",
+                                          "BeforeWriteAtServer": "ПередЗаписьюНаСервере"},
+                WindowOpeningMode="LockOwnerWindow")
 
 
 # --------------------------------------------------------------------------------------------------------------------
@@ -336,35 +458,47 @@ def journal_table(name="Журнал"):
 
 
 def zadacha_form():
+    """Форма задачи: сводка, что сделать, поля к заполнению, комментарий, кнопки действий, история (свёрнута)."""
     commands = [
         Cmd("ПринятьКИсполнению", "Принять к исполнению", "Отметить, что задача взята в работу"),
-        Cmd("ДобавитьКомментарий", "Добавить комментарий", "Добавить комментарий в ленту процесса"),
+        Cmd("ДобавитьКомментарий", "Только комментарий", "Добавить комментарий в ленту процесса, не выполняя задачу"),
         Cmd("ОткрытьПроцесс", "Процесс", "Открыть карточку процесса"),
         Cmd("Обновить", "Обновить", "Перечитать задачу", "StdPicture.Refresh"),
     ]
     ro = dict(ReadOnly=True)
-    items = [
-        group("Шапка", [
-            label("Процесс", "Объект.Процесс", "Процесс", Hiperlink=True),
-            label("Предмет", "Объект.Предмет", "Предмет", Hiperlink=True),
+    card = group("Карточка", [
+        label("Сводка", "Сводка", TitleLocation="None", Font=Raw(lambda i: f'{T(i)}<Font ref="sys:DefaultGUIFont" '
+                                                                     f'bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>\n')),
+        group("Сведения", [
+            group("СведенияЛево", [
+                label("Процесс", "Объект.Процесс", "Процесс", Hiperlink=True),
+                label("Предмет", "Объект.Предмет", "Предмет", Hiperlink=True),
+            ]),
+            group("СведенияПраво", [
+                label("Назначенный", "Объект.Назначенный", "Исполнитель"),
+                label("Срок", "Объект.Срок", "Срок"),
+            ]),
         ], horizontal=True),
-        group("Реквизиты", [
-            label("Состояние", "Объект.Состояние", "Состояние"),
-            label("Срок", "Объект.Срок", "Срок"),
-            label("Назначенный", "Объект.Назначенный", "Исполнитель"),
-        ], horizontal=True),
-        field("Инструкция", "Инструкция", "Что сделать", TitleLocation="Top", MultiLine=True, Height=3, **ro),
-        group("Действия", [button("ФормаПринятьКИсполнению", "ПринятьКИсполнению")],
-              title="Действия", horizontal=True),
-        field("Комментарий", "Комментарий", "Комментарий", TitleLocation="Top", MultiLine=True, Height=3,
-              InputHint="Комментарий к действию или в ленту процесса"),
-        button("ФормаДобавитьКомментарий", "ДобавитьКомментарий"),
+        group("ГруппаИнструкция", [
+            label("Инструкция", "Инструкция", TitleLocation="None", Height=2, AutoMaxHeight=False, MaxHeight=8),
+        ], title="Что сделать", show_title=True, representation="NormalSeparation"),
+        group("ГруппаПоля", [], title="Заполните", show_title=True, representation="NormalSeparation"),
+        group("ГруппаИнформация", [], title="Данные процесса", show_title=True, representation="NormalSeparation"),
         label("Результат", "Результат", "Результат", Visible=False),
-        group("ГруппаЖурнал", [journal_table()], title="История и комментарии", show_title=True,
-              representation="NormalSeparation"),
-    ]
+        field("Комментарий", "Комментарий", "Комментарий", TitleLocation="Top", MultiLine=True, Height=3,
+              InputHint="Комментарий к действию (виден в истории процесса)"),
+        group("Действия", [
+            button("ФормаПринятьКИсполнению", "ПринятьКИсполнению"),
+            button("ФормаДобавитьКомментарий", "ДобавитьКомментарий"),
+        ], title="Действия", horizontal=True),
+    ], Width=90, HorizontalStretch=False)
+    history = group("ГруппаЖурнал", [journal_table()], title="История и комментарии", show_title=True,
+                    representation="NormalSeparation", Behavior="Collapsible", Collapsed=True,
+                    ControlRepresentation="Picture")
+    items = [card, history]
     attrs = [
         Attr("Объект", t_cfg("CatalogObject.кбп_Задачи"), main=True, saved=True),
+        Attr("Сводка", t_str(0), "Сводка"),
         Attr("Инструкция", t_str(0), "Что сделать"),
         Attr("Комментарий", t_str(0), "Комментарий"),
         Attr("Результат", t_str(0), "Результат"),
@@ -374,9 +508,17 @@ def zadacha_form():
             ("ИдКнопки", t_str(36), None),
             ("Заголовок", t_str(0), None),
             ("ЭтоВозврат", T_BOOL, None),
+            ("Опасная", T_BOOL, None),
             ("Подтверждение", T_BOOL, None),
             ("ТекстПодтверждения", t_str(0), None),
             ("КомментарийОбязателен", T_BOOL, None),
+        ]),
+        Attr("Поля", T_VT, "Поля", columns=[
+            ("ИмяРеквизита", t_str(0), None),
+            ("Имя", t_str(0), None),
+            ("Заголовок", t_str(0), None),
+            ("Обязательное", T_BOOL, None),
+            ("ТолькоПросмотр", T_BOOL, None),
         ]),
         Attr("МожноВыполнить", T_BOOL, "Можно выполнить"),
     ]
@@ -391,6 +533,8 @@ def process_form():
         Cmd("ПрерватьПроцесс", "Прервать процесс", "Прервать процесс и отменить его задачи"),
         Cmd("ДобавитьКомментарий", "Добавить комментарий", "Добавить комментарий в ленту процесса"),
         Cmd("Обновить", "Обновить", "Перечитать процесс", "StdPicture.Refresh"),
+        Cmd("ВыполнитьОтложенные", "Не ждать таймер", "Выполнить ожидающие таймеры и отложенные действия процесса сейчас "
+                                                     "(для администратора и проверки схем)"),
     ]
     tasks = table("Задачи", "Задачи", cols("Задачи", [
         ("Наименование", "Задача", "field"),
@@ -406,30 +550,46 @@ def process_form():
         ("Переменная", "Переменная", "field"),
         ("Значение", "Значение", "field"),
     ], path="Объект.Переменные"), bar=[], ReadOnly=True, ChangeRowSet=False, ChangeRowOrder=False, TitleLocation="None", Height=4)
+    tree = table("Дерево", "Дерево", cols("Дерево", [
+        ("Представление", "Процесс", "field"),
+        ("Состояние", "Состояние", "field", {"Width": 10}),
+        ("ШагРодителя", "Запущен шагом", "field"),
+        ("ДатаСтарта", "Запущен", "field", {"Width": 12}),
+    ]), events={"Selection": "ДеревоВыбор"}, bar=[], ReadOnly=True, ChangeRowSet=False, ChangeRowOrder=False,
+        TitleLocation="None", Height=5)
     items = [
         group("Шапка", [
-            label("Схема", "Объект.Схема", "Схема", Hiperlink=True),
-            label("ВерсияСхемы", "Объект.ВерсияСхемы", "Версия"),
-            label("Предмет", "Объект.Предмет", "Предмет", Hiperlink=True),
+            group("ШапкаЛево", [
+                label("Схема", "Объект.Схема", "Схема", Hiperlink=True),
+                label("Предмет", "Объект.Предмет", "Предмет", Hiperlink=True),
+                label("Автор", "Объект.Автор", "Автор"),
+            ]),
+            group("ШапкаПраво", [
+                label("Состояние", "Объект.Состояние", "Состояние"),
+                label("ДатаСтарта", "Объект.ДатаСтарта", "Запущен"),
+                label("ДатаЗавершения", "Объект.ДатаЗавершения", "Завершён"),
+                label("РодительскийПроцесс", "Объект.РодительскийПроцесс", "Родительский процесс", Hiperlink=True),
+            ]),
         ], horizontal=True),
-        group("Реквизиты", [
-            label("Состояние", "Объект.Состояние", "Состояние"),
-            label("Автор", "Объект.Автор", "Автор"),
-            label("ДатаСтарта", "Объект.ДатаСтарта", "Запущен"),
-            label("ДатаЗавершения", "Объект.ДатаЗавершения", "Завершён"),
-        ], horizontal=True),
+        group("ГруппаСейчас", [
+            label("Сейчас", "Сейчас", TitleLocation="None", Height=2, AutoMaxHeight=False, MaxHeight=6),
+        ], title="Сейчас", show_title=True, representation="NormalSeparation"),
         pages("Страницы", [
             page("СтраницаЗадачи", "Задачи", [tasks]),
             page("СтраницаИстория", "История и комментарии", [
                 journal_table(),
-                field("Комментарий", "Комментарий", "Комментарий", TitleLocation="Top", MultiLine=True, Height=2),
-                button("ФормаДобавитьКомментарий", "ДобавитьКомментарий"),
+                group("ГруппаКомментарий", [
+                    field("Комментарий", "Комментарий", "Комментарий", TitleLocation="None", MultiLine=True, Height=2,
+                          InputHint="Комментарий в ленту процесса"),
+                    button("ФормаДобавитьКомментарий", "ДобавитьКомментарий"),
+                ], horizontal=True),
             ]),
             page("СтраницаСхема", "Схема", [
                 schema_field("ГрафСхема", "ГрафСхема", "Схема", TitleLocation="None", Width=80, Height=20, Edit=False),
                 deco("ЛегендаСхемы", "Зелёные — пройденные шаги, жёлтые — текущие."),
             ]),
             page("СтраницаПеременные", "Переменные", [variables]),
+            page("СтраницаВложенные", "Вложенные процессы", [tree]),
         ], PagesRepresentation="TabsOnTop"),
     ]
     attrs = [
@@ -448,8 +608,18 @@ def process_form():
         Attr("Журнал", T_VT, "История", columns=JOURNAL_COLUMNS),
         Attr("Комментарий", t_str(0), "Комментарий"),
         Attr("ГрафСхема", T_GRAPH, "Схема"),
+        Attr("Сейчас", t_str(0), "Сейчас"),
+        Attr("Дерево", T_VT, "Вложенные процессы", columns=[
+            ("Ссылка", t_cfg("CatalogRef.кбп_Процессы"), "Процесс"),
+            ("Представление", t_str(0), "Процесс"),
+            ("Состояние", t_cfg("EnumRef.кбп_СостоянияПроцессов"), "Состояние"),
+            ("ШагРодителя", t_cfg("CatalogRef.кбп_ЭлементыСхем"), "Запущен шагом"),
+            ("ДатаСтарта", T_DATETIME, "Запущен"),
+        ]),
     ]
-    bar = [button("ФормаПрерватьПроцесс", "ПрерватьПроцесс", usual=False), button("ФормаОбновить", "Обновить", usual=False)]
+    bar = [button("ФормаПрерватьПроцесс", "ПрерватьПроцесс", usual=False),
+           button("ФормаВыполнитьОтложенные", "ВыполнитьОтложенные", usual=False),
+           button("ФормаОбновить", "Обновить", usual=False)]
     return form(items, attrs, commands, bar=bar, bar_autofill=False,
                 events={"OnCreateAtServer": "ПриСозданииНаСервере"})
 
@@ -458,11 +628,11 @@ def process_form():
 # Метаданные
 # --------------------------------------------------------------------------------------------------------------------
 
-def register_catalog_form(catalog, form_name):
-    """Добавляет форму в Catalogs/<catalog>.xml и делает её основной формой объекта."""
-    path = SRC / "Catalogs" / f"{catalog}.xml"
+def register_catalog_form(catalog, form_name, folder="Catalogs", md="Catalog"):
+    """Добавляет форму в <folder>/<объект>.xml и делает её основной формой объекта."""
+    path = SRC / folder / f"{catalog}.xml"
     text = path.read_bytes().decode("utf-8-sig")
-    full = f"Catalog.{catalog}.Form.{form_name}"
+    full = f"{md}.{catalog}.Form.{form_name}"
     text = re.sub(r"<DefaultObjectForm\s*/>|<DefaultObjectForm>[^<]*</DefaultObjectForm>",
                   f"<DefaultObjectForm>{full}</DefaultObjectForm>", text, count=1)
     if f"<Form>{form_name}</Form>" not in text:
@@ -475,6 +645,9 @@ def register_catalog_form(catalog, form_name):
 FORMS = {
     # (путь каталога объекта, md-имя владельца, имя формы, синоним): построитель
     ("DataProcessors/кбп_КонструкторСхем", f"DataProcessor.{KONSTR}", "Форма", "Конструктор схем процессов"): konstruktor_form,
+    ("DataProcessors/кбп_КонструкторСхем", f"DataProcessor.{KONSTR}", "УсловиеПерехода", "Условие перехода"): uslovie_form,
+    ("ChartsOfCharacteristicTypes/кбп_ПеременныеПроцессов", "ChartOfCharacteristicTypes.кбп_ПеременныеПроцессов",
+     "ФормаЭлемента", "Переменная процесса"): peremennaya_form,
     ("DataProcessors/кбп_МоиЗадачи", f"DataProcessor.{MOI}", "Форма", "Мои задачи"): moi_zadachi_form,
     ("DataProcessors/кбп_МоиЗадачи", f"DataProcessor.{MOI}", "ЗапускПроцесса", "Запуск процесса"): zapusk_form,
     ("Catalogs/кбп_Задачи", "Catalog.кбп_Задачи", "ФормаЭлемента", "Задача"): zadacha_form,
@@ -492,13 +665,16 @@ MODULES = {
 
 
 def main():
-    write(f"DataProcessors/{KONSTR}.xml", data_processor_md(KONSTR, "Конструктор схем процессов", ["Форма"], "Форма"))
+    write(f"DataProcessors/{KONSTR}.xml", data_processor_md(KONSTR, "Конструктор схем процессов",
+                                                            ["Форма", "УсловиеПерехода"], "Форма"))
     write(f"DataProcessors/{MOI}.xml", data_processor_md(MOI, "Мои задачи", ["Форма", "ЗапускПроцесса"], "Форма"))
     for (folder, owner, name, synonym), build in FORMS.items():
         write(f"{folder}/Forms/{name}.xml", form_md(owner, name, synonym))
         write(f"{folder}/Forms/{name}/Ext/Form.xml", build())
     register_catalog_form("кбп_Задачи", "ФормаЭлемента")
     register_catalog_form("кбп_Процессы", "ФормаЭлемента")
+    register_catalog_form("кбп_ПеременныеПроцессов", "ФормаЭлемента", "ChartsOfCharacteristicTypes",
+                          "ChartOfCharacteristicTypes")
     if BSL is not None:
         for src, dst in MODULES.items():
             write(dst, (BSL / src).read_text(encoding="utf-8"))
