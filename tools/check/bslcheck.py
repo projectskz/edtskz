@@ -116,6 +116,12 @@ forms = {}
 for f in glob.glob(os.path.join(ROOT, "**/Forms/*/Ext/Form/Module.bsl"), recursive=True):
     text = open(f, encoding="utf-8-sig").read().replace("\r\n", "\n")
     forms[f] = (f, strip(text), text)
+others = {}
+for pattern in ("**/Ext/ObjectModule.bsl", "**/Ext/ManagerModule.bsl", "**/Ext/RecordSetModule.bsl",
+                "**/Ext/CommandModule.bsl"):
+    for f in glob.glob(os.path.join(ROOT, pattern), recursive=True):
+        text = open(f, encoding="utf-8-sig").read().replace("\r\n", "\n")
+        others[f] = (f, strip(text), text)
 
 exports = {m: {p for p, d in procs(v[1]).items() if d["export"]} for m, v in modules.items()}
 unknown_global = collections.Counter()
@@ -187,6 +193,8 @@ for m, (f, lines, raw) in modules.items():
     check(m, lines, raw, False)
 for f, (ff, lines, raw) in forms.items():
     check(f, lines, raw, True)
+for f, (ff, lines, raw) in others.items():
+    check(f, lines, raw, False)
 print("Неизвестные вызовы (проверить глазами):", ", ".join(f"{k}" for k, v in sorted(unknown_global.items())))
 print("проблем:", problems)
 

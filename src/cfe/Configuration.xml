@@ -87,11 +87,15 @@
 			<CommonModule>кбп_ПроцессыПереопределяемый</CommonModule>
 			<CommonModule>кбп_Лицензирование</CommonModule>
 			<CommonModule>кбп_РегламентныеЗадания</CommonModule>
+			<EventSubscription>кбп_ПриЗаписиОбъекта</EventSubscription>
+			<EventSubscription>кбп_ПриПроведенииДокумента</EventSubscription>
 			<ScheduledJob>кбп_ОбработкаОчередиОповещений</ScheduledJob>
 			<ScheduledJob>кбп_ОбработкаОчередиДействий</ScheduledJob>
 			<ScheduledJob>кбп_КонтрольСроков</ScheduledJob>
 			<ScheduledJob>кбп_РассылкиПоРасписанию</ScheduledJob>
 			<ScheduledJob>кбп_ОчисткаЖурнала</ScheduledJob>
+			<CommonCommand>кбп_ПроцессыПредмета</CommonCommand>
+			<CommonCommand>кбп_ЗапуститьПроцессПоПредмету</CommonCommand>
 			<Catalog>Пользователи</Catalog>
 			<Catalog>кбп_СхемыПроцессов</Catalog>
 			<Catalog>кбп_ВерсииСхем</Catalog>

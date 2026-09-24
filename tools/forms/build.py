@@ -846,6 +846,132 @@ MODULES = {
 }
 
 
+# --------------------------------------------------------------------------------------------------------------------
+# Подписки на события и общие команды (этап 3)
+# --------------------------------------------------------------------------------------------------------------------
+
+from formlib import MDHEAD, lstr, uid  # noqa: E402
+
+SUBSCRIPTIONS = [
+    # имя, синоним, наборы типов источника, событие, обработчик
+    ("кбп_ПриЗаписиОбъекта", "Бизнес-процессы: автозапуск при записи", ["cfg:DocumentObject", "cfg:CatalogObject"],
+     "OnWrite", "CommonModule.кбп_ПроцессыСлужебный.ПриЗаписиОбъекта"),
+    ("кбп_ПриПроведенииДокумента", "Бизнес-процессы: автозапуск при проведении", ["cfg:DocumentObject"],
+     "Posting", "CommonModule.кбп_ПроцессыСлужебный.ОбработкаПроведенияДокумента"),
+]
+
+COMMANDS = [
+    # имя, синоним, подсказка, группа, картинка, форма, роли
+    ("кбп_ПроцессыПредмета", "Процессы", "Бизнес-процессы и задачи по этому объекту", "FormNavigationPanelGoTo",
+     "StdPicture.Task", "Обработка.кбп_МоиЗадачи.Форма.ПроцессыПредмета",
+     ["кбп_ИспользованиеПроцессов", "кбп_НаблюдениеЗаПроцессами"]),
+    ("кбп_ЗапуститьПроцессПоПредмету", "Запустить процесс", "Запустить бизнес-процесс по этому объекту",
+     "FormCommandBarImportant", None, "Обработка.кбп_МоиЗадачи.Форма.ЗапускПроцесса", ["кбп_ИспользованиеПроцессов"]),
+]
+
+
+def subscription_md(name, synonym, sources, event, handler):
+    src = "".join(f"\t\t\t\t<v8:TypeSet>{s}</v8:TypeSet>\n" for s in sources)
+    return MDHEAD + f'''	<EventSubscription uuid="{uid("EventSubscription", name)}">
+		<Properties>
+			<Name>{name}</Name>
+			<Synonym>
+{lstr(synonym, 4)}			</Synonym>
+			<Comment/>
+			<Source>
+{src}			</Source>
+			<Event>{event}</Event>
+			<Handler>{handler}</Handler>
+		</Properties>
+	</EventSubscription>
+</MetaDataObject>'''
+
+
+def command_md(name, synonym, tooltip, group_name, picture):
+    pic = (f"\t\t\t<Picture>\n\t\t\t\t<xr:Ref>{picture}</xr:Ref>\n\t\t\t\t<xr:LoadTransparent>true</xr:LoadTransparent>\n"
+           f"\t\t\t</Picture>\n") if picture else "\t\t\t<Picture/>\n"
+    return MDHEAD + f'''	<CommonCommand uuid="{uid("CommonCommand", name)}">
+		<Properties>
+			<Name>{name}</Name>
+			<Synonym>
+{lstr(synonym, 4)}			</Synonym>
+			<Comment/>
+			<Group>{group_name}</Group>
+			<Representation>Auto</Representation>
+			<ToolTip>
+{lstr(tooltip, 4)}			</ToolTip>
+{pic}			<Shortcut/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<CommandParameterType>
+				<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
+				<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+			</CommandParameterType>
+			<ParameterUseMode>Single</ParameterUseMode>
+			<ModifiesData>false</ModifiesData>
+			<OnMainServerUnavalableBehavior>Auto</OnMainServerUnavalableBehavior>
+		</Properties>
+	</CommonCommand>
+</MetaDataObject>'''
+
+
+COMMAND_MODULE = '''#Область ОбработчикиСобытий
+
+&НаКлиенте
+Процедура ОбработкаКоманды(ПараметрКоманды, ПараметрыВыполненияКоманды)
+
+	ОткрытьФорму("{form}", Новый Структура("Предмет", ПараметрКоманды),
+		ПараметрыВыполненияКоманды.Источник, {uniq}, ПараметрыВыполненияКоманды.Окно{link});
+
+КонецПроцедуры
+
+#КонецОбласти
+'''
+
+
+def register_in_configuration(kind, name, after_kind):
+    """Добавляет <kind>name</kind> в ChildObjects Configuration.xml после последнего элемента after_kind (или kind)."""
+    path = SRC / "Configuration.xml"
+    text = path.read_bytes().decode("utf-8-sig")
+    tag = f"<{kind}>{name}</{kind}>"
+    if tag in text:
+        return
+    nl = "\r\n" if "\r\n" in text else "\n"
+    anchors = [m.end() for k in (kind, after_kind) for m in re.finditer(rf"<{k}>[^<]*</{k}>", text)]
+    idx = max(anchors)
+    text = text[:idx] + f"{nl}\t\t\t{tag}" + text[idx:]
+    path.write_bytes(("﻿" + text).encode("utf-8"))
+
+
+def grant_view(role, obj):
+    """Право «Просмотр» на объект в роли (перед блоком подсистемы)."""
+    path = SRC / "Roles" / role / "Ext" / "Rights.xml"
+    text = path.read_bytes().decode("utf-8-sig")
+    if f"<name>{obj}</name>" in text:
+        return
+    nl = "\r\n" if "\r\n" in text else "\n"
+    block = (f"<object>{nl}\t\t<name>{obj}</name>{nl}\t\t<right>{nl}\t\t\t<name>View</name>{nl}"
+             f"\t\t\t<value>true</value>{nl}\t\t</right>{nl}\t</object>{nl}\t")
+    idx = text.index("<object>")
+    text = text[:idx] + block + text[idx:]
+    path.write_bytes(("﻿" + text).encode("utf-8"))
+
+
+def write_stage3_metadata():
+    for name, synonym, sources, event, handler in SUBSCRIPTIONS:
+        write(f"EventSubscriptions/{name}.xml", subscription_md(name, synonym, sources, event, handler))
+        register_in_configuration("EventSubscription", name, "CommonModule")
+    for name, synonym, tooltip, group_name, picture, form_name, roles in COMMANDS:
+        write(f"CommonCommands/{name}.xml", command_md(name, synonym, tooltip, group_name, picture))
+        nav = group_name.startswith("FormNavigationPanel")
+        write(f"CommonCommands/{name}/Ext/CommandModule.bsl", COMMAND_MODULE.format(
+            form=form_name,
+            uniq="ПараметрыВыполненияКоманды.Источник.КлючУникальности" if nav else "ПараметрКоманды",
+            link=", ПараметрыВыполненияКоманды.НавигационнаяСсылка" if nav else ""))
+        register_in_configuration("CommonCommand", name, "ScheduledJob")
+        for role in roles:
+            grant_view(role, f"CommonCommand.{name}")
+
+
 def main():
     write(f"DataProcessors/{KONSTR}.xml", data_processor_md(KONSTR, "Конструктор схем процессов",
                                                             ["Форма", "УсловиеПерехода", "ПравилаЗапуска"], "Форма"))
@@ -859,6 +985,7 @@ def main():
     register_catalog_form("кбп_ПеременныеПроцессов", "ФормаЭлемента", "ChartsOfCharacteristicTypes",
                           "ChartOfCharacteristicTypes")
     register_catalog_form("кбп_Замещение", "ФормаДокумента", "Documents", "Document")
+    write_stage3_metadata()
     if BSL is not None:
         for src, dst in MODULES.items():
             write(dst, (BSL / src).read_text(encoding="utf-8"))
