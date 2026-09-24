@@ -1,10 +1,21 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Rights xmlns="http://v8.1c.ru/8.2/roles" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Rights" version="2.20">
+<Rights xmlns="http://v8.1c.ru/8.2/roles" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Rights" version="2.21">
 	<setForNewObjects>false</setForNewObjects>
 	<setForAttributesByDefault>true</setForAttributesByDefault>
 	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
 	<object>
-		<name>Catalog.кбп_СхемыПроцессов</name>
+		<name>InformationRegister.кбп_ПравилаЗапуска</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.кбп_ВерсииСхем</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -19,7 +30,66 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.кбп_ВерсииСхем</name>
+		<name>InformationRegister.кбп_Настройки</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.кбп_РолиИсполнителей</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.кбп_Замещения</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.кбп_ОчередьОповещений</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.кбп_ИсполнителиШагов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.кбп_ШаблоныСообщений</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -49,7 +119,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.кбп_РолиИсполнителей</name>
+		<name>InformationRegister.кбп_ОчередьДействий</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -58,13 +128,9 @@
 			<name>View</name>
 			<value>true</value>
 		</right>
-		<right>
-			<name>InputByString</name>
-			<value>true</value>
-		</right>
 	</object>
 	<object>
-		<name>Catalog.кбп_ШаблоныСообщений</name>
+		<name>Document.кбп_Замещение</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -94,17 +160,6 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.кбп_ПереходыСхем</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>InformationRegister.кбп_КнопкиШагов</name>
 		<right>
 			<name>Read</name>
@@ -116,7 +171,37 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.кбп_ИсполнителиШагов</name>
+		<name>Catalog.кбп_Процессы</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.кбп_ОбработчикиПроцессов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.кбп_ИсполнителиРолей</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -149,84 +234,6 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.кбп_ИсполнителиРолей</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.кбп_ПравилаЗапуска</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.кбп_ОбработчикиПроцессов</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.кбп_Процессы</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.кбп_Задачи</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.кбп_Маркеры</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>InformationRegister.кбп_ЖурналПроцессов</name>
 		<right>
 			<name>Read</name>
@@ -238,7 +245,7 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.кбп_ОчередьДействий</name>
+		<name>InformationRegister.кбп_ПереходыСхем</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -249,7 +256,7 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.кбп_ОчередьОповещений</name>
+		<name>InformationRegister.кбп_Маркеры</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -279,6 +286,21 @@
 		</right>
 	</object>
 	<object>
+		<name>Catalog.кбп_СхемыПроцессов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>InformationRegister.кбп_ПодпискиПользователей</name>
 		<right>
 			<name>Read</name>
@@ -298,7 +320,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.кбп_Замещение</name>
+		<name>Catalog.кбп_Задачи</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -309,28 +331,6 @@
 		</right>
 		<right>
 			<name>InputByString</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.кбп_Замещения</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.кбп_Настройки</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>

@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.21">
+	<ConfigVersions>
+		<Metadata name="Catalog.Пользователи" id="db2678c2-3d00-5cf8-a618-09a588082792" configVersion="7ddb1124bdd93f029349ee94c31a4fec32663f6c"/>
+		<Metadata name="Catalog.кбп_ВерсииСхем" id="1c9a423e-d961-586e-8f33-15ddb9c23ddd" configVersion="41e86676b31b7b7a77a328210e3e71bfe9052fb3">
+			<Metadata name="Catalog.кбп_ВерсииСхем.Attribute.Статус" id="0965f78b-51fb-5444-910d-34ec7cdea7ed"/>
+			<Metadata name="Catalog.кбп_ВерсииСхем.Attribute.ДатаСоздания" id="4671ae8f-af86-515d-bfb2-0995bda1bdd6"/>
+			<Metadata name="Catalog.кбп_ВерсииСхем.Attribute.ВерсияОснование" id="4873c2c2-5cec-58dc-a187-503db6679035"/>
+			<Metadata name="Catalog.кбп_ВерсииСхем.Attribute.Комментарий" id="565007db-b746-5389-9340-7bcc4dfce21a"/>
+			<Metadata name="Catalog.кбп_ВерсииСхем.Attribute.ГрафическаяСхема" id="61e6f49c-d39c-52a5-b02e-0d2ff00120c7"/>
+			<Metadata name="Catalog.кбп_ВерсииСхем.Attribute.Опубликовал" id="6a2f42bc-7883-594d-8e55-f7c939da03e5"/>
+			<Metadata name="Catalog.кбп_ВерсииСхем.Attribute.Автор" id="889f27ea-4edd-5b5b-8dd9-158621ed9ad6"/>
+			<Metadata name="Catalog.кбп_ВерсииСхем.Attribute.НомерВерсии" id="b169a763-8b92-55a3-ad82-8f97a865824d"/>
+			<Metadata name="Catalog.кбп_ВерсииСхем.Attribute.ДатаПубликации" id="d221e965-fb53-5a76-8271-3c2497c88932"/>
+		</Metadata>
+		<Metadata name="Catalog.кбп_Задачи" id="ee499b28-3eca-5b93-ad50-a1d60c13053e" configVersion="82946b2a068acce0109295f859e8c19325450716">
+			<Metadata name="Catalog.кбп_Задачи.Attribute.Замещение" id="1ccbd26b-7985-5fef-83b3-e77a3c2ed633"/>
+			<Metadata name="Catalog.кбп_Задачи.Attribute.Роль" id="22845b55-909a-56cf-87b8-3c9e78e60eef"/>
+			<Metadata name="Catalog.кбп_Задачи.Attribute.Предмет" id="2d8eb568-37f2-5bba-be86-bfee2b30bb0f"/>
+			<Metadata name="Catalog.кбп_Задачи.Attribute.ДатаСоздания" id="2e0f457e-2220-51ac-b581-b5d858194e88"/>
+			<Metadata name="Catalog.кбп_Задачи.Attribute.ДатаПринятия" id="3f88affb-5c46-5c12-af33-a3581dd88421"/>
+			<Metadata name="Catalog.кбп_Задачи.Attribute.ИдМаркера" id="5262c8df-84c1-53ce-b8fc-a38bb83ed80b"/>
+			<Metadata name="Catalog.кбп_Задачи.Attribute.Состояние" id="53b375b4-9193-5841-b2e2-e2ef2bada506"/>
+			<Metadata name="Catalog.кбп_Задачи.Attribute.Срок" id="5c42b7c4-17eb-5d34-b536-16b419d4c449"/>
+			<Metadata name="Catalog.кбп_Задачи.Attribute.Шаг" id="6682e77c-3ca9-56ea-8185-0474572cb90b"/>
+			<Metadata name="Catalog.кбп_Задачи.Attribute.ДатаВыполнения" id="6e12ed0b-f5f5-5d86-95eb-09b315702a35"/>
+			<Metadata name="Catalog.кбп_Задачи.Attribute.Назначенный" id="71755bd0-6c95-5d04-b058-40afca9e5ff3"/>
+			<Metadata name="Catalog.кбп_Задачи.Attribute.ПредставлениеПредмета" id="7acd9b0a-0db1-5010-821f-2727a8ad3435"/>
+			<Metadata name="Catalog.кбп_Задачи.Attribute.ОбъектАдресации1" id="7bd365c4-70da-5973-a104-b43bcc4e5542"/>
+			<Metadata name="Catalog.кбп_Задачи.Attribute.ОбъектАдресации2" id="90779c05-78a6-5062-a6d7-d488d35c12ea"/>
+			<Metadata name="Catalog.кбп_Задачи.Attribute.Итерация" id="99a49656-8af9-596d-8460-40e061e4c5f6"/>
+			<Metadata name="Catalog.кбп_Задачи.Attribute.ПринятаКИсполнению" id="9da87994-0918-52b4-840d-64f5b2db7423"/>
+			<Metadata name="Catalog.кбп_Задачи.Attribute.Процесс" id="9e142fe5-1003-56e7-96a1-401a8e42b3aa"/>
+			<Metadata name="Catalog.кбп_Задачи.Attribute.Комментарий" id="b2685a29-c330-5fc2-bf5f-0bc4f122c105"/>
+			<Metadata name="Catalog.кбп_Задачи.Attribute.ЭтоКопия" id="c2b93dcd-8310-55d9-b155-810c5fefb538"/>
+			<Metadata name="Catalog.кбп_Задачи.Attribute.ПринялКИсполнению" id="cc6c5a74-efc2-5e8c-a5a6-547dabd8a43f"/>
+			<Metadata name="Catalog.кбп_Задачи.Attribute.Исполнитель" id="cdb13eb9-5e22-5d05-8d79-8ab77c3f69b5"/>
+			<Metadata name="Catalog.кбп_Задачи.Attribute.Результат" id="ec2a3495-3229-5ba4-8709-9ce9155f1810"/>
+		</Metadata>
+		<Metadata name="Catalog.кбп_ОбработчикиПроцессов" id="88306de9-ac63-57f8-a4e1-2fcbaa3af282" configVersion="9740d49085189373eb43c3c20a8cb38adf9c9214">
+			<Metadata name="Catalog.кбп_ОбработчикиПроцессов.Attribute.Используется" id="8e2eacf8-1731-51c5-9f20-194530d4c006"/>
+			<Metadata name="Catalog.кбп_ОбработчикиПроцессов.Attribute.Имя" id="ee6760e3-dab7-593f-9993-9421997c3977"/>
+			<Metadata name="Catalog.кбп_ОбработчикиПроцессов.Attribute.ПолноеИмяМетода" id="f1241c57-4e09-5468-b8da-b1d8bca23fbe"/>
+			<Metadata name="Catalog.кбп_ОбработчикиПроцессов.Attribute.Контекст" id="ff99695d-3002-5877-a8f4-5d9f35baf3b3"/>
+		</Metadata>
+		<Metadata name="Catalog.кбп_Процессы" id="7cfadf81-2f10-5758-81e4-2d48dfaf3ec9" configVersion="4d54f7d8045c0dc694b0cbaec12491763de0bb01">
+			<Metadata name="Catalog.кбп_Процессы.TabularSection.Переменные" id="04e68f32-a5b6-5d08-9c9f-13fca96d23b5"/>
+			<Metadata name="Catalog.кбп_Процессы.TabularSection.Переменные.Attribute.Переменная" id="06175dab-8acd-5451-a4c0-32405fe4c924"/>
+			<Metadata name="Catalog.кбп_Процессы.Attribute.Состояние" id="0fcb1d69-01f9-5be2-908f-90eb5d538ba5"/>
+			<Metadata name="Catalog.кбп_Процессы.Attribute.КорневойПроцесс" id="177eabb2-87a5-532d-843a-673ee8db105b"/>
+			<Metadata name="Catalog.кбп_Процессы.Attribute.Схема" id="1f5dd508-0fe1-596c-b0f6-98753dea5cb4"/>
+			<Metadata name="Catalog.кбп_Процессы.Attribute.УровеньВложенности" id="1fc47da6-def3-536d-811f-1af2226df165"/>
+			<Metadata name="Catalog.кбп_Процессы.Attribute.ИдМаркераРодителя" id="39561681-f622-599b-802e-5fefafc50b80"/>
+			<Metadata name="Catalog.кбп_Процессы.Attribute.ВерсияСхемы" id="3dc99af7-47e7-5b72-84db-dbac7c7f7c2c"/>
+			<Metadata name="Catalog.кбп_Процессы.TabularSection.Наблюдатели" id="42ff11d7-d117-5326-9aad-fc03a2822c69"/>
+			<Metadata name="Catalog.кбп_Процессы.Attribute.ОписаниеОшибки" id="444f5536-7a9c-564d-b954-5e94166d7da3"/>
+			<Metadata name="Catalog.кбп_Процессы.Attribute.РодительскийПроцесс" id="4cca40e9-eda5-5beb-bf36-5f8d74f47486"/>
+			<Metadata name="Catalog.кбп_Процессы.Attribute.ШагРодителя" id="4fb8e048-2bed-5bd4-88fd-deb25567ae43"/>
+			<Metadata name="Catalog.кбп_Процессы.TabularSection.Переменные.Attribute.Значение" id="50d2e156-adbe-5c4f-bca3-2f738ebe0984"/>
+			<Metadata name="Catalog.кбп_Процессы.TabularSection.Наблюдатели.Attribute.Пользователь" id="78d8e057-b216-5efd-992c-11230e8d761d"/>
+			<Metadata name="Catalog.кбп_Процессы.Attribute.ПредставлениеПредмета" id="910f5054-bc7b-53ea-a34c-82825f39b9e4"/>
+			<Metadata name="Catalog.кбп_Процессы.Attribute.Предмет" id="9eb21fe0-7742-5823-8899-dca9f6496dbe"/>
+			<Metadata name="Catalog.кбп_Процессы.Attribute.ДатаСтарта" id="a3687302-4d50-5b96-b4aa-4a1832c98c79"/>
+			<Metadata name="Catalog.кбп_Процессы.Attribute.Автор" id="b486eb47-f6a4-5e79-a5e1-806db6e2e4ea"/>
+			<Metadata name="Catalog.кбп_Процессы.Attribute.ДатаЗавершения" id="d6265163-8b14-5d7b-b07d-b655105108d6"/>
+		</Metadata>
+		<Metadata name="Catalog.кбп_РолиИсполнителей" id="2c6db8a2-550d-5b33-b189-e4d21bb8fd08" configVersion="d1ef12a87026b94f8601f805d53f2bf711ce789b">
+			<Metadata name="Catalog.кбп_РолиИсполнителей.Attribute.ТипОбъектаАдресации1" id="3db1f284-0f9f-5a75-9094-048c49c46b55"/>
+			<Metadata name="Catalog.кбп_РолиИсполнителей.Attribute.ЭскалационнаяРоль" id="7a9d7089-56f4-5a5a-9b07-b3f33f052d96"/>
+			<Metadata name="Catalog.кбп_РолиИсполнителей.Attribute.ЗаголовокОбъектаАдресации2" id="affee3f2-a9f0-5dea-9fc1-49e8c9b56ed0"/>
+			<Metadata name="Catalog.кбп_РолиИсполнителей.Attribute.ИспользоватьБезОбъектовАдресации" id="b678c75e-6ff1-56e7-b70b-f6038b17cff3"/>
+			<Metadata name="Catalog.кбп_РолиИсполнителей.Attribute.ЗаголовокОбъектаАдресации1" id="cf77d1cb-6ec6-51c3-9c73-cbf5736a6ca4"/>
+			<Metadata name="Catalog.кбп_РолиИсполнителей.Attribute.ТипОбъектаАдресации2" id="e2bf1cdc-2f2c-5fd1-a7e9-d7f3c6b994ff"/>
+			<Metadata name="Catalog.кбп_РолиИсполнителей.Attribute.Описание" id="e423511b-371b-5259-8616-fb49a8b2fba2"/>
+		</Metadata>
+		<Metadata name="Catalog.кбп_СхемыПроцессов" id="c6b7064d-831f-5c41-8e66-f441a3e2644e" configVersion="c30a8d573d57a551bfc57ca500cdef84b876a222">
+			<Metadata name="Catalog.кбп_СхемыПроцессов.Attribute.КаскадноеПрерывание" id="02a212b1-7b64-52a0-a261-bf3143ae8f6c"/>
+			<Metadata name="Catalog.кбп_СхемыПроцессов.TabularSection.ИсключенияЗапуска.Attribute.Значение" id="2bdf886f-4f9a-527e-bdd8-b6625cd09e19"/>
+			<Metadata name="Catalog.кбп_СхемыПроцессов.TabularSection.ПравилаЗапуска.Attribute.Активно" id="4d4e7a6b-8b96-595a-a979-7c332bb53a37"/>
+			<Metadata name="Catalog.кбп_СхемыПроцессов.TabularSection.ПравилаЗапуска.Attribute.Расписание" id="61ae758a-0284-584a-9803-d75a0b6c59b6"/>
+			<Metadata name="Catalog.кбп_СхемыПроцессов.Attribute.ЗапретВторогоЭкземпляра" id="6eca662d-e342-522a-8f21-e462b394c881"/>
+			<Metadata name="Catalog.кбп_СхемыПроцессов.Attribute.Описание" id="7304e918-61be-5863-95e2-4f60eab6354e"/>
+			<Metadata name="Catalog.кбп_СхемыПроцессов.Attribute.ТипПредмета" id="86f524d3-6f37-56b0-8c6e-ae35c1126112"/>
+			<Metadata name="Catalog.кбп_СхемыПроцессов.TabularSection.ПравилаЗапуска.Attribute.Условие" id="af9f9d50-c299-5cd9-9093-a69062912027"/>
+			<Metadata name="Catalog.кбп_СхемыПроцессов.TabularSection.ПравилаЗапуска.Attribute.Событие" id="d6197c76-a2c9-5e2d-9aab-27564f280c40"/>
+			<Metadata name="Catalog.кбп_СхемыПроцессов.TabularSection.ИсключенияЗапуска.Attribute.ПутьКРеквизиту" id="db97dcbc-0303-55d6-a0be-06741419ffc4"/>
+			<Metadata name="Catalog.кбп_СхемыПроцессов.TabularSection.ПравилаЗапуска" id="df520165-cbd1-59bb-90a6-b503c748a7ad"/>
+			<Metadata name="Catalog.кбп_СхемыПроцессов.TabularSection.ИсключенияЗапуска" id="e214d844-e432-5518-8d94-8e2a5ea93719"/>
+			<Metadata name="Catalog.кбп_СхемыПроцессов.Attribute.ТекущаяВерсия" id="e7491ea3-dcaa-5890-87a5-7a0dd787bf6d"/>
+			<Metadata name="Catalog.кбп_СхемыПроцессов.Attribute.Ответственный" id="ee7ade34-381a-5bd3-84ab-9f7933fd2dbd"/>
+			<Metadata name="Catalog.кбп_СхемыПроцессов.Attribute.Черновик" id="fd18c191-55d3-5e9e-aa81-2d42bed2b9af"/>
+		</Metadata>
+		<Metadata name="Catalog.кбп_ШаблоныСообщений" id="47696545-f7cd-504f-b08e-344501872289" configVersion="0790f6d4d5a5fd991a3fca050faede63d7ce5185">
+			<Metadata name="Catalog.кбп_ШаблоныСообщений.Attribute.ШаблонБСП" id="12869ad6-d73f-5775-9e6a-e13c38210a1e"/>
+			<Metadata name="Catalog.кбп_ШаблоныСообщений.Attribute.Тема" id="4ab2e502-f5a0-5066-ba04-336c1702771e"/>
+			<Metadata name="Catalog.кбп_ШаблоныСообщений.TabularSection.ТекстыПоКаналам.Attribute.Тема" id="6671d1a1-ab5f-523f-a67a-a50f53dd7592"/>
+			<Metadata name="Catalog.кбп_ШаблоныСообщений.TabularSection.ТекстыПоКаналам.Attribute.ЭтоHTML" id="a88a956d-b611-5215-bb0b-2ba8cc3393b4"/>
+			<Metadata name="Catalog.кбп_ШаблоныСообщений.Attribute.Текст" id="c43b6acd-2c58-5067-b4a9-6bbe79ee47b8"/>
+			<Metadata name="Catalog.кбп_ШаблоныСообщений.TabularSection.ТекстыПоКаналам" id="d322a0f3-fd03-5969-8ecd-d62d819930bd"/>
+			<Metadata name="Catalog.кбп_ШаблоныСообщений.TabularSection.ТекстыПоКаналам.Attribute.Канал" id="d89be235-fc9a-5967-9fe4-078c479c1aad"/>
+			<Metadata name="Catalog.кбп_ШаблоныСообщений.Attribute.Событие" id="dd0a4a4e-e178-5a5e-87ef-538df1507c49"/>
+			<Metadata name="Catalog.кбп_ШаблоныСообщений.TabularSection.ТекстыПоКаналам.Attribute.Текст" id="e6fb4aac-ee8d-53c8-bf1d-b1e4c57a8ab5"/>
+			<Metadata name="Catalog.кбп_ШаблоныСообщений.Attribute.ЭтоHTML" id="f252d5e8-ff4f-5e6f-9d92-2848ebc49f1c"/>
+		</Metadata>
+		<Metadata name="Catalog.кбп_ЭлементыСхем" id="5c81bb6c-ebca-583c-b6ad-a85cddb97e55" configVersion="af2fb24ecb05fda568bce5a302fe3d85d31b5b9e">
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.ВзятьВРаботу" id="035b6149-8d57-5c5f-90b6-80a4388c31e1"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.TabularSection.ПоляЗаполнения.Attribute.Переменная" id="0557ba7c-50c6-559d-a4e9-de969f80cb5b"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.TabularSection.КопииДляСведения.Attribute.Пользователь" id="05fb37e7-6147-5e15-a05e-7a0399a30908"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.ЭлементВыбора" id="0798a3d4-5b35-5845-829d-1ffe5c052892"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.ТаймерЕдиница" id="10db0f1d-df6b-598e-9f10-300417385d4d"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.ИсточникМножественногоЗапуска" id="16f8ac4f-e076-5127-8fd4-f5c35613ce4d"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.НетНаСхеме" id="1755e108-ba4d-5ef5-885f-85be0aaa81f4"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.МножественныйЗапуск" id="1b9b7524-c04c-5da1-9abd-f4d6b2791c3e"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.РазрешенаПереадресация" id="1c05e9d8-3f58-51aa-924b-469e1575c0ce"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.Инструкция" id="1e298830-00de-5bc9-9c93-cae9c822298c"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.TabularSection.ПараметрыВложенного" id="252f3aa6-138a-556f-bf4d-c92e421f01d2"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.TabularSection.ШагиВозврата.Attribute.Шаг" id="2956466e-40db-5e9c-955e-a3df883efd58"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.TabularSection.ПоляЗаполнения.Attribute.ТолькоПросмотр" id="2b3d3c6d-90e8-52b0-a573-e3202e036ddc"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.СрокЗначение" id="30a00cb6-7900-501f-bb77-6e932071a298"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.КнопкаАвтовыполнения" id="37687c81-662d-5a97-8e59-ec03a30583fd"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.TabularSection.ПоляЗаполнения.Attribute.РеквизитПредмета" id="39cf30d0-635f-5c4b-8b31-e8f54bfa3bfc"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.ЗначениеВарианта" id="4c89bde6-d8fd-539b-a0ad-ee5ae8d41c89"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.ИдЭлемента" id="500fd670-3c6e-5c8d-99b7-e65fe9c0628a"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.TabularSection.ЗавершаемыеШаги.Attribute.Шаг" id="57950339-3117-5f60-b567-c61c33d79d36"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.ЭскалационнаяРоль" id="5b93d053-ce3b-5d7b-b35b-b42c74b4cc42"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.TabularSection.ЗавершаемыеШаги" id="5c1e1011-3e31-594c-abc9-75ee99b9c522"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.TabularSection.ПараметрыВложенного.Attribute.ПеременнаяДочернего" id="6201eb56-40db-571f-9d7e-2bf4abd40558"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.РежимНазначения" id="62c10c49-cfc2-5655-8a6d-6af681d40496"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.TabularSection.Отчеты.Attribute.ПолеОтбора" id="64046665-3ee5-5f5c-9bb8-136d9ee67c3c"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.ДействиеПриПросрочке" id="64145a9f-8806-56ac-8e31-60b6ae9f1e29"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.TabularSection.КопииДляСведения.Attribute.СпособАдресации" id="6c5dfb78-d260-5cb8-a10a-63e69f1dea52"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.TabularSection.ПараметрыВложенного.Attribute.Выход" id="6d1ffc73-ab93-5c48-8a81-ec4639fbcb31"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.TabularSection.ПоляЗаполнения.Attribute.Заголовок" id="71b9748d-429f-5745-9e8e-ea0d49d14c48"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.ТотЖеИсполнительПриВозврате" id="7331885c-ad79-535f-836e-5bab34f04fa7"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.РазрешенВозврат" id="7457366d-f66e-57d9-b410-0d7177db6081"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.TabularSection.КопииДляСведения.Attribute.РеквизитПредмета" id="76aecc3b-3cfd-50e6-ad0c-52b99f351801"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.ДнейДоАвтовыполнения" id="7750a712-141c-5ab5-af23-ca8c246b1eac"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.TabularSection.КопииДляСведения.Attribute.Роль" id="78d54255-651d-539e-963f-6050a8d8865d"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.ТекстКнопкиПринятия" id="7fd542e6-5b91-5f88-85d5-cd9afb04702d"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.ВложеннаяВерсия" id="8a4276c4-5bd6-533e-8b66-c5cd8cd97b94"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.TabularSection.ПоляЗаполнения" id="8a493b87-0ae3-5517-91ce-f2c0ecd2ed64"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.ВозвратВРодителя" id="91b08e7b-defc-5c0c-98e1-9fa5275afa92"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.TabularSection.ПоляЗаполнения.Attribute.Обязательное" id="92aa81a5-265c-5073-99bc-8f90111f3767"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.ВыборИсполнителяСледующего" id="95077947-16a9-57d8-8fe1-2c9f6763bb7c"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.TabularSection.Отчеты" id="98306c73-27bd-55bc-ad3f-518233eb1c51"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.TabularSection.Отчеты.Attribute.КлючВарианта" id="9c1dd07e-085f-5c28-ac99-3d19804b21e4"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.Обработчик" id="9fc09cf7-8874-5929-ad21-e12242d2e6f8"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.ТаймерИзПеременной" id="a1323510-0551-57ac-951b-e3beff0b1165"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.ТипШага" id="a26de169-b3c6-5e8d-9626-56bb909ceaad"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.ТаймерЗначение" id="a42001fe-1592-5b8b-9a01-4a542e90f1dc"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.ВложеннаяСхема" id="af610171-7a38-5bc6-bc1b-d50b7a400f29"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.КоличествоДляСлияния" id="b15f040d-e8d2-53b2-9318-f722e3b9bc39"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.СрокИзПеременной" id="b3c85302-3717-58d5-a6fa-a07a46873e7b"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.ШаблонОповещения" id="ba7fe9f0-4a5c-58b8-a33a-1f72b71f7c60"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.РежимВозврата" id="bf93a134-8f0c-59a0-977f-020edeb2d9a1"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.TabularSection.ПараметрыВложенного.Attribute.ПеременнаяРодителя" id="bf9ab0b2-9dd4-5779-9131-77450166d0d5"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.ВидОбработчика" id="c467dac5-ea92-5496-a86e-60fb8e6a82c0"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.РежимСлияния" id="c76da5e8-0e5b-5b4a-962c-9926278ee024"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.РежимВложенного" id="ce8d7c72-1763-55a8-809d-1d760722ac72"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.TabularSection.ШагиВозврата" id="d6a2bd55-177b-54a9-9484-249ed37b45d5"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.TabularSection.КопииДляСведения" id="da74e10a-7547-5eb9-8697-18deaaf592a0"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.TabularSection.ПараметрыВложенного.Attribute.Вход" id="df89e29d-5679-51e2-b99f-1fe016c556c9"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.СрокЕдиница" id="e5b7c309-edc7-5c80-af95-d5c74c09df56"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.Attribute.КодОбработчика" id="fd79b4a6-7d72-5e9f-a6e1-71f130445b89"/>
+			<Metadata name="Catalog.кбп_ЭлементыСхем.TabularSection.Отчеты.Attribute.Отчет" id="fe273d8f-8b60-51b7-bbf5-98cdf7ccdb89"/>
+		</Metadata>
+		<Metadata name="ChartOfCharacteristicTypes.кбп_ПеременныеПроцессов" id="7702ee8f-ca84-5fa4-bda9-d45b00182a68" configVersion="05bced978eb20052dbc93fda122835ba086f377d">
+			<Metadata name="ChartOfCharacteristicTypes.кбп_ПеременныеПроцессов.Attribute.Порядок" id="170b7da4-ea0a-55df-bd2f-0ed7cb471c67"/>
+			<Metadata name="ChartOfCharacteristicTypes.кбп_ПеременныеПроцессов.Attribute.Вход" id="20bc7f59-423b-5354-93bf-063ed9bcd7b8"/>
+			<Metadata name="ChartOfCharacteristicTypes.кбп_ПеременныеПроцессов.Attribute.Схема" id="4472d085-01fd-54bc-8c3b-6665098aac71"/>
+			<Metadata name="ChartOfCharacteristicTypes.кбп_ПеременныеПроцессов.Attribute.ПоказыватьВЗадаче" id="5e7cc2d7-08dc-5d4c-8aa3-40af7f893f2a"/>
+			<Metadata name="ChartOfCharacteristicTypes.кбп_ПеременныеПроцессов.Attribute.ЗначениеПоУмолчанию" id="9610e852-a7df-589a-b18c-ee98d767be98"/>
+			<Metadata name="ChartOfCharacteristicTypes.кбп_ПеременныеПроцессов.Attribute.Выход" id="ba212003-3842-588b-b551-f67e92578df3"/>
+			<Metadata name="ChartOfCharacteristicTypes.кбп_ПеременныеПроцессов.Attribute.Имя" id="f47250e8-c94d-5f2c-ab04-be03fed1f4db"/>
+		</Metadata>
+		<Metadata name="CommonModule.кбп_АдаптерКонфигурации" id="ef0cf77f-c0dc-573a-ac36-e5b84c438501" configVersion="4b5d59535fcc023ec01d157cf7dff975e3709a61"/>
+		<Metadata name="CommonModule.кбп_АдаптерКонфигурации.Module" id="ef0cf77f-c0dc-573a-ac36-e5b84c438501.0" configVersion="e87dee3cf2cc904be84393a323e2e0e59eeaf1ea"/>
+		<Metadata name="CommonModule.кбп_Адресация" id="48bbd447-e62f-51b0-8306-259186c4bff0" configVersion="d832f9f5af794610642b94ea51e748f006f713ac"/>
+		<Metadata name="CommonModule.кбп_Адресация.Module" id="48bbd447-e62f-51b0-8306-259186c4bff0.0" configVersion="ace0a29af37202b2fa3ea730441252bcc8970050"/>
+		<Metadata name="CommonModule.кбп_Движок" id="2222df48-f804-52ed-b8c3-7011fe45b548" configVersion="bae7ec67137fb78928f5f6c6b3a8a850fc86eb0c"/>
+		<Metadata name="CommonModule.кбп_Движок.Module" id="2222df48-f804-52ed-b8c3-7011fe45b548.0" configVersion="ace0a29af37202b2fa3ea730441252bcc8970050"/>
+		<Metadata name="CommonModule.кбп_Действия" id="e0e17a5a-0704-532c-9519-56ffed77adb6" configVersion="bfbe7697e3ce6d5c756ab1c16c37345e95174cd9"/>
+		<Metadata name="CommonModule.кбп_Действия.Module" id="e0e17a5a-0704-532c-9519-56ffed77adb6.0" configVersion="8d4cfb49507ba18a5bcb46f423101bc269fa683d"/>
+		<Metadata name="CommonModule.кбп_КомпиляторСхем" id="93665b0d-b909-5cc7-a82a-d9a603184c33" configVersion="a451d7c34d104d5598665caf13cbc2f7e8ca0e1a"/>
+		<Metadata name="CommonModule.кбп_КомпиляторСхем.Module" id="93665b0d-b909-5cc7-a82a-d9a603184c33.0" configVersion="8d4cfb49507ba18a5bcb46f423101bc269fa683d"/>
+		<Metadata name="CommonModule.кбп_Лицензирование" id="45a88d9b-35b6-5344-ad51-951b0c4cc1e4" configVersion="994f7332e3e92b41495943422f953039e1e507d9"/>
+		<Metadata name="CommonModule.кбп_Лицензирование.Module" id="45a88d9b-35b6-5344-ad51-951b0c4cc1e4.0" configVersion="9fc765e53a2ee31df906ed05001c06f303ed786c"/>
+		<Metadata name="CommonModule.кбп_Оповещения" id="86a2ce7d-a0db-56a2-9d5c-d9d3d3b9917b" configVersion="28a9c3e55f802ac2a48ea4658a1fc5e576a89b17"/>
+		<Metadata name="CommonModule.кбп_Оповещения.Module" id="86a2ce7d-a0db-56a2-9d5c-d9d3d3b9917b.0" configVersion="a9b600b22796c5d6e9aebbb068e00955c0c1aee5"/>
+		<Metadata name="CommonModule.кбп_ПроцессыAPI" id="3b3c487b-9260-5ad8-8adc-2b152d15c8dc" configVersion="a080575e852cb5b1f46ac6f928c7295b759ea88a"/>
+		<Metadata name="CommonModule.кбп_ПроцессыAPI.Module" id="3b3c487b-9260-5ad8-8adc-2b152d15c8dc.0" configVersion="4fd5885831677ae4938999a51994f02a4c666734"/>
+		<Metadata name="CommonModule.кбп_ПроцессыВызовСервера" id="39292782-60f6-5f6b-8c24-6b1bb6137c6d" configVersion="a9498aa215260e9e0012f6b82d36e75df70c6cd5"/>
+		<Metadata name="CommonModule.кбп_ПроцессыВызовСервера.Module" id="39292782-60f6-5f6b-8c24-6b1bb6137c6d.0" configVersion="a9b600b22796c5d6e9aebbb068e00955c0c1aee5"/>
+		<Metadata name="CommonModule.кбп_ПроцессыКлиент" id="f0d6b53f-5e9d-5c29-8ec7-6953a62e4ca8" configVersion="df9db5f81e75a2133562921a6020364085e19e3a"/>
+		<Metadata name="CommonModule.кбп_ПроцессыКлиент.Module" id="f0d6b53f-5e9d-5c29-8ec7-6953a62e4ca8.0" configVersion="868447494b3ed517aec1352ad2988cafc83d32b8"/>
+		<Metadata name="CommonModule.кбп_ПроцессыПереопределяемый" id="d453dadf-00ce-5b2e-a5cd-c661a4a2e3cf" configVersion="439b24eda8de5487273d9d10980f5a8e93ff19bd"/>
+		<Metadata name="CommonModule.кбп_ПроцессыПереопределяемый.Module" id="d453dadf-00ce-5b2e-a5cd-c661a4a2e3cf.0" configVersion="564e90c851f5aae6159224ebd4fa78907885e6bb"/>
+		<Metadata name="CommonModule.кбп_ПроцессыПовтИсп" id="60d90f5d-2205-52c7-aa01-88dc291ff2ea" configVersion="7f5c41c973f3d4b951e19b423abac870a7b0dcd4"/>
+		<Metadata name="CommonModule.кбп_ПроцессыПовтИсп.Module" id="60d90f5d-2205-52c7-aa01-88dc291ff2ea.0" configVersion="8d4cfb49507ba18a5bcb46f423101bc269fa683d"/>
+		<Metadata name="CommonModule.кбп_ПроцессыСлужебный" id="b76020da-6ba2-5ca7-bd96-8db0ce6816c5" configVersion="272da7d3be7112223f246eb99233624361774eb4"/>
+		<Metadata name="CommonModule.кбп_ПроцессыСлужебный.Module" id="b76020da-6ba2-5ca7-bd96-8db0ce6816c5.0" configVersion="a9b600b22796c5d6e9aebbb068e00955c0c1aee5"/>
+		<Metadata name="CommonModule.кбп_РегламентныеЗадания" id="5e5fe220-8065-5095-9061-13a4b7862ee6" configVersion="e9fc1c15b5ea241085cc70f508fa63a9d5f124cf"/>
+		<Metadata name="CommonModule.кбп_РегламентныеЗадания.Module" id="5e5fe220-8065-5095-9061-13a4b7862ee6.0" configVersion="e6b430b8322d976f311403e609e3dfde7c5876bd"/>
+		<Metadata name="CommonModule.кбп_Условия" id="a7866bc1-6caf-5279-abf4-1a9dd1ff6a07" configVersion="632b5847c7cf1f242884d5433984d27ed573c4f3"/>
+		<Metadata name="CommonModule.кбп_Условия.Module" id="a7866bc1-6caf-5279-abf4-1a9dd1ff6a07.0" configVersion="ace0a29af37202b2fa3ea730441252bcc8970050"/>
+		<Metadata name="Configuration.КонструкторБизнесПроцессов" id="e9040851-14cb-5810-a615-6f6718df44f1" configVersion="544aa2ae0adf9ab9d86df7601562c903660a3815"/>
+		<Metadata name="Document.кбп_Замещение" id="6b7f6b19-599c-5f64-8d2f-87ba072610ad" configVersion="2142c25f7aef7d1488e583292609d8875dad0cb2">
+			<Metadata name="Document.кбп_Замещение.Attribute.Ответственный" id="160b6e98-6172-55b2-a417-2b88225ab72b"/>
+			<Metadata name="Document.кбп_Замещение.Attribute.ДатаОкончания" id="17cb17ef-ae6a-5d98-9361-57607c0f4798"/>
+			<Metadata name="Document.кбп_Замещение.Attribute.Замещающий" id="3d6cae4a-82db-5bfc-9d99-32eacc9f3091"/>
+			<Metadata name="Document.кбп_Замещение.TabularSection.Схемы" id="56c16509-4787-542a-bcce-98275d064324"/>
+			<Metadata name="Document.кбп_Замещение.TabularSection.Роли" id="660ea5e4-32b8-57d4-853d-826dd27007db"/>
+			<Metadata name="Document.кбп_Замещение.Attribute.ОбластьДействия" id="6a4c8f8e-4cec-5eba-9c62-26ffe4087a99"/>
+			<Metadata name="Document.кбп_Замещение.Attribute.Комментарий" id="6fac0c74-f8e3-5daf-adc2-a5ab0f03b574"/>
+			<Metadata name="Document.кбп_Замещение.Attribute.ДатаНачала" id="9c9e08cc-e2b9-5ac6-9442-5a40a630c2aa"/>
+			<Metadata name="Document.кбп_Замещение.Attribute.ВернутьЗадачиПоОкончании" id="a70ccc2d-26f8-53b6-920f-537c112277d1"/>
+			<Metadata name="Document.кбп_Замещение.TabularSection.Роли.Attribute.Роль" id="a7734b12-85cf-5b56-a8c9-119a313691ec"/>
+			<Metadata name="Document.кбп_Замещение.TabularSection.Схемы.Attribute.Схема" id="aaced83d-4be1-50be-83f3-79b94158e35c"/>
+			<Metadata name="Document.кбп_Замещение.Attribute.Замещаемый" id="cbbe5676-522e-526b-bc09-5c4eae895cec"/>
+			<Metadata name="Document.кбп_Замещение.Attribute.УведомлятьЗамещаемого" id="ecd753c8-9834-55ff-837e-0aa2cf93eabc"/>
+			<Metadata name="Document.кбп_Замещение.Attribute.Основание" id="f45374df-f21b-56d0-8f28-82809fea05c6"/>
+		</Metadata>
+		<Metadata name="Enum.кбп_ВидыДействий" id="3409a741-3ff4-50ed-83d0-091891fb6cc5" configVersion="e535d6e3e8911a79febe896d12b5c81630790309">
+			<Metadata name="Enum.кбп_ВидыДействий.EnumValue.Обработчик" id="250c4b40-0068-5775-8f35-9b74ea819eaf"/>
+			<Metadata name="Enum.кбп_ВидыДействий.EnumValue.ЗапуститьВложенный" id="3d6c20e6-984a-5a05-92f3-27bc45399e3b"/>
+			<Metadata name="Enum.кбп_ВидыДействий.EnumValue.Переход" id="52e218a3-a436-5ba8-96bd-ba3f2c5517e9"/>
+			<Metadata name="Enum.кбп_ВидыДействий.EnumValue.Завершить" id="5ab2cc6e-d603-5640-8b47-67a3c35df0d1"/>
+			<Metadata name="Enum.кбп_ВидыДействий.EnumValue.Прервать" id="93d17ab9-ecf9-5b20-ad6c-eb8154e4e26d"/>
+			<Metadata name="Enum.кбп_ВидыДействий.EnumValue.Вернуть" id="a2c82579-5468-5b03-bbcc-bdd3aed1c958"/>
+			<Metadata name="Enum.кбп_ВидыДействий.EnumValue.ОткрытьФорму" id="a6c2b503-2810-5166-9822-6cb3fc013fac"/>
+			<Metadata name="Enum.кбп_ВидыДействий.EnumValue.Переадресовать" id="dbe7005e-21da-533d-8c8d-f14757b00d37"/>
+		</Metadata>
+		<Metadata name="Enum.кбп_ВидыЗаписейЖурнала" id="5bac6c0b-1986-50b2-a97c-d24a711aea70" configVersion="6406eb8adcaad4529e09201d3d3ce6a0e5f7e5f5">
+			<Metadata name="Enum.кбп_ВидыЗаписейЖурнала.EnumValue.Приостановка" id="0538b821-ecd5-56e5-850b-f1583b708f08"/>
+			<Metadata name="Enum.кбп_ВидыЗаписейЖурнала.EnumValue.Продолжение" id="0ed8e7fe-5554-57eb-916b-78e325ef20eb"/>
+			<Metadata name="Enum.кбп_ВидыЗаписейЖурнала.EnumValue.Предупреждение" id="10a230f1-9392-5e2a-b5f5-419ef51e311d"/>
+			<Metadata name="Enum.кбп_ВидыЗаписейЖурнала.EnumValue.Переадресация" id="1c8f2bcd-132e-5843-adac-4350e6c00f3c"/>
+			<Metadata name="Enum.кбп_ВидыЗаписейЖурнала.EnumValue.Запуск" id="1d77a205-c908-50d1-bdf6-c3c55635366f"/>
+			<Metadata name="Enum.кбп_ВидыЗаписейЖурнала.EnumValue.НажатаКнопка" id="208dd622-7eac-52de-bd95-c3d1366035c0"/>
+			<Metadata name="Enum.кбп_ВидыЗаписейЖурнала.EnumValue.Прерывание" id="2e918fe3-298a-5930-ae89-66ee562e1d1c"/>
+			<Metadata name="Enum.кбп_ВидыЗаписейЖурнала.EnumValue.Комментарий" id="2f7df70b-783b-5085-8c6d-e0571502e5be"/>
+			<Metadata name="Enum.кбп_ВидыЗаписейЖурнала.EnumValue.Переход" id="338fdadd-4264-5a62-8a48-bb177d255f74"/>
+			<Metadata name="Enum.кбп_ВидыЗаписейЖурнала.EnumValue.Возврат" id="3bae75a7-2c9f-50cb-bc27-f0051a8b0c24"/>
+			<Metadata name="Enum.кбп_ВидыЗаписейЖурнала.EnumValue.Завершение" id="4167630d-73b6-535d-ab70-db6df8347a1f"/>
+			<Metadata name="Enum.кбп_ВидыЗаписейЖурнала.EnumValue.ЗадачаВыполнена" id="45af6cdb-2b07-5e89-8261-780e801e1682"/>
+			<Metadata name="Enum.кбп_ВидыЗаписейЖурнала.EnumValue.ЗадачаСоздана" id="4963e952-1100-561c-8535-1b8fd708d8de"/>
+			<Metadata name="Enum.кбп_ВидыЗаписейЖурнала.EnumValue.ЗадачаПринята" id="4d87fbac-67cd-5472-ad89-e23bfa6ed5f3"/>
+			<Metadata name="Enum.кбп_ВидыЗаписейЖурнала.EnumValue.ВложенныйЗапущен" id="59db4b4a-0228-5a91-a8d6-3bd747915ca2"/>
+			<Metadata name="Enum.кбп_ВидыЗаписейЖурнала.EnumValue.ВложенныйЗавершен" id="5f2d4d01-9cdb-55da-99fc-35e9a5c49c80"/>
+			<Metadata name="Enum.кбп_ВидыЗаписейЖурнала.EnumValue.ИзменениеАдминистратором" id="6d6c5c9d-fd5f-562b-940c-a71a9b4244ff"/>
+			<Metadata name="Enum.кбп_ВидыЗаписейЖурнала.EnumValue.Оповещение" id="71f6a784-a1d7-5755-9af4-0f681ed6e47e"/>
+			<Metadata name="Enum.кбп_ВидыЗаписейЖурнала.EnumValue.Ошибка" id="c67b5413-ef1c-594b-8e1b-8a5d92e2a6d2"/>
+		</Metadata>
+		<Metadata name="Enum.кбп_ВидыКнопок" id="24c0ade3-5388-5a48-95ef-c0629a567837" configVersion="b8b3888dcf636e032ec0cfd0633db43d42c88b9c">
+			<Metadata name="Enum.кбп_ВидыКнопок.EnumValue.Обычная" id="3c941e19-a862-5934-9eb3-2a6f9e7d96cb"/>
+			<Metadata name="Enum.кбп_ВидыКнопок.EnumValue.Основная" id="952ca7f8-4b5e-57a2-9ece-0a65287bc960"/>
+			<Metadata name="Enum.кбп_ВидыКнопок.EnumValue.Опасная" id="ae73185e-b05f-517d-814a-bb58b599602b"/>
+		</Metadata>
+		<Metadata name="Enum.кбп_ВидыОбработчиков" id="d38dc459-6c9b-5e25-9176-cabb12277a9d" configVersion="a19c59033a73f427efee2f95b178826a193788e8">
+			<Metadata name="Enum.кбп_ВидыОбработчиков.EnumValue.Зарегистрированный" id="270ed3b3-43f1-541d-93bc-f22c0d052ed5"/>
+			<Metadata name="Enum.кбп_ВидыОбработчиков.EnumValue.Код" id="aeda5597-5288-5d64-b844-0730d2453279"/>
+			<Metadata name="Enum.кбп_ВидыОбработчиков.EnumValue.ДопОбработка" id="fecb1d7c-2a5e-569d-b3ff-7caa46391e44"/>
+		</Metadata>
+		<Metadata name="Enum.кбп_ВидыОтложенныхДействий" id="2170e09a-ca46-519e-8a17-f2f4d00a1073" configVersion="7dea64dc14c6d1f2aa643226271f11eb3cfb6cfa">
+			<Metadata name="Enum.кбп_ВидыОтложенныхДействий.EnumValue.Автошаг" id="62952e2b-e41d-5360-af79-62746df41504"/>
+			<Metadata name="Enum.кбп_ВидыОтложенныхДействий.EnumValue.Автовыполнение" id="6947844e-f12d-53a4-b0f4-5d0a68e47a92"/>
+			<Metadata name="Enum.кбп_ВидыОтложенныхДействий.EnumValue.ЗапускПоРасписанию" id="6a95c5db-1050-5303-b4f4-2df746549556"/>
+			<Metadata name="Enum.кбп_ВидыОтложенныхДействий.EnumValue.ПродолжитьРодителя" id="6f27797d-cf3d-5403-9b14-08dd93dc322e"/>
+			<Metadata name="Enum.кбп_ВидыОтложенныхДействий.EnumValue.Эскалация" id="95432671-818c-55d7-b402-f76592658a8e"/>
+			<Metadata name="Enum.кбп_ВидыОтложенныхДействий.EnumValue.КонтрольСрока" id="b73ed400-5ce1-59c6-bce7-b3a12d54481f"/>
+			<Metadata name="Enum.кбп_ВидыОтложенныхДействий.EnumValue.Таймер" id="ca7fa111-8039-5ce4-8789-e862922077be"/>
+		</Metadata>
+		<Metadata name="Enum.кбп_ВидыПолучателейОповещений" id="1e4794de-cded-50a9-9835-a392041d9d87" configVersion="239804c60ef1726558e308b099879745e96a4dc0">
+			<Metadata name="Enum.кбп_ВидыПолучателейОповещений.EnumValue.Пользователь" id="3c5bd0c6-be44-5e3f-b2ba-1b4958028caf"/>
+			<Metadata name="Enum.кбп_ВидыПолучателейОповещений.EnumValue.Наблюдатели" id="4b6f7acb-7c43-5412-a878-6abe4fd4ff1a"/>
+			<Metadata name="Enum.кбп_ВидыПолучателейОповещений.EnumValue.Обработчик" id="552e3e10-af87-555f-b51a-2e5e2aebf7df"/>
+			<Metadata name="Enum.кбп_ВидыПолучателейОповещений.EnumValue.Автор" id="63c0742d-66b3-531c-87d0-9d99c5294db4"/>
+			<Metadata name="Enum.кбп_ВидыПолучателейОповещений.EnumValue.Адрес" id="6a8b5cae-d1b3-5379-b6ca-a18e3794100e"/>
+			<Metadata name="Enum.кбп_ВидыПолучателейОповещений.EnumValue.Исполнитель" id="73abbe33-3931-55ed-a131-711bc571bf68"/>
+			<Metadata name="Enum.кбп_ВидыПолучателейОповещений.EnumValue.ИзРеквизита" id="7cd2e3f9-02a0-5694-aa9b-034488cf5610"/>
+			<Metadata name="Enum.кбп_ВидыПолучателейОповещений.EnumValue.Роль" id="bb449850-0ee3-55ce-b814-c81e33505e19"/>
+		</Metadata>
+		<Metadata name="Enum.кбп_ВидыУсловий" id="c7a6e73f-0962-5743-befc-4224853828f3" configVersion="a5d361076720eb8e47a1a62743c693f5077c63f2">
+			<Metadata name="Enum.кбп_ВидыУсловий.EnumValue.Отбор" id="09c59fa4-b035-5463-9f61-7641b8b57b03"/>
+			<Metadata name="Enum.кбп_ВидыУсловий.EnumValue.Нет" id="8d3c1f6f-d26a-50f4-9987-995b90b8bfc3"/>
+			<Metadata name="Enum.кбп_ВидыУсловий.EnumValue.Обработчик" id="8dd7eee6-baa1-556c-9440-7c829968a3ce"/>
+			<Metadata name="Enum.кбп_ВидыУсловий.EnumValue.Выражение" id="e04355ad-7730-59bc-8d2b-763e147417f9"/>
+		</Metadata>
+		<Metadata name="Enum.кбп_ДействияПриПросрочке" id="7a298d50-bf45-57fe-bebb-6ea6b9e991b8" configVersion="4d05c06465ece13dabfaad41d173156a60b2f3d8">
+			<Metadata name="Enum.кбп_ДействияПриПросрочке.EnumValue.Ничего" id="0feef920-083e-56c8-ba8a-7502e63a7aba"/>
+			<Metadata name="Enum.кбп_ДействияПриПросрочке.EnumValue.Эскалация" id="855bf749-68b0-5e60-b743-0e35d83181c0"/>
+			<Metadata name="Enum.кбп_ДействияПриПросрочке.EnumValue.Автовыполнение" id="ce6448db-7a50-5836-a2b1-1c01b92446ae"/>
+		</Metadata>
+		<Metadata name="Enum.кбп_ЕдиницыСрока" id="49da365c-ce98-5898-bdd4-aee972b6dc5a" configVersion="89192955c909d8da05cc11c3802711ebfe4ff3b0">
+			<Metadata name="Enum.кбп_ЕдиницыСрока.EnumValue.Минуты" id="154a24d5-e9b0-57e5-9853-13932085ba78"/>
+			<Metadata name="Enum.кбп_ЕдиницыСрока.EnumValue.Дни" id="6b773307-4ab6-5957-a89e-f88219555f63"/>
+			<Metadata name="Enum.кбп_ЕдиницыСрока.EnumValue.РабочиеЧасы" id="6ca83abd-a725-580e-85e3-a958904eef27"/>
+			<Metadata name="Enum.кбп_ЕдиницыСрока.EnumValue.РабочиеДни" id="98db6225-2f28-580e-90b1-96d98502fa3c"/>
+			<Metadata name="Enum.кбп_ЕдиницыСрока.EnumValue.Часы" id="c160582b-bfef-5ead-83b4-431de41c74b4"/>
+		</Metadata>
+		<Metadata name="Enum.кбп_ОбластиЗамещения" id="08269919-39e0-5f88-badc-24a9c852d806" configVersion="63cb8c446d682c87fa1b5e3be2bf3c6c50b6411f">
+			<Metadata name="Enum.кбп_ОбластиЗамещения.EnumValue.Схемы" id="0e4aa187-3e10-52ec-be02-0016e5a082fb"/>
+			<Metadata name="Enum.кбп_ОбластиЗамещения.EnumValue.Роли" id="1fbcd824-6821-51ee-8d23-47f7592e2716"/>
+			<Metadata name="Enum.кбп_ОбластиЗамещения.EnumValue.Все" id="70c845eb-9d22-514e-87f8-be8e6ed9ce09"/>
+		</Metadata>
+		<Metadata name="Enum.кбп_РежимыВложенногоПроцесса" id="0a185852-b961-505c-b046-955c6e744f0f" configVersion="20ab02427eb1b4b2f7603ae28b33a4ea11ec89fc">
+			<Metadata name="Enum.кбп_РежимыВложенногоПроцесса.EnumValue.Синхронно" id="a89a8ed7-11f3-5083-a8c5-c111e7883e9c"/>
+			<Metadata name="Enum.кбп_РежимыВложенногоПроцесса.EnumValue.Асинхронно" id="e9357de3-6dba-50c5-96e4-a2eb67b8ecc8"/>
+		</Metadata>
+		<Metadata name="Enum.кбп_РежимыВозврата" id="68e0bf90-ef46-5450-baba-a1a6620304ae" configVersion="39bfd18cf3455ff65f3d09ba7c195ef456acf0fd">
+			<Metadata name="Enum.кбп_РежимыВозврата.EnumValue.ПройтиМаршрутЗаново" id="43203b59-3846-5f6b-b9b5-c5192b4f094c"/>
+			<Metadata name="Enum.кбп_РежимыВозврата.EnumValue.ВернутьНаВернувшего" id="6e9c8406-71af-5b96-863f-21bd430ed9b8"/>
+		</Metadata>
+		<Metadata name="Enum.кбп_РежимыНазначения" id="cf4ed928-50b9-5764-8585-a5674b82a1d2" configVersion="32bc605c04a48d018cd1c3a14f5fa816c2060c32">
+			<Metadata name="Enum.кбп_РежимыНазначения.EnumValue.ЛюбомуИз" id="23895ce8-d85b-5819-bb02-d70787a43aac"/>
+			<Metadata name="Enum.кбп_РежимыНазначения.EnumValue.Каждому" id="39085c91-abee-5823-af84-4aefb07c5f67"/>
+		</Metadata>
+		<Metadata name="Enum.кбп_РежимыСлияния" id="4d93aca6-7456-56d5-859e-1bea1e04fee5" configVersion="c8dd98405dd0fdc049e520d751b2bc93362e5edc">
+			<Metadata name="Enum.кбп_РежимыСлияния.EnumValue.Любая" id="0103bc7e-60a7-59ea-9925-bb5435074048"/>
+			<Metadata name="Enum.кбп_РежимыСлияния.EnumValue.Все" id="86bc8837-a03b-528b-93b6-4a9a3a648c71"/>
+			<Metadata name="Enum.кбп_РежимыСлияния.EnumValue.NизM" id="adaa7edd-b36a-5a6c-ad11-e4636d995ac9"/>
+		</Metadata>
+		<Metadata name="Enum.кбп_СобытияЗапуска" id="9edb60e6-45d0-5ac1-a4da-c17fac2eae37" configVersion="ff970e05fa62ca6efaace16335f50f2fbd560b5d">
+			<Metadata name="Enum.кбп_СобытияЗапуска.EnumValue.Проведение" id="0d0a0a22-932d-5921-8d78-7c8d69a81d08"/>
+			<Metadata name="Enum.кбп_СобытияЗапуска.EnumValue.Расписание" id="317131a1-02f9-5a3f-a054-230e8aeb16fe"/>
+			<Metadata name="Enum.кбп_СобытияЗапуска.EnumValue.Запись" id="66025cba-4a0a-5d34-9353-f779cd5d2292"/>
+		</Metadata>
+		<Metadata name="Enum.кбп_СобытияПроцессов" id="1c8b7f66-035d-5611-8b1c-ab4179592427" configVersion="11eff4705cb5612ffbb1e64f4b62e44ece21987c">
+			<Metadata name="Enum.кбп_СобытияПроцессов.EnumValue.ЗадачаПросрочена" id="0c892cda-d7dc-5414-aae7-54af74758f23"/>
+			<Metadata name="Enum.кбп_СобытияПроцессов.EnumValue.СобытиеШага" id="3bacee64-377b-551d-8408-1c49cf23c0b8"/>
+			<Metadata name="Enum.кбп_СобытияПроцессов.EnumValue.ЗамещениеНачалось" id="40b5bde7-0ee4-503a-9805-55a173e65139"/>
+			<Metadata name="Enum.кбп_СобытияПроцессов.EnumValue.Дайджест" id="7396dccb-bebb-5e66-adf4-43ea6a12c34d"/>
+			<Metadata name="Enum.кбп_СобытияПроцессов.EnumValue.ПроцессПрерван" id="74b378ec-f68d-566b-99f5-e3def12b734a"/>
+			<Metadata name="Enum.кбп_СобытияПроцессов.EnumValue.НовыйКомментарий" id="96eb78ab-8120-59a6-8099-be6c800de339"/>
+			<Metadata name="Enum.кбп_СобытияПроцессов.EnumValue.ЗамещениеЗакончилось" id="a0edad77-d518-57b4-9535-df9b3a27beee"/>
+			<Metadata name="Enum.кбп_СобытияПроцессов.EnumValue.Упоминание" id="b78c73ac-3aac-5542-87b2-428b838007ce"/>
+			<Metadata name="Enum.кбп_СобытияПроцессов.EnumValue.ЗадачаНазначена" id="b803aa37-afa6-5a96-b68f-1afadad8c2ea"/>
+			<Metadata name="Enum.кбп_СобытияПроцессов.EnumValue.СрокИстекает" id="bd6f5177-23bf-5b40-bc06-52ceca34a214"/>
+			<Metadata name="Enum.кбп_СобытияПроцессов.EnumValue.ВозвратНаДоработку" id="c0ceefa7-bd4d-5694-a6a4-b7d69bef1232"/>
+			<Metadata name="Enum.кбп_СобытияПроцессов.EnumValue.ЗадачаВыполнена" id="c154231a-0754-5c6b-a67b-397444ff5acd"/>
+			<Metadata name="Enum.кбп_СобытияПроцессов.EnumValue.ПроцессЗапущен" id="f37e6f63-deae-519f-aaa3-b4760c50ac0e"/>
+			<Metadata name="Enum.кбп_СобытияПроцессов.EnumValue.ПроцессЗавершен" id="fcc949f6-76c1-54ab-a516-4fdaa7d4ea9e"/>
+		</Metadata>
+		<Metadata name="Enum.кбп_СостоянияЗадач" id="5938d93b-345a-54aa-9aa1-2c326c65fa04" configVersion="3bfe64d5d7397f632da7c9ce556c7bf8e4072b58">
+			<Metadata name="Enum.кбп_СостоянияЗадач.EnumValue.Переадресована" id="30dd4421-495b-591b-b797-b384b3e21362"/>
+			<Metadata name="Enum.кбп_СостоянияЗадач.EnumValue.Возвращена" id="3e709978-ab36-54ca-ae33-0c3125275d12"/>
+			<Metadata name="Enum.кбп_СостоянияЗадач.EnumValue.Отменена" id="7cc5f3fc-c5b2-5362-9836-a2c89bb01af8"/>
+			<Metadata name="Enum.кбп_СостоянияЗадач.EnumValue.Ожидает" id="a4c206ff-a2ea-5df8-9e9b-29b8da8b4757"/>
+			<Metadata name="Enum.кбп_СостоянияЗадач.EnumValue.ВРаботе" id="b46fbd1f-b060-5e74-95dc-38b6f9671e26"/>
+			<Metadata name="Enum.кбп_СостоянияЗадач.EnumValue.Выполнена" id="e774bf85-4705-5b20-8f63-7a254af35e48"/>
+		</Metadata>
+		<Metadata name="Enum.кбп_СостоянияМаркеров" id="b957a809-6dab-5073-bf33-82f762aabada" configVersion="b4d51b37931a83bd512392c05ff4c4c30a494deb">
+			<Metadata name="Enum.кбп_СостоянияМаркеров.EnumValue.Завершен" id="092ea1f5-558c-554b-8ab4-a7aa886e1752"/>
+			<Metadata name="Enum.кбп_СостоянияМаркеров.EnumValue.Ожидает" id="95345366-b01f-5062-a265-b438d499927f"/>
+			<Metadata name="Enum.кбп_СостоянияМаркеров.EnumValue.Активен" id="99e00f04-5acb-55ff-9dd8-6cbd52599686"/>
+		</Metadata>
+		<Metadata name="Enum.кбп_СостоянияПроцессов" id="df859a09-dc67-57cf-8b9b-26b16109e990" configVersion="367dbe84e61c2cbeca7021477c34f8a97533ac03">
+			<Metadata name="Enum.кбп_СостоянияПроцессов.EnumValue.Завершен" id="55daba05-5510-5294-a40f-885763c458bd"/>
+			<Metadata name="Enum.кбп_СостоянияПроцессов.EnumValue.Прерван" id="5ebf458e-8cee-52bd-b984-53f4fdd96f42"/>
+			<Metadata name="Enum.кбп_СостоянияПроцессов.EnumValue.Ошибка" id="9cef7cc9-d466-53cf-8e8e-a7fecadd319e"/>
+			<Metadata name="Enum.кбп_СостоянияПроцессов.EnumValue.Активен" id="b1e1b117-efc0-529f-a73a-4d201ca30dac"/>
+			<Metadata name="Enum.кбп_СостоянияПроцессов.EnumValue.Черновик" id="c44d16fd-de8a-5692-b87d-8b18797e55f1"/>
+			<Metadata name="Enum.кбп_СостоянияПроцессов.EnumValue.Приостановлен" id="ebdd2e33-a852-5cd5-9da7-b8d83789dda2"/>
+		</Metadata>
+		<Metadata name="Enum.кбп_СпособыАдресации" id="153325ac-e153-57ac-ace9-fbfc89162aad" configVersion="a9cf0a8f63d9fd4ccf96baf02517b721d9970a30">
+			<Metadata name="Enum.кбп_СпособыАдресации.EnumValue.Автор" id="04b3b4f7-fa0b-5fc0-a67c-cae5652f0e39"/>
+			<Metadata name="Enum.кбп_СпособыАдресации.EnumValue.Руководитель" id="07fe31ff-f328-54f0-b886-edff8aa09662"/>
+			<Metadata name="Enum.кбп_СпособыАдресации.EnumValue.Пользователь" id="1102b1c5-65ab-59ea-bd79-10e59ecf3a7c"/>
+			<Metadata name="Enum.кбп_СпособыАдресации.EnumValue.ИсполнительПредыдущегоШага" id="179136ec-094b-5cd7-9067-63b2f419a696"/>
+			<Metadata name="Enum.кбп_СпособыАдресации.EnumValue.Обработчик" id="22b5b016-1e89-50c7-b5e8-8f815979342c"/>
+			<Metadata name="Enum.кбп_СпособыАдресации.EnumValue.ВыбираетПредыдущий" id="28cf35d8-22ee-5498-b08d-fc0be2e7153a"/>
+			<Metadata name="Enum.кбп_СпособыАдресации.EnumValue.ИзРеквизита" id="64f8f716-8a86-5858-a514-fc97dac93413"/>
+			<Metadata name="Enum.кбп_СпособыАдресации.EnumValue.Роль" id="eff40eda-da52-5dd2-8f3f-01b64773d877"/>
+		</Metadata>
+		<Metadata name="Enum.кбп_СпособыГруппировкиОповещений" id="1de76808-4a71-553f-b3eb-20d9fe440d9a" configVersion="2ff4dacf88630e4e3d956a6264b6f450089c737c">
+			<Metadata name="Enum.кбп_СпособыГруппировкиОповещений.EnumValue.Сразу" id="ae0dd25b-da63-5822-93c3-766986e6a626"/>
+			<Metadata name="Enum.кбп_СпособыГруппировкиОповещений.EnumValue.РазВNМинут" id="c38fd55d-e5a0-5c5e-969e-dbdd62800af7"/>
+			<Metadata name="Enum.кбп_СпособыГруппировкиОповещений.EnumValue.РазВДень" id="d6bc4a14-bec9-5f32-8957-fec43a58226b"/>
+		</Metadata>
+		<Metadata name="Enum.кбп_СтатусыВерсийСхем" id="d03fb9f1-5eae-529b-bf62-8af896383ec5" configVersion="439970ce77e1d78cd41825b0a6596ef74c8e694d">
+			<Metadata name="Enum.кбп_СтатусыВерсийСхем.EnumValue.Архив" id="678cb1f0-d3fa-5d65-a7d6-1d793e4321b3"/>
+			<Metadata name="Enum.кбп_СтатусыВерсийСхем.EnumValue.Опубликована" id="82a403b2-d7e2-56e2-9ed6-98d24006f842"/>
+			<Metadata name="Enum.кбп_СтатусыВерсийСхем.EnumValue.Черновик" id="d27051aa-db99-567a-82e7-a383f724d736"/>
+		</Metadata>
+		<Metadata name="Enum.кбп_СтатусыОчереди" id="c304e7bf-62f2-5283-9ec8-36ec5221cc04" configVersion="8e628b56bfa37fb25763a44e3160e910ca312520">
+			<Metadata name="Enum.кбп_СтатусыОчереди.EnumValue.Ожидает" id="017a40cc-20b1-5d44-9600-8470fb9e3589"/>
+			<Metadata name="Enum.кбп_СтатусыОчереди.EnumValue.Ошибка" id="06689f71-8380-5aac-a5c9-295cc3f8be07"/>
+			<Metadata name="Enum.кбп_СтатусыОчереди.EnumValue.Выполняется" id="52c28094-986a-50d9-a65f-6ed8720bb399"/>
+			<Metadata name="Enum.кбп_СтатусыОчереди.EnumValue.Отменено" id="5de267a7-43c7-582f-b893-d07c72990768"/>
+			<Metadata name="Enum.кбп_СтатусыОчереди.EnumValue.ОжидаетГруппировки" id="da78aaeb-e18d-5c30-b900-3afeaff1d989"/>
+			<Metadata name="Enum.кбп_СтатусыОчереди.EnumValue.Выполнено" id="f7de5388-1e84-5304-8899-4e0f820ffa3e"/>
+		</Metadata>
+		<Metadata name="Enum.кбп_ТипыШагов" id="a3a9dd3d-66d7-5e47-948c-11dfb166935d" configVersion="cf52a5602945c616e946958f0f012e22d1b89ac1">
+			<Metadata name="Enum.кбп_ТипыШагов.EnumValue.Обработка" id="14d47a01-d690-563a-a92e-7b32b9704c87"/>
+			<Metadata name="Enum.кбп_ТипыШагов.EnumValue.Старт" id="600cf4f4-968b-580f-8ffc-ec0a7aa824f3"/>
+			<Metadata name="Enum.кбп_ТипыШагов.EnumValue.Таймер" id="62db5578-132e-5b98-9289-9c31ff75fb68"/>
+			<Metadata name="Enum.кбп_ТипыШагов.EnumValue.Слияние" id="7b6ef3ef-aa58-560b-973d-0ac423996906"/>
+			<Metadata name="Enum.кбп_ТипыШагов.EnumValue.Вариант" id="8a582bf7-3473-5889-9a26-f0e9258c6148"/>
+			<Metadata name="Enum.кбп_ТипыШагов.EnumValue.ВложенныйПроцесс" id="8d54c2fb-937a-57f8-91f4-b3e9fda129dd"/>
+			<Metadata name="Enum.кбп_ТипыШагов.EnumValue.Условие" id="945649db-3d50-5694-8be0-24d164da23d6"/>
+			<Metadata name="Enum.кбп_ТипыШагов.EnumValue.Оповещение" id="9626fe5c-9488-58e2-bc03-9c744ed4dd53"/>
+			<Metadata name="Enum.кбп_ТипыШагов.EnumValue.Декорация" id="a43e92cf-12f2-5f44-adb7-23425e2516e1"/>
+			<Metadata name="Enum.кбп_ТипыШагов.EnumValue.Завершение" id="c66bdad1-4f9e-5156-9479-17700ceccea1"/>
+			<Metadata name="Enum.кбп_ТипыШагов.EnumValue.ВыборВарианта" id="d2827fdb-31f8-5ffe-a4d9-4a94524ff4f0"/>
+			<Metadata name="Enum.кбп_ТипыШагов.EnumValue.Разделение" id="d89aa560-ee3d-55d1-9cf3-ffffa14473d4"/>
+			<Metadata name="Enum.кбп_ТипыШагов.EnumValue.Задача" id="e6966f4c-0231-5d68-ac1d-677a55984057"/>
+		</Metadata>
+		<Metadata name="InformationRegister.кбп_ЖурналПроцессов" id="95022bc6-7e90-5796-8898-498eb72827b5" configVersion="792642ad40cf128f8287cbdff007267a7312871b">
+			<Metadata name="InformationRegister.кбп_ЖурналПроцессов.Dimension.Момент" id="257761a0-6920-583a-972b-05193f4032ba"/>
+			<Metadata name="InformationRegister.кбп_ЖурналПроцессов.Resource.ЗаКого" id="37f6676c-03ca-552b-a022-eea45fcf2b0d"/>
+			<Metadata name="InformationRegister.кбп_ЖурналПроцессов.Resource.Пользователь" id="6c9b24a8-fcd1-57f3-b6f8-6f3172514d1a"/>
+			<Metadata name="InformationRegister.кбп_ЖурналПроцессов.Resource.Шаг" id="7eac3069-a55d-50a5-a64e-0344a80afcf6"/>
+			<Metadata name="InformationRegister.кбп_ЖурналПроцессов.Resource.ВидЗаписи" id="915e995c-dbf0-55db-a2ba-a31b9d063619"/>
+			<Metadata name="InformationRegister.кбп_ЖурналПроцессов.Dimension.НомерЗаписи" id="995fa3c7-6ffc-59bc-ac0f-dd4955a3bac2"/>
+			<Metadata name="InformationRegister.кбп_ЖурналПроцессов.Resource.Комментарий" id="ad45612a-ed2d-59ff-a746-ddc3751b96f6"/>
+			<Metadata name="InformationRegister.кбп_ЖурналПроцессов.Resource.Задача" id="b570f921-db82-59d2-a570-6a514a0b49b7"/>
+			<Metadata name="InformationRegister.кбп_ЖурналПроцессов.Resource.Данные" id="c16984d6-2663-56a5-9f2f-41a5420940f1"/>
+			<Metadata name="InformationRegister.кбп_ЖурналПроцессов.Dimension.Процесс" id="c4b10fa7-ee2c-56a8-b6d6-cee310c400b1"/>
+			<Metadata name="InformationRegister.кбп_ЖурналПроцессов.Resource.Итерация" id="d0d10be4-d6b0-5be0-a846-bda30d0a035f"/>
+			<Metadata name="InformationRegister.кбп_ЖурналПроцессов.Resource.ИдКнопки" id="f06aa528-a9a3-5110-a196-5b4bf65d7d3b"/>
+		</Metadata>
+		<Metadata name="InformationRegister.кбп_Замещения" id="383fcd33-738a-5207-bdc7-32b7935d9f1e" configVersion="6dcf41d039715d37ee5430e09a7c73519efb2726">
+			<Metadata name="InformationRegister.кбп_Замещения.Dimension.Замещаемый" id="115e8e74-9896-5b1c-b5a4-2022a5751cb2"/>
+			<Metadata name="InformationRegister.кбп_Замещения.Dimension.Схема" id="5831b989-af5d-5231-8ddc-11fcdc1289c9"/>
+			<Metadata name="InformationRegister.кбп_Замещения.Dimension.Роль" id="6d517669-bc79-59f7-bd07-a4c36e36af3f"/>
+			<Metadata name="InformationRegister.кбп_Замещения.Dimension.Замещающий" id="a77041d4-1769-59cb-9110-bdd1738383ec"/>
+			<Metadata name="InformationRegister.кбп_Замещения.Resource.ВозвращатьЗадачи" id="d6a57c51-fc37-5115-994c-40ceb2c8e627"/>
+			<Metadata name="InformationRegister.кбп_Замещения.Resource.ДатаОкончания" id="d7a63cc5-cc82-5e32-b4b5-e0b4d786df72"/>
+			<Metadata name="InformationRegister.кбп_Замещения.Resource.ДатаНачала" id="eb7826a7-3d07-5974-bbe5-99bc5c6ecf84"/>
+			<Metadata name="InformationRegister.кбп_Замещения.Resource.Уведомлять" id="f6b85442-57d9-5785-85f5-93623e02f7fb"/>
+		</Metadata>
+		<Metadata name="InformationRegister.кбп_ИсполнителиРолей" id="8a9358e0-ef6e-5231-8990-ab4fc4d37954" configVersion="1b70c187cd1fca489ab72889e28d2b2f1f76d6ef">
+			<Metadata name="InformationRegister.кбп_ИсполнителиРолей.Dimension.Пользователь" id="0a90f1f1-196c-5a41-ac55-6d8295f587dd"/>
+			<Metadata name="InformationRegister.кбп_ИсполнителиРолей.Dimension.ОбъектАдресации2" id="161f28a8-9fac-5174-ab33-d2e00311f04b"/>
+			<Metadata name="InformationRegister.кбп_ИсполнителиРолей.Resource.Порядок" id="495e2eb7-644b-5099-99b0-a3d7dc7fa20f"/>
+			<Metadata name="InformationRegister.кбп_ИсполнителиРолей.Dimension.ОбъектАдресации1" id="ad9f0b40-277f-5e91-a9b4-93d1af774266"/>
+			<Metadata name="InformationRegister.кбп_ИсполнителиРолей.Resource.Основной" id="b789eae4-e62a-5535-b178-bde32cc2ff12"/>
+			<Metadata name="InformationRegister.кбп_ИсполнителиРолей.Dimension.Роль" id="e46ff5b4-c37b-52f7-ae54-3af6aed2cd8c"/>
+		</Metadata>
+		<Metadata name="InformationRegister.кбп_ИсполнителиШагов" id="44a5907e-3caa-5b50-8271-3126d65d6064" configVersion="1bd959418073c375885c900bad8e3f8c46a11fe1">
+			<Metadata name="InformationRegister.кбп_ИсполнителиШагов.Resource.Роль" id="23f6f188-020b-5f6a-9c4f-9d898aeac8a0"/>
+			<Metadata name="InformationRegister.кбп_ИсполнителиШагов.Resource.СпособАдресации" id="31ba010d-b9ce-5c02-a698-e44198baa2ea"/>
+			<Metadata name="InformationRegister.кбп_ИсполнителиШагов.Resource.ПутьОбъектаАдресации1" id="3cef9131-30c9-52f3-81e7-7db1fa4c1d27"/>
+			<Metadata name="InformationRegister.кбп_ИсполнителиШагов.Dimension.НомерЗаписи" id="6419dc34-900f-5817-8160-36219f48ebdd"/>
+			<Metadata name="InformationRegister.кбп_ИсполнителиШагов.Resource.РеквизитПредмета" id="7c383b59-531f-5766-b16b-0b5adc6ae716"/>
+			<Metadata name="InformationRegister.кбп_ИсполнителиШагов.Resource.ПутьОбъектаАдресации2" id="90976039-dfd0-594c-ac83-8c6cbd806f00"/>
+			<Metadata name="InformationRegister.кбп_ИсполнителиШагов.Resource.Обработчик" id="9b171a79-407d-59d7-8252-e8e31069b617"/>
+			<Metadata name="InformationRegister.кбп_ИсполнителиШагов.Attribute.Условие" id="b64de7c6-0099-5b20-9786-8c5ccf852016"/>
+			<Metadata name="InformationRegister.кбп_ИсполнителиШагов.Resource.Пользователь" id="e84893be-a328-55ad-9186-5aeaa84b2ddb"/>
+			<Metadata name="InformationRegister.кбп_ИсполнителиШагов.Dimension.Шаг" id="ed8bce95-9774-5355-92e8-547eb5f8786b"/>
+		</Metadata>
+		<Metadata name="InformationRegister.кбп_КнопкиШагов" id="79957959-0238-5956-9587-ecf3282dad24" configVersion="7afc140b6066d9127e2d5082680595beafdf5ace">
+			<Metadata name="InformationRegister.кбп_КнопкиШагов.Resource.КомментарийОбязателен" id="0ab98a7a-78b7-5866-9e32-f6b5f7c9a59f"/>
+			<Metadata name="InformationRegister.кбп_КнопкиШагов.Resource.Обработчик" id="0c4efa95-d4e7-5c05-b36e-8bb9fd899f25"/>
+			<Metadata name="InformationRegister.кбп_КнопкиШагов.Resource.Подтверждение" id="0c771510-8cb3-55d5-a3d6-b49dcb667fc5"/>
+			<Metadata name="InformationRegister.кбп_КнопкиШагов.Resource.ВложеннаяСхема" id="14334ede-597a-53b3-9088-491fdfef444b"/>
+			<Metadata name="InformationRegister.кбп_КнопкиШагов.Resource.ВидОбработчика" id="40d7f621-e7ac-5158-946f-3b369c2d0bd0"/>
+			<Metadata name="InformationRegister.кбп_КнопкиШагов.Resource.Порядок" id="5c36752b-1c02-580f-9881-7b7db26460d0"/>
+			<Metadata name="InformationRegister.кбп_КнопкиШагов.Attribute.УсловиеВидимости" id="649172f9-23d7-573e-a3a5-da4f5d3fcb22"/>
+			<Metadata name="InformationRegister.кбп_КнопкиШагов.Resource.ТекстПодтверждения" id="6824152e-e4a0-58e0-8f0a-f7e224bbe224"/>
+			<Metadata name="InformationRegister.кбп_КнопкиШагов.Attribute.ЦепочкаДействий" id="69c3bc12-1705-5b47-8774-c2da66cffd87"/>
+			<Metadata name="InformationRegister.кбп_КнопкиШагов.Attribute.КодОбработчика" id="82d91141-f917-5543-b5e8-ec7dfa10a5f9"/>
+			<Metadata name="InformationRegister.кбп_КнопкиШагов.Resource.ИмяФормы" id="97c9994a-e181-5e4c-a82d-1591604b31ea"/>
+			<Metadata name="InformationRegister.кбп_КнопкиШагов.Resource.Вид" id="aaf1b8bc-bc39-5196-9cf2-0e75dea5fac1"/>
+			<Metadata name="InformationRegister.кбп_КнопкиШагов.Dimension.Шаг" id="acd229d4-a69c-56cf-8b26-6ca3766e4d99"/>
+			<Metadata name="InformationRegister.кбп_КнопкиШагов.Resource.Заголовок" id="b2f713d0-8230-5917-9015-a26fb0d9da89"/>
+			<Metadata name="InformationRegister.кбп_КнопкиШагов.Resource.ИдПерехода" id="cad6c106-a62f-5c31-a83f-ae7338f19b61"/>
+			<Metadata name="InformationRegister.кбп_КнопкиШагов.Resource.Картинка" id="de822f62-7daa-5396-b7f3-45e26bf9de7d"/>
+			<Metadata name="InformationRegister.кбп_КнопкиШагов.Dimension.ИдКнопки" id="df7ee798-0525-5c1e-a92e-f1a30836c94e"/>
+			<Metadata name="InformationRegister.кбп_КнопкиШагов.Resource.Действие" id="f9f94176-ec8c-581b-9c06-7313545de8e3"/>
+		</Metadata>
+		<Metadata name="InformationRegister.кбп_Маркеры" id="9895c669-0e3c-5949-8cb7-b0a6a2c960b3" configVersion="29beb58c8b8c9b8810aff9f5fabda67a4bd163ac">
+			<Metadata name="InformationRegister.кбп_Маркеры.Resource.Ветка" id="1b12c566-3ed9-50e9-b8b8-b43ef3a036f2"/>
+			<Metadata name="InformationRegister.кбп_Маркеры.Dimension.ИдМаркера" id="1fdef2cd-f3ea-5b69-96ff-e2fa8e9a6d1e"/>
+			<Metadata name="InformationRegister.кбп_Маркеры.Resource.ПришлоВеток" id="2aac10ba-a8a5-5949-b626-eeaeb52f13c3"/>
+			<Metadata name="InformationRegister.кбп_Маркеры.Dimension.Процесс" id="2c46473a-86e1-5eb6-b352-cf74602cf19e"/>
+			<Metadata name="InformationRegister.кбп_Маркеры.Resource.Шаг" id="44f84bd8-e7b9-5ea3-b459-2fa20598723d"/>
+			<Metadata name="InformationRegister.кбп_Маркеры.Resource.Состояние" id="65214f16-66dd-5781-a453-668fc68e358c"/>
+			<Metadata name="InformationRegister.кбп_Маркеры.Resource.ДатаСоздания" id="817b7714-16eb-5c4a-a0d3-71d021a8d498"/>
+			<Metadata name="InformationRegister.кбп_Маркеры.Resource.Итерация" id="b6aa0ba6-746e-5110-9406-1aad0c8c3cdf"/>
+			<Metadata name="InformationRegister.кбп_Маркеры.Resource.ВернутьНа" id="dcb682af-3854-51d6-9cb6-ecb016f5c74f"/>
+			<Metadata name="InformationRegister.кбп_Маркеры.Resource.ОжидаетсяВеток" id="dcfbc042-159e-5767-a160-3187c043d072"/>
+			<Metadata name="InformationRegister.кбп_Маркеры.Resource.РодительскийМаркер" id="eddb54f1-6e3b-5392-be3b-77fc74e1d955"/>
+		</Metadata>
+		<Metadata name="InformationRegister.кбп_Настройки" id="236a5217-9175-57d2-aac8-0cbb1e44e3f3" configVersion="78a76faccafdd2f303b838408449625dfaf2b2a9">
+			<Metadata name="InformationRegister.кбп_Настройки.Attribute.Значение" id="206a98d8-27b9-5882-b41d-f4a616272012"/>
+			<Metadata name="InformationRegister.кбп_Настройки.Dimension.Ключ" id="cff09194-72f0-5184-b479-495005f4b0d3"/>
+		</Metadata>
+		<Metadata name="InformationRegister.кбп_ОповещенияШагов" id="92aa5b05-07df-5ef1-bede-2c59eee7987a" configVersion="157096bdb4bad5e8f6cc1086af064f392d546874">
+			<Metadata name="InformationRegister.кбп_ОповещенияШагов.Resource.Пользователь" id="0611caae-192e-5bbf-8b19-899d9bfeb6f3"/>
+			<Metadata name="InformationRegister.кбп_ОповещенияШагов.Dimension.Версия" id="0e8ddd35-f846-5b8a-b6ba-e945ce751f39"/>
+			<Metadata name="InformationRegister.кбп_ОповещенияШагов.Resource.Шаблон" id="1a34c6a4-f774-5f3b-bf58-f3ceec77c7fb"/>
+			<Metadata name="InformationRegister.кбп_ОповещенияШагов.Resource.РеквизитПредмета" id="204d345a-224c-553c-92f6-c0d04eea8a8b"/>
+			<Metadata name="InformationRegister.кбп_ОповещенияШагов.Resource.Роль" id="26777a15-985d-53c1-9124-59007e5d9bf3"/>
+			<Metadata name="InformationRegister.кбп_ОповещенияШагов.Resource.Срочное" id="4e487228-4c5a-5295-9e65-d66b976d7d23"/>
+			<Metadata name="InformationRegister.кбп_ОповещенияШагов.Resource.Адрес" id="55e0711b-09da-5a7c-a985-b43f2d769743"/>
+			<Metadata name="InformationRegister.кбп_ОповещенияШагов.Dimension.НомерЗаписи" id="5fb3bcad-713d-507d-9050-72a622d8800f"/>
+			<Metadata name="InformationRegister.кбп_ОповещенияШагов.Dimension.Событие" id="6cac56d3-d08e-580d-8062-f845a3673f8c"/>
+			<Metadata name="InformationRegister.кбп_ОповещенияШагов.Resource.Обработчик" id="8edb2484-1b91-5eee-bb17-a92001b703e4"/>
+			<Metadata name="InformationRegister.кбп_ОповещенияШагов.Resource.Каналы" id="97a2aec6-2ba0-5fca-b9a0-67af2d72cea3"/>
+			<Metadata name="InformationRegister.кбп_ОповещенияШагов.Attribute.Условие" id="cc732b83-eaf2-5441-b4d4-3ce5c1d2103e"/>
+			<Metadata name="InformationRegister.кбп_ОповещенияШагов.Dimension.Шаг" id="d700f578-6d5f-51e0-ac04-aab7bfb5adb2"/>
+			<Metadata name="InformationRegister.кбп_ОповещенияШагов.Resource.ВидПолучателя" id="e807ba0c-dd9c-552a-abaf-34fe02963d07"/>
+		</Metadata>
+		<Metadata name="InformationRegister.кбп_ОчередьДействий" id="61b41843-c1df-50ee-9157-64b9075b59fa" configVersion="274e51717a84fb45443a501faaa1bf68641ccc41">
+			<Metadata name="InformationRegister.кбп_ОчередьДействий.Resource.ВыполнитьПосле" id="19d71c81-073b-5efe-ac2a-1fda5b2a1838"/>
+			<Metadata name="InformationRegister.кбп_ОчередьДействий.Dimension.Ид" id="3c073f9d-efcb-5fbd-99f2-d7fba5d59d57"/>
+			<Metadata name="InformationRegister.кбп_ОчередьДействий.Resource.ДатаСоздания" id="58432079-b424-5919-83a3-56a7d158fe3b"/>
+			<Metadata name="InformationRegister.кбп_ОчередьДействий.Attribute.Параметры" id="5d62e36b-4f62-57c5-8f3d-e8cd6670f4ec"/>
+			<Metadata name="InformationRegister.кбп_ОчередьДействий.Resource.Процесс" id="5fcbed4b-887d-52ee-b54b-b6e09c0ab2ea"/>
+			<Metadata name="InformationRegister.кбп_ОчередьДействий.Resource.Статус" id="799afd0c-8b74-50fa-908b-e50022bc7483"/>
+			<Metadata name="InformationRegister.кбп_ОчередьДействий.Resource.ПоследняяОшибка" id="c17cf38d-f0c9-586b-999b-92234ba66e48"/>
+			<Metadata name="InformationRegister.кбп_ОчередьДействий.Resource.Вид" id="e0319b10-1d6e-553a-b3f4-a214a78064a9"/>
+			<Metadata name="InformationRegister.кбп_ОчередьДействий.Resource.Задача" id="eb4c9ff4-7d2c-590d-ae0a-b01b60af9c21"/>
+			<Metadata name="InformationRegister.кбп_ОчередьДействий.Resource.ИдМаркера" id="ee5ca096-191a-5cc2-b8f7-9dfb52f2f26c"/>
+			<Metadata name="InformationRegister.кбп_ОчередьДействий.Resource.Попыток" id="ff02f5a7-0597-50c6-becd-31b16ccade01"/>
+		</Metadata>
+		<Metadata name="InformationRegister.кбп_ОчередьОповещений" id="414dd513-5f50-590e-9374-c29ff1fcc781" configVersion="3f823e731572b4c0cf18649e9853d3e5044cfd73">
+			<Metadata name="InformationRegister.кбп_ОчередьОповещений.Resource.ОтправитьПосле" id="05ab7d9e-4388-5517-8025-ef2097e971c2"/>
+			<Metadata name="InformationRegister.кбп_ОчередьОповещений.Resource.Ошибка" id="22710d78-fb72-58be-9bbb-6de5a21baf25"/>
+			<Metadata name="InformationRegister.кбп_ОчередьОповещений.Resource.Процесс" id="32c43390-168c-51d3-861e-99d14402c694"/>
+			<Metadata name="InformationRegister.кбп_ОчередьОповещений.Resource.Получатель" id="38f2f7c2-1a69-587b-975d-8eec41bae968"/>
+			<Metadata name="InformationRegister.кбп_ОчередьОповещений.Resource.Попыток" id="503e8555-cc26-5f3d-980e-55e44aedbf4c"/>
+			<Metadata name="InformationRegister.кбп_ОчередьОповещений.Resource.Адрес" id="84861ae9-8cef-5c5e-b93f-99cead4bb291"/>
+			<Metadata name="InformationRegister.кбп_ОчередьОповещений.Resource.Статус" id="860e7ebf-9816-5f90-bb37-1e18ba978e16"/>
+			<Metadata name="InformationRegister.кбп_ОчередьОповещений.Resource.Тема" id="92d4880b-53c7-522d-87ce-aace3afe0091"/>
+			<Metadata name="InformationRegister.кбп_ОчередьОповещений.Resource.Задача" id="9e63fbfe-b93f-5bcb-89d7-1cabdc393a20"/>
+			<Metadata name="InformationRegister.кбп_ОчередьОповещений.Resource.ДатаОтправки" id="9f658b28-2704-576a-9db0-72cc0db78e20"/>
+			<Metadata name="InformationRegister.кбп_ОчередьОповещений.Resource.ЭтоHTML" id="b49a97e1-6bdc-5289-b5e3-27cc5521015e"/>
+			<Metadata name="InformationRegister.кбп_ОчередьОповещений.Dimension.Ид" id="be381bcd-8368-579c-874d-b871c699630b"/>
+			<Metadata name="InformationRegister.кбп_ОчередьОповещений.Resource.ДатаСоздания" id="c5cd956b-dd23-554a-9b4c-23aa455dfe7b"/>
+			<Metadata name="InformationRegister.кбп_ОчередьОповещений.Resource.Канал" id="cbd5cbd0-fe6f-5804-8594-daa20cedd8f1"/>
+			<Metadata name="InformationRegister.кбп_ОчередьОповещений.Resource.КлючДедупликации" id="d6f62736-108d-5eb2-984e-adcab17d5c45"/>
+			<Metadata name="InformationRegister.кбп_ОчередьОповещений.Resource.Событие" id="d8dcda24-08a7-5b78-8428-a1e85c3d81e7"/>
+			<Metadata name="InformationRegister.кбп_ОчередьОповещений.Resource.Текст" id="f00d3b23-f0ae-58e1-80e1-e6f2635e0acf"/>
+		</Metadata>
+		<Metadata name="InformationRegister.кбп_ПараметрыСхем" id="92cd8d71-3834-582b-9bd6-116f62b58919" configVersion="a2eac5c380357d41743713e2ff2f967737d4123f">
+			<Metadata name="InformationRegister.кбп_ПараметрыСхем.Resource.Значение" id="36c36c5c-ecd4-5c55-8e17-df2386e13cad"/>
+			<Metadata name="InformationRegister.кбп_ПараметрыСхем.Dimension.Схема" id="76d58b68-221a-51a5-a860-0a3266e09adb"/>
+			<Metadata name="InformationRegister.кбп_ПараметрыСхем.Dimension.Параметр" id="92e26337-fb2c-5505-ac9f-df8b5cbcf1d8"/>
+		</Metadata>
+		<Metadata name="InformationRegister.кбп_ПереходыСхем" id="984865ef-5978-5cab-8a84-46f2967d3b7f" configVersion="c8a67d87973d6eb5b9d31e773fd4f1badadeca13">
+			<Metadata name="InformationRegister.кбп_ПереходыСхем.Resource.Наименование" id="04826de6-0c53-5443-a2e5-b655db528611"/>
+			<Metadata name="InformationRegister.кбп_ПереходыСхем.Resource.Откуда" id="165989ac-d98a-5183-96aa-2efa4379b940"/>
+			<Metadata name="InformationRegister.кбп_ПереходыСхем.Attribute.Условие" id="1ffdf158-ba05-586f-8591-020ff06d4d31"/>
+			<Metadata name="InformationRegister.кбп_ПереходыСхем.Attribute.КодУсловия" id="2d684685-55e3-5dbd-a667-9ac50443ed2b"/>
+			<Metadata name="InformationRegister.кбп_ПереходыСхем.Dimension.ИдПерехода" id="356130c7-978c-5b7b-8533-10e917a5606f"/>
+			<Metadata name="InformationRegister.кбп_ПереходыСхем.Resource.ОбработчикУсловия" id="39ba9115-e696-5af0-8a64-6ac9baeb6fd8"/>
+			<Metadata name="InformationRegister.кбп_ПереходыСхем.Resource.ВидУсловия" id="43c3aeb6-41a7-56b0-9ad7-4e38a789291f"/>
+			<Metadata name="InformationRegister.кбп_ПереходыСхем.Resource.Вариант" id="5de135bc-45b4-5863-a20f-fb8011121e2f"/>
+			<Metadata name="InformationRegister.кбп_ПереходыСхем.Resource.Куда" id="60d43547-6a6a-5631-94d0-674d29189905"/>
+			<Metadata name="InformationRegister.кбп_ПереходыСхем.Resource.ЭтоВозврат" id="69f7a9ed-7a7c-5276-b2fd-43b025b542cb"/>
+			<Metadata name="InformationRegister.кбп_ПереходыСхем.Dimension.Версия" id="8662b2f2-9dfb-5ba8-aeea-56676d8cda8b"/>
+			<Metadata name="InformationRegister.кбп_ПереходыСхем.Resource.Порядок" id="b4adb0e0-5db4-5a0f-96a9-57137719aab4"/>
+			<Metadata name="InformationRegister.кбп_ПереходыСхем.Resource.ИдКнопки" id="b7e8e8ef-2f2a-56e6-b10f-3dd44fb256c5"/>
+			<Metadata name="InformationRegister.кбп_ПереходыСхем.Resource.ПоУмолчанию" id="f597b199-1155-541a-acec-a50db9bc157c"/>
+		</Metadata>
+		<Metadata name="InformationRegister.кбп_ПодпискиПользователей" id="c789b36f-d705-52a1-9494-8146ce115174" configVersion="ce6e96db54168d989508e67831a6c6a0049aefa2">
+			<Metadata name="InformationRegister.кбп_ПодпискиПользователей.Resource.СпособГруппировки" id="1c7a319e-6263-5625-9a9d-281c13801078"/>
+			<Metadata name="InformationRegister.кбп_ПодпискиПользователей.Resource.Каналы" id="7207287b-a6fe-5ff6-b7cd-40b1245557bd"/>
+			<Metadata name="InformationRegister.кбп_ПодпискиПользователей.Dimension.Пользователь" id="7c052125-20e4-5d47-9f0f-3a5e9c538004"/>
+			<Metadata name="InformationRegister.кбп_ПодпискиПользователей.Resource.Отключено" id="813a5424-bf5f-5937-a2c5-04e292a16433"/>
+			<Metadata name="InformationRegister.кбп_ПодпискиПользователей.Resource.ИнтервалМинут" id="b440ff92-620c-585b-b2ea-781a6869f331"/>
+			<Metadata name="InformationRegister.кбп_ПодпискиПользователей.Dimension.Событие" id="e8c81c1c-0470-5878-96cc-8d80bec7f1e4"/>
+		</Metadata>
+		<Metadata name="InformationRegister.кбп_ПравилаЗапуска" id="132ec759-cf57-5866-ae94-9338360bef12" configVersion="4b126f877643a2144c1fa3f460534d0493334d53">
+			<Metadata name="InformationRegister.кбп_ПравилаЗапуска.Dimension.ТипПредмета" id="12e1733d-89dc-5ee5-ba70-b4c9b63d0e26"/>
+			<Metadata name="InformationRegister.кбп_ПравилаЗапуска.Dimension.Событие" id="16ee035a-f4ea-5bf7-84cf-d4091b62ca68"/>
+			<Metadata name="InformationRegister.кбп_ПравилаЗапуска.Dimension.Схема" id="f6079f4e-0c32-5260-b42c-d6eba78be943"/>
+			<Metadata name="InformationRegister.кбп_ПравилаЗапуска.Attribute.Условие" id="f7d18d53-66aa-5521-aebd-7858a587fab0"/>
+		</Metadata>
+		<Metadata name="InformationRegister.кбп_УведомленияПользователей" id="b000248a-0f4f-55e0-882d-8cad8e860da8" configVersion="2d4b0bf201409269c7d727637e146bce321fb457">
+			<Metadata name="InformationRegister.кбп_УведомленияПользователей.Resource.Показано" id="01bc5d14-a4da-54a3-8afe-8b8d1c972d75"/>
+			<Metadata name="InformationRegister.кбп_УведомленияПользователей.Resource.Задача" id="05168c7b-f7c9-5907-bd9b-e46aec06ea5a"/>
+			<Metadata name="InformationRegister.кбп_УведомленияПользователей.Resource.Текст" id="110b2f7b-52d3-5b71-9412-459bd51dfd51"/>
+			<Metadata name="InformationRegister.кбп_УведомленияПользователей.Resource.Процесс" id="612196b7-4177-5ca4-8e45-bf39265fb2f7"/>
+			<Metadata name="InformationRegister.кбп_УведомленияПользователей.Dimension.Пользователь" id="87c2d357-5bb0-55b9-b01e-246824295a46"/>
+			<Metadata name="InformationRegister.кбп_УведомленияПользователей.Dimension.Ид" id="9c9b1ffc-d5ef-5d58-aff8-016f051f817b"/>
+			<Metadata name="InformationRegister.кбп_УведомленияПользователей.Resource.Дата" id="9f2af929-3442-51e9-a8c1-f17dfb658fea"/>
+			<Metadata name="InformationRegister.кбп_УведомленияПользователей.Resource.Прочитано" id="fd54b20f-e549-51f4-bbcc-ebeb3e38ac11"/>
+		</Metadata>
+		<Metadata name="Language.Русский" id="93fef9ac-83e4-544d-b496-88498afb2016" configVersion="d285bbe9c70285d482c3f57a715face469b46b20"/>
+		<Metadata name="Role.кбп_АдминистрированиеПроцессов" id="b90c2e0e-1f23-5de4-8dd2-0af3a202de85" configVersion="160c3dae26d7744a3e913035d4ef15f8f9d24b5b"/>
+		<Metadata name="Role.кбп_АдминистрированиеПроцессов.Rights" id="b90c2e0e-1f23-5de4-8dd2-0af3a202de85.0" configVersion="e027d9159d02442f5e52059f04f97615094f0004"/>
+		<Metadata name="Role.кбп_ДизайнПроцессов" id="41b4091f-922c-500b-90b1-df51ee7d8aed" configVersion="62755b25d4219c98a0e700c0b3a1cfe145183413"/>
+		<Metadata name="Role.кбп_ДизайнПроцессов.Rights" id="41b4091f-922c-500b-90b1-df51ee7d8aed.0" configVersion="75a4db77cf40c800335c032cd33e55a7df38130f"/>
+		<Metadata name="Role.кбп_ИспользованиеПроцессов" id="cdaf02cf-af4e-548b-950f-5efb99f8deff" configVersion="665109b80223254494b68e502b79d1b5b051e940"/>
+		<Metadata name="Role.кбп_ИспользованиеПроцессов.Rights" id="cdaf02cf-af4e-548b-950f-5efb99f8deff.0" configVersion="949dd40c407bf6a8ebf4fa0e4dd72d86cdeea44f"/>
+		<Metadata name="Role.кбп_НаблюдениеЗаПроцессами" id="ad8761fb-96fe-54be-bfb3-08723c790113" configVersion="a3d013f05cb818d826fdbd16bbeeaf2cb534a323"/>
+		<Metadata name="Role.кбп_НаблюдениеЗаПроцессами.Rights" id="ad8761fb-96fe-54be-bfb3-08723c790113.0" configVersion="04606bf952e8cb815f676d7957dde1c36999f877"/>
+		<Metadata name="Role.кбп_РазработкаКодаПроцессов" id="04789e30-9722-5625-b3fd-ffe0aa89afb8" configVersion="f604d54f8102fd59a40db3cc205f803ce27981bf"/>
+		<Metadata name="Role.кбп_РазработкаКодаПроцессов.Rights" id="04789e30-9722-5625-b3fd-ffe0aa89afb8.0" configVersion="3d2f2138a8364a6e3c076124423e01e6a35bbf6a"/>
+		<Metadata name="ScheduledJob.кбп_КонтрольСроков" id="f8346721-b775-533d-9c3d-991776560d04" configVersion="ddf6060e3b5489ea412827ff6344219b07236d4f"/>
+		<Metadata name="ScheduledJob.кбп_ОбработкаОчередиДействий" id="62a9c04b-72a7-59cf-821f-d9da64439c2b" configVersion="8e5c68bd10e6b7fbea13def9f5f1841139a137cd"/>
+		<Metadata name="ScheduledJob.кбп_ОбработкаОчередиОповещений" id="77808c68-38b2-56f7-a74b-f772a45ec2d7" configVersion="1611403c29593f55634ab77a1ffe51277ba87f52"/>
+		<Metadata name="ScheduledJob.кбп_ОчисткаЖурнала" id="035c046c-4a08-5c1f-81f0-efd567230ec1" configVersion="cdf89d3055fd90c07e1c532106b33fbf4dea2290"/>
+		<Metadata name="ScheduledJob.кбп_РассылкиПоРасписанию" id="a4be0d77-40dc-5fc0-ac2c-fb8de714de3f" configVersion="5443e27ca64a5274c81029247c784ced9502e4f9"/>
+		<Metadata name="Subsystem.кбп_БизнесПроцессы" id="ff696969-b29c-5662-8cee-edd30eba2d11" configVersion="b147fa3a1baf3f237e4b51966a5db96c3312cc79"/>
+	</ConfigVersions>
+</ConfigDumpInfo>

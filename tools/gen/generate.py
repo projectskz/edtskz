@@ -5,7 +5,7 @@
 Конфигуратора (DumpConfigToFiles -format Hierarchical, версия 2.20),
 которые загружаются командой /LoadConfigFromFiles ... -Extension ...
 
-Запуск:  python3 tools/gen/generate.py [--out src/cfe] [--compat Version8_3_24]
+Запуск:  python3 tools/gen/generate.py [--out build/cfe] [--users-uuid <UUID>] [--compat Version8_3_24]
                                         [--adopted <каталог выгрузки>] [--force-modules]
 """
 import argparse
@@ -23,8 +23,9 @@ EXT_SYNONYM = "Конструктор бизнес-процессов"
 PREFIX = "кбп_"
 MAIN_ROLE = "кбп_ИспользованиеПроцессов"
 SUBSYSTEM = "кбп_БизнесПроцессы"
-# UUID справочника «Пользователи» в БСП 3.1 (1c-syntax/ssl_3_1)
-USERS_BASE_UUID = "579baaa4-6493-4d99-8744-6399757295c7"
+# UUID справочника «Пользователи» в базе разработки (из выгрузки Конфигуратора).
+# В БСП 3.1 (1c-syntax/ssl_3_1) — 579baaa4-6493-4d99-8744-6399757295c7. Другая база — ключ --users-uuid.
+USERS_BASE_UUID = ["fa1ef4b3-fc76-4b08-bb66-d89a7a1b66b1"]
 NS = uuid.UUID("6f1c3a52-3d8e-4b6a-9d61-6b0f2d1c7a10")
 
 HEADER = ('﻿<?xml version="1.0" encoding="UTF-8"?>\n'
@@ -245,9 +246,12 @@ def attribute_xml(tag, row, owner_path, kind, indent, link_path_prefix):
     out += el("ChoiceHistoryOnInput", "Auto", p)
     if kind == "register_dim":
         out += (el("Master", "false", p) + el("MainFilter", "true", p) + el("DenyIncompleteValues", "false", p))
-    if kind in ("catalog", "ccht"):
+    if kind == "catalog":
         out += el("Use", "ForItem", p)
-    out += el("Indexing", idx, p) + el("FullTextSearch", "Use", p) + el("DataHistory", "Use", p)
+    out += el("Indexing", idx, p)
+    if kind == "ccht":  # у ПВХ Конфигуратор выгружает Use после Indexing
+        out += el("Use", "ForItem", p)
+    out += el("FullTextSearch", "Use", p) + el("DataHistory", "Use", p)
     if kind == "register_dim":
         out += el("TypeReductionMode", "TransformValues", p)
     out += f"{t}\t</Properties>\n{t}</{tag}>\n"
@@ -391,7 +395,7 @@ def gen_ccht(o):
                              ("ChartOfCharacteristicTypesSelection", "Selection"), ("ChartOfCharacteristicTypesList", "List"),
                              ("Characteristic", "Characteristic"), ("ChartOfCharacteristicTypesManager", "Manager")], 2)
     p = 3
-    body, _, _ = parse_type("Строка(1024) | Число(17,5) | ДатаВремя | Булево | ЛюбаяСсылка", md)
+    body, _, _ = parse_type("Булево | Строка(1024) | ДатаВремя | Число(17,5) | ЛюбаяСсылка", md)
     s += "\t\t<Properties>\n" + el("Name", o["name"], p) + el_lstr("Synonym", o["synonym"], p) + el("Comment", None, p)
     s += (el("UseStandardCommands", "true", p) + el("IncludeHelpInContents", "false", p)
           + el("CharacteristicExtValues", None, p) + type_block(body, p)
@@ -616,7 +620,7 @@ def gen_adopted_users():
     s = generated_types(md, [("CatalogObject", "Object"), ("CatalogRef", "Ref"), ("CatalogSelection", "Selection"),
                              ("CatalogList", "List"), ("CatalogManager", "Manager")], 2)
     s += ("\t\t<Properties>\n" + el("ObjectBelonging", "Adopted", 3) + el("Name", "Пользователи", 3) + el("Comment", None, 3)
-          + el("ExtendedConfigurationObject", USERS_BASE_UUID, 3) + "\t\t</Properties>\n\t\t<ChildObjects/>\n")
+          + el("ExtendedConfigurationObject", USERS_BASE_UUID[0], 3) + "\t\t</Properties>\n\t\t<ChildObjects/>\n")
     return wrap("Catalog", md, s)
 
 
@@ -781,12 +785,15 @@ def write(path, text):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--out", default=str(ROOT / "src" / "cfe"))
+    ap.add_argument("--out", default=str(ROOT / "build" / "cfe"))
     ap.add_argument("--compat", default="Version8_3_24")
+    ap.add_argument("--users-uuid", default=USERS_BASE_UUID[0],
+                    help="UUID справочника Пользователи в базе, куда загружается выгрузка")
     ap.add_argument("--adopted", help="каталог выгрузки с заимствованным Catalogs/Пользователи.xml")
     ap.add_argument("--force-modules", action="store_true", help="перезаписать Ext/ (модули, права)")
     args = ap.parse_args()
     out = Path(args.out)
+    USERS_BASE_UUID[0] = args.users_uuid
     LINE_NUMBER_LENGTH[0] = "9" if compat_version(args.compat) >= (8, 3, 27) else "5"
 
     text = SPEC.read_text(encoding="utf-8")
