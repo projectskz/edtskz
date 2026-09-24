@@ -94,6 +94,8 @@ ORDER = {
               "VerticalStretch GroupVerticalAlign CommandName DataPath Font Picture TextColor BackColor BorderColor "
               "Title PictureLocation ToolTipRepresentation RepresentationInContextMenu LocationInCommandBar "
               "ShapeRepresentation ExtendedTooltip",
+    "CommandBar": "Enabled Item Visible EnableContentChange Title GroupVerticalAlign ToolTip Width Height "
+                  "HorizontalStretch GroupHorizontalAlign HorizontalLocation CommandSource ExtendedTooltip ChildItems",
     "GraphicalSchemaField": "DataPath ReadOnly Title TitleLocation Width Height Edit ContextMenu ExtendedTooltip Events",
 }
 ORDER = {k: v.split() for k, v in ORDER.items()}
@@ -254,6 +256,10 @@ def table(name, path, columns, events=None, bar=None, **kw):
     p = dict(Representation="List", RowFilter=Raw(lambda i: f'{T(i)}<RowFilter xsi:nil="true"/>\n'))
     p.update(kw)
     return TableEl(name, path, columns, events, bar, **p)
+
+
+def command_bar(name, buttons, title=None, **kw):
+    return El("CommandBar", name, buttons, Title=title or name, **kw)
 
 
 def schema_field(name, path, title, events=None, **kw):

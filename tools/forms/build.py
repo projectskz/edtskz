@@ -13,7 +13,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from formlib import (Attr, Cmd, SRC, T_ANYREF, T_BOOL, T_DATETIME, T_GRAPH, T_VT, button, check, data_processor_md,
-                     deco, field, form, form_md, group, label, page, pages, schema_field, t_cfg, t_num, t_str, table,
+                     command_bar, deco, field, form, form_md, group, label, page, pages, schema_field, t_cfg, t_num, t_str, table,
                      write)
 
 BSL = Path(sys.argv[1]) if len(sys.argv) > 1 else None
@@ -149,11 +149,18 @@ def konstruktor_form():
 
     right = group("Правая", [steps, props], Width=48, HorizontalStretch=False)
 
-    main = group("Основная", [
+    # Палитра: стандартные команды поля графической схемы (имена подтверждены формами типовых конфигураций).
+    palette = command_bar("ПалитраСхемы", [
+        button(f"Палитра{name}", f"Form.Item.ГрафСхема.StandardCommand.InsertItem{cmd}", usual=False)
+        for name, cmd in (("Старт", "Start"), ("Действие", "Activity"), ("Условие", "Condition"),
+                          ("Обработка", "Processing"), ("Завершение", "Completion"), ("Декорация", "Decoration"))
+    ], title="Палитра")
+    left = group("Левая", [
+        palette,
         schema_field("ГрафСхема", "ГрафСхема", "Схема процесса", events={"Selection": "ГрафСхемаВыбор"},
                      TitleLocation="None", Width=100, Height=30, Edit=True),
-        right,
-    ], horizontal=True)
+    ])
+    main = group("Основная", [left, right], horizontal=True)
 
     check_text = field("ТекстПроверки", "ТекстПроверки", "Результат проверки", ReadOnly=True, TitleLocation="Top",
                        Height=4, MultiLine=True)
