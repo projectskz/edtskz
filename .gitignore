@@ -1,2 +1,3 @@
 build/
 tools/forms/__pycache__/
+*.zip
