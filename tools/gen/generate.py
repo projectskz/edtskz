@@ -856,6 +856,7 @@ def main():
         content = [f"Catalog.{c}" for c in ("кбп_Задачи", "кбп_Процессы", "кбп_СхемыПроцессов", "кбп_РолиИсполнителей",
                                             "кбп_ШаблоныСообщений")] + ["Document.кбп_Замещение"]
         content.insert(2, "DataProcessor.кбп_КонструкторСхем")
+        content.insert(0, "DataProcessor.кбп_МоиЗадачи")
         add("Subsystem", subsystem["name"], f"Subsystems/{subsystem['name']}.xml", gen_subsystem(subsystem, content))
 
     check_references(files, names)

@@ -16,6 +16,7 @@
 			<Explanation/>
 			<Picture/>
 			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.кбп_МоиЗадачи</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.кбп_Задачи</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.кбп_Процессы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.кбп_КонструкторСхем</xr:Item>

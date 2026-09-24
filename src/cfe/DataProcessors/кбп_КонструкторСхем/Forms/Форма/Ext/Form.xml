@@ -22,25 +22,30 @@
 				<CommandName>Form.Command.ИзменитьСхему</CommandName>
 				<ExtendedTooltip name="ФормаИзменитьСхемуРасширеннаяПодсказка" id="8"/>
 			</Button>
-			<Button name="ФормаРедактирование" id="9">
+			<Button name="ФормаЗапуститьПроцесс" id="9">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗапуститьПроцесс</CommandName>
+				<ExtendedTooltip name="ФормаЗапуститьПроцессРасширеннаяПодсказка" id="10"/>
+			</Button>
+			<Button name="ФормаРедактирование" id="11">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.Редактирование</CommandName>
-				<ExtendedTooltip name="ФормаРедактированиеРасширеннаяПодсказка" id="10"/>
+				<ExtendedTooltip name="ФормаРедактированиеРасширеннаяПодсказка" id="12"/>
 			</Button>
-			<Button name="ФормаСвойстваЭлемента" id="11">
+			<Button name="ФормаСвойстваЭлемента" id="13">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.СвойстваЭлемента</CommandName>
-				<ExtendedTooltip name="ФормаСвойстваЭлементаРасширеннаяПодсказка" id="12"/>
+				<ExtendedTooltip name="ФормаСвойстваЭлементаРасширеннаяПодсказка" id="14"/>
 			</Button>
-			<Button name="ФормаПеречитать" id="13">
+			<Button name="ФормаПеречитать" id="15">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.Перечитать</CommandName>
-				<ExtendedTooltip name="ФормаПеречитатьРасширеннаяПодсказка" id="14"/>
+				<ExtendedTooltip name="ФормаПеречитатьРасширеннаяПодсказка" id="16"/>
 			</Button>
-			<Button name="ФормаСтруктураСхемы" id="15">
+			<Button name="ФормаСтруктураСхемы" id="17">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.СтруктураСхемы</CommandName>
-				<ExtendedTooltip name="ФормаСтруктураСхемыРасширеннаяПодсказка" id="16"/>
+				<ExtendedTooltip name="ФормаСтруктураСхемыРасширеннаяПодсказка" id="18"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
@@ -49,7 +54,7 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<UsualGroup name="Шапка" id="17">
+		<UsualGroup name="Шапка" id="19">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -60,9 +65,9 @@
 			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="18"/>
+			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="20"/>
 			<ChildItems>
-				<InputField name="Схема" id="19">
+				<InputField name="Схема" id="21">
 					<DataPath>Схема</DataPath>
 					<Title>
 						<v8:item>
@@ -70,13 +75,13 @@
 							<v8:content>Схема</v8:content>
 						</v8:item>
 					</Title>
-					<ContextMenu name="СхемаКонтекстноеМеню" id="20"/>
-					<ExtendedTooltip name="СхемаРасширеннаяПодсказка" id="21"/>
+					<ContextMenu name="СхемаКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="СхемаРасширеннаяПодсказка" id="23"/>
 					<Events>
 						<Event name="OnChange">СхемаПриИзменении</Event>
 					</Events>
 				</InputField>
-				<InputField name="Версия" id="22">
+				<InputField name="Версия" id="24">
 					<DataPath>Версия</DataPath>
 					<Title>
 						<v8:item>
@@ -84,21 +89,44 @@
 							<v8:content>Версия</v8:content>
 						</v8:item>
 					</Title>
-					<ContextMenu name="ВерсияКонтекстноеМеню" id="23"/>
-					<ExtendedTooltip name="ВерсияРасширеннаяПодсказка" id="24"/>
+					<ContextMenu name="ВерсияКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ВерсияРасширеннаяПодсказка" id="26"/>
 					<Events>
 						<Event name="OnChange">ВерсияПриИзменении</Event>
 					</Events>
 				</InputField>
-				<LabelField name="Статус" id="25">
+				<InputField name="ТипПредмета" id="27">
+					<DataPath>ТипПредмета</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предмет процесса</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип объектов, по которым запускается процесс; пусто — процесс без предмета</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>30</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ContextMenu name="ТипПредметаКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="ТипПредметаРасширеннаяПодсказка" id="29"/>
+					<Events>
+						<Event name="OnChange">ТипПредметаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<LabelField name="Статус" id="30">
 					<DataPath>Статус</DataPath>
 					<TitleLocation>None</TitleLocation>
-					<ContextMenu name="СтатусКонтекстноеМеню" id="26"/>
-					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="27"/>
+					<ContextMenu name="СтатусКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="32"/>
 				</LabelField>
 			</ChildItems>
 		</UsualGroup>
-		<UsualGroup name="Основная" id="28">
+		<UsualGroup name="Основная" id="33">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -109,9 +137,9 @@
 			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ОсновнаяРасширеннаяПодсказка" id="29"/>
+			<ExtendedTooltip name="ОсновнаяРасширеннаяПодсказка" id="34"/>
 			<ChildItems>
-				<GraphicalSchemaField name="ГрафСхема" id="30">
+				<GraphicalSchemaField name="ГрафСхема" id="35">
 					<DataPath>ГрафСхема</DataPath>
 					<Title>
 						<v8:item>
@@ -123,97 +151,754 @@
 					<Width>100</Width>
 					<Height>30</Height>
 					<Edit>true</Edit>
-					<ContextMenu name="ГрафСхемаКонтекстноеМеню" id="31"/>
-					<ExtendedTooltip name="ГрафСхемаРасширеннаяПодсказка" id="32"/>
+					<ContextMenu name="ГрафСхемаКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ГрафСхемаРасширеннаяПодсказка" id="37"/>
 					<Events>
 						<Event name="Selection">ГрафСхемаВыбор</Event>
 					</Events>
 				</GraphicalSchemaField>
-				<Table name="Шаги" id="33">
-					<Representation>List</Representation>
-					<ReadOnly>true</ReadOnly>
-					<ChangeRowSet>false</ChangeRowSet>
-					<ChangeRowOrder>false</ChangeRowOrder>
-					<Width>35</Width>
-					<DataPath>Шаги</DataPath>
+				<UsualGroup name="Правая" id="38">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Шаги схемы</v8:content>
+							<v8:content>Правая</v8:content>
 						</v8:item>
 					</Title>
-					<RowFilter xsi:nil="true"/>
-					<ContextMenu name="ШагиКонтекстноеМеню" id="34"/>
-					<AutoCommandBar name="ШагиКоманднаяПанель" id="35">
-						<Autofill>false</Autofill>
-					</AutoCommandBar>
-					<ExtendedTooltip name="ШагиРасширеннаяПодсказка" id="36"/>
-					<SearchStringAddition name="ШагиСтрокаПоиска" id="37">
-						<AdditionSource>
-							<Item>Шаги</Item>
-							<Type>SearchStringRepresentation</Type>
-						</AdditionSource>
-						<ContextMenu name="ШагиСтрокаПоискаКонтекстноеМеню" id="38"/>
-						<ExtendedTooltip name="ШагиСтрокаПоискаРасширеннаяПодсказка" id="39"/>
-					</SearchStringAddition>
-					<ViewStatusAddition name="ШагиСостояниеПросмотра" id="40">
-						<AdditionSource>
-							<Item>Шаги</Item>
-							<Type>ViewStatusRepresentation</Type>
-						</AdditionSource>
-						<ContextMenu name="ШагиСостояниеПросмотраКонтекстноеМеню" id="41"/>
-						<ExtendedTooltip name="ШагиСостояниеПросмотраРасширеннаяПодсказка" id="42"/>
-					</ViewStatusAddition>
-					<SearchControlAddition name="ШагиУправлениеПоиском" id="43">
-						<AdditionSource>
-							<Item>Шаги</Item>
-							<Type>SearchControl</Type>
-						</AdditionSource>
-						<ContextMenu name="ШагиУправлениеПоискомКонтекстноеМеню" id="44"/>
-						<ExtendedTooltip name="ШагиУправлениеПоискомРасширеннаяПодсказка" id="45"/>
-					</SearchControlAddition>
-					<Events>
-						<Event name="Selection">ШагиВыбор</Event>
-					</Events>
+					<Width>48</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ПраваяРасширеннаяПодсказка" id="39"/>
 					<ChildItems>
-						<InputField name="ШагиОшибка" id="46">
-							<DataPath>Шаги.Ошибка</DataPath>
+						<Table name="Шаги" id="40">
+							<Representation>List</Representation>
+							<TitleLocation>Top</TitleLocation>
+							<ReadOnly>true</ReadOnly>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<Height>8</Height>
+							<Header>false</Header>
+							<DataPath>Шаги</DataPath>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>!</v8:content>
+									<v8:content>Шаги и линии схемы</v8:content>
 								</v8:item>
 							</Title>
-							<ContextMenu name="ШагиОшибкаКонтекстноеМеню" id="47"/>
-							<ExtendedTooltip name="ШагиОшибкаРасширеннаяПодсказка" id="48"/>
-						</InputField>
-						<InputField name="ШагиНаименование" id="49">
-							<DataPath>Шаги.Наименование</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ШагиКонтекстноеМеню" id="41"/>
+							<AutoCommandBar name="ШагиКоманднаяПанель" id="42">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ШагиРасширеннаяПодсказка" id="43"/>
+							<SearchStringAddition name="ШагиСтрокаПоиска" id="44">
+								<AdditionSource>
+									<Item>Шаги</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ШагиСтрокаПоискаКонтекстноеМеню" id="45"/>
+								<ExtendedTooltip name="ШагиСтрокаПоискаРасширеннаяПодсказка" id="46"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ШагиСостояниеПросмотра" id="47">
+								<AdditionSource>
+									<Item>Шаги</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ШагиСостояниеПросмотраКонтекстноеМеню" id="48"/>
+								<ExtendedTooltip name="ШагиСостояниеПросмотраРасширеннаяПодсказка" id="49"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ШагиУправлениеПоиском" id="50">
+								<AdditionSource>
+									<Item>Шаги</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ШагиУправлениеПоискомКонтекстноеМеню" id="51"/>
+								<ExtendedTooltip name="ШагиУправлениеПоискомРасширеннаяПодсказка" id="52"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ШагиВыбор</Event>
+								<Event name="OnActivateRow">ШагиПриАктивизацииСтроки</Event>
+							</Events>
+							<ChildItems>
+								<CheckBoxField name="ШагиОшибка" id="53">
+									<DataPath>Шаги.Ошибка</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>!</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ШагиОшибкаКонтекстноеМеню" id="54"/>
+									<ExtendedTooltip name="ШагиОшибкаРасширеннаяПодсказка" id="55"/>
+								</CheckBoxField>
+								<InputField name="ШагиНаименование" id="56">
+									<DataPath>Шаги.Наименование</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Элемент</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ШагиНаименованиеКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="ШагиНаименованиеРасширеннаяПодсказка" id="58"/>
+								</InputField>
+								<InputField name="ШагиВид" id="59">
+									<DataPath>Шаги.Вид</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вид</v8:content>
+										</v8:item>
+									</Title>
+									<Width>10</Width>
+									<ContextMenu name="ШагиВидКонтекстноеМеню" id="60"/>
+									<ExtendedTooltip name="ШагиВидРасширеннаяПодсказка" id="61"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<UsualGroup name="Свойства" id="62">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Шаг</v8:content>
+									<v8:content>Свойства</v8:content>
 								</v8:item>
 							</Title>
-							<ContextMenu name="ШагиНаименованиеКонтекстноеМеню" id="50"/>
-							<ExtendedTooltip name="ШагиНаименованиеРасширеннаяПодсказка" id="51"/>
-						</InputField>
-						<InputField name="ШагиТипШага" id="52">
-							<DataPath>Шаги.ТипШага</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Тип</v8:content>
-								</v8:item>
-							</Title>
-							<ContextMenu name="ШагиТипШагаКонтекстноеМеню" id="53"/>
-							<ExtendedTooltip name="ШагиТипШагаРасширеннаяПодсказка" id="54"/>
-						</InputField>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>true</ShowTitle>
+							<TitleDataPath>ЗаголовокСвойств</TitleDataPath>
+							<ExtendedTooltip name="СвойстваРасширеннаяПодсказка" id="63"/>
+							<ChildItems>
+								<Pages name="СтраницыСвойств" id="64">
+									<PagesRepresentation>TabsOnTop</PagesRepresentation>
+									<ExtendedTooltip name="СтраницыСвойствРасширеннаяПодсказка" id="65"/>
+									<ChildItems>
+										<Page name="СтраницаПусто" id="66">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Нет элемента</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="СтраницаПустоРасширеннаяПодсказка" id="67"/>
+											<ChildItems>
+												<LabelDecoration name="ПодсказкаПусто" id="68">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Выберите шаг или линию в списке выше или дважды щёлкните элемент на схеме.</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ПодсказкаПустоКонтекстноеМеню" id="69"/>
+													<ExtendedTooltip name="ПодсказкаПустоРасширеннаяПодсказка" id="70"/>
+												</LabelDecoration>
+											</ChildItems>
+										</Page>
+										<Page name="СтраницаШаг" id="71">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Шаг</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="СтраницаШагРасширеннаяПодсказка" id="72"/>
+											<ChildItems>
+												<LabelField name="ЭлементШагаНаименование" id="73">
+													<DataPath>ЭлементШага.Description</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Наименование</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ЭлементШагаНаименованиеКонтекстноеМеню" id="74"/>
+													<ExtendedTooltip name="ЭлементШагаНаименованиеРасширеннаяПодсказка" id="75"/>
+												</LabelField>
+												<LabelField name="ЭлементШагаТипШага" id="76">
+													<DataPath>ЭлементШага.ТипШага</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Тип шага</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ЭлементШагаТипШагаКонтекстноеМеню" id="77"/>
+													<ExtendedTooltip name="ЭлементШагаТипШагаРасширеннаяПодсказка" id="78"/>
+												</LabelField>
+												<InputField name="ЭлементШагаИнструкция" id="79">
+													<DataPath>ЭлементШага.Инструкция</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Инструкция исполнителю</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Top</TitleLocation>
+													<Height>3</Height>
+													<MultiLine>true</MultiLine>
+													<ContextMenu name="ЭлементШагаИнструкцияКонтекстноеМеню" id="80"/>
+													<ExtendedTooltip name="ЭлементШагаИнструкцияРасширеннаяПодсказка" id="81"/>
+													<Events>
+														<Event name="OnChange">СвойствоПриИзменении</Event>
+													</Events>
+												</InputField>
+												<UsualGroup name="ГруппаСрок" id="82">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Срок</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Horizontal</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаСрокРасширеннаяПодсказка" id="83"/>
+													<ChildItems>
+														<InputField name="ЭлементШагаСрокЗначение" id="84">
+															<DataPath>ЭлементШага.СрокЗначение</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Срок</v8:content>
+																</v8:item>
+															</Title>
+															<Width>6</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<ContextMenu name="ЭлементШагаСрокЗначениеКонтекстноеМеню" id="85"/>
+															<ExtendedTooltip name="ЭлементШагаСрокЗначениеРасширеннаяПодсказка" id="86"/>
+															<Events>
+																<Event name="OnChange">СвойствоПриИзменении</Event>
+															</Events>
+														</InputField>
+														<InputField name="ЭлементШагаСрокЕдиница" id="87">
+															<DataPath>ЭлементШага.СрокЕдиница</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ContextMenu name="ЭлементШагаСрокЕдиницаКонтекстноеМеню" id="88"/>
+															<ExtendedTooltip name="ЭлементШагаСрокЕдиницаРасширеннаяПодсказка" id="89"/>
+															<Events>
+																<Event name="OnChange">СвойствоПриИзменении</Event>
+															</Events>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<InputField name="ЭлементШагаРежимНазначения" id="90">
+													<DataPath>ЭлементШага.РежимНазначения</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Назначить</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Каждому — задача каждому исполнителю, шаг завершается, когда выполнят все; любому из — первый выполнивший завершает шаг</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ContextMenu name="ЭлементШагаРежимНазначенияКонтекстноеМеню" id="91"/>
+													<ExtendedTooltip name="ЭлементШагаРежимНазначенияРасширеннаяПодсказка" id="92"/>
+													<Events>
+														<Event name="OnChange">СвойствоПриИзменении</Event>
+													</Events>
+												</InputField>
+												<CheckBoxField name="ЭлементШагаВзятьВРаботу" id="93">
+													<DataPath>ЭлементШага.ВзятьВРаботу</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Принятие к исполнению снимает задачу с остальных</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ЭлементШагаВзятьВРаботуКонтекстноеМеню" id="94"/>
+													<ExtendedTooltip name="ЭлементШагаВзятьВРаботуРасширеннаяПодсказка" id="95"/>
+													<Events>
+														<Event name="OnChange">СвойствоПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<CheckBoxField name="ЭлементШагаРазрешенВозврат" id="96">
+													<DataPath>ЭлементШага.РазрешенВозврат</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Разрешён возврат на доработку</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ЭлементШагаРазрешенВозвратКонтекстноеМеню" id="97"/>
+													<ExtendedTooltip name="ЭлементШагаРазрешенВозвратРасширеннаяПодсказка" id="98"/>
+													<Events>
+														<Event name="OnChange">СвойствоПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<InputField name="ЭлементШагаРежимВозврата" id="99">
+													<DataPath>ЭлементШага.РежимВозврата</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>После доработки</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ЭлементШагаРежимВозвратаКонтекстноеМеню" id="100"/>
+													<ExtendedTooltip name="ЭлементШагаРежимВозвратаРасширеннаяПодсказка" id="101"/>
+													<Events>
+														<Event name="OnChange">СвойствоПриИзменении</Event>
+													</Events>
+												</InputField>
+												<CheckBoxField name="ЭлементШагаТотЖеИсполнительПриВозврате" id="102">
+													<DataPath>ЭлементШага.ТотЖеИсполнительПриВозврате</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>При возврате на этот шаг — тому же исполнителю</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ЭлементШагаТотЖеИсполнительПриВозвратеКонтекстноеМеню" id="103"/>
+													<ExtendedTooltip name="ЭлементШагаТотЖеИсполнительПриВозвратеРасширеннаяПодсказка" id="104"/>
+													<Events>
+														<Event name="OnChange">СвойствоПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<InputField name="ЭлементШагаОбработчик" id="105">
+													<DataPath>ЭлементШага.Обработчик</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Обработчик</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ЭлементШагаОбработчикКонтекстноеМеню" id="106"/>
+													<ExtendedTooltip name="ЭлементШагаОбработчикРасширеннаяПодсказка" id="107"/>
+													<Events>
+														<Event name="OnChange">СвойствоПриИзменении</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</Page>
+										<Page name="СтраницаИсполнители" id="108">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Исполнители</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="СтраницаИсполнителиРасширеннаяПодсказка" id="109"/>
+											<ChildItems>
+												<Table name="ИсполнителиШага" id="110">
+													<Representation>List</Representation>
+													<TitleLocation>None</TitleLocation>
+													<Height>5</Height>
+													<DataPath>ИсполнителиШага</DataPath>
+													<RowFilter xsi:nil="true"/>
+													<ContextMenu name="ИсполнителиШагаКонтекстноеМеню" id="111"/>
+													<AutoCommandBar name="ИсполнителиШагаКоманднаяПанель" id="112">
+													</AutoCommandBar>
+													<ExtendedTooltip name="ИсполнителиШагаРасширеннаяПодсказка" id="113"/>
+													<SearchStringAddition name="ИсполнителиШагаСтрокаПоиска" id="114">
+														<AdditionSource>
+															<Item>ИсполнителиШага</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ИсполнителиШагаСтрокаПоискаКонтекстноеМеню" id="115"/>
+														<ExtendedTooltip name="ИсполнителиШагаСтрокаПоискаРасширеннаяПодсказка" id="116"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="ИсполнителиШагаСостояниеПросмотра" id="117">
+														<AdditionSource>
+															<Item>ИсполнителиШага</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ИсполнителиШагаСостояниеПросмотраКонтекстноеМеню" id="118"/>
+														<ExtendedTooltip name="ИсполнителиШагаСостояниеПросмотраРасширеннаяПодсказка" id="119"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="ИсполнителиШагаУправлениеПоиском" id="120">
+														<AdditionSource>
+															<Item>ИсполнителиШага</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="ИсполнителиШагаУправлениеПоискомКонтекстноеМеню" id="121"/>
+														<ExtendedTooltip name="ИсполнителиШагаУправлениеПоискомРасширеннаяПодсказка" id="122"/>
+													</SearchControlAddition>
+													<Events>
+														<Event name="OnChange">СвойствоТаблицыПриИзменении</Event>
+													</Events>
+													<ChildItems>
+														<InputField name="ИсполнителиШагаСпособАдресации" id="123">
+															<DataPath>ИсполнителиШага.СпособАдресации</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Способ</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ИсполнителиШагаСпособАдресацииКонтекстноеМеню" id="124"/>
+															<ExtendedTooltip name="ИсполнителиШагаСпособАдресацииРасширеннаяПодсказка" id="125"/>
+														</InputField>
+														<InputField name="ИсполнителиШагаРоль" id="126">
+															<DataPath>ИсполнителиШага.Роль</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Роль</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ИсполнителиШагаРольКонтекстноеМеню" id="127"/>
+															<ExtendedTooltip name="ИсполнителиШагаРольРасширеннаяПодсказка" id="128"/>
+														</InputField>
+														<InputField name="ИсполнителиШагаПользователь" id="129">
+															<DataPath>ИсполнителиШага.Пользователь</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Пользователь</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ИсполнителиШагаПользовательКонтекстноеМеню" id="130"/>
+															<ExtendedTooltip name="ИсполнителиШагаПользовательРасширеннаяПодсказка" id="131"/>
+														</InputField>
+														<InputField name="ИсполнителиШагаПутьОбъектаАдресации1" id="132">
+															<DataPath>ИсполнителиШага.ПутьОбъектаАдресации1</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Объект адресации (путь)</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ИсполнителиШагаПутьОбъектаАдресации1КонтекстноеМеню" id="133"/>
+															<ExtendedTooltip name="ИсполнителиШагаПутьОбъектаАдресации1РасширеннаяПодсказка" id="134"/>
+														</InputField>
+														<InputField name="ИсполнителиШагаРеквизитПредмета" id="135">
+															<DataPath>ИсполнителиШага.РеквизитПредмета</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Реквизит предмета</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ИсполнителиШагаРеквизитПредметаКонтекстноеМеню" id="136"/>
+															<ExtendedTooltip name="ИсполнителиШагаРеквизитПредметаРасширеннаяПодсказка" id="137"/>
+														</InputField>
+														<InputField name="ИсполнителиШагаОбработчик" id="138">
+															<DataPath>ИсполнителиШага.Обработчик</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Обработчик</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ИсполнителиШагаОбработчикКонтекстноеМеню" id="139"/>
+															<ExtendedTooltip name="ИсполнителиШагаОбработчикРасширеннаяПодсказка" id="140"/>
+														</InputField>
+													</ChildItems>
+												</Table>
+												<LabelDecoration name="ПодсказкаИсполнители" id="141">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Путь — от предмета через точку («Контрагент.ОсновнойМенеджер») или «Переменные.Имя».</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ПодсказкаИсполнителиКонтекстноеМеню" id="142"/>
+													<ExtendedTooltip name="ПодсказкаИсполнителиРасширеннаяПодсказка" id="143"/>
+												</LabelDecoration>
+											</ChildItems>
+										</Page>
+										<Page name="СтраницаКнопки" id="144">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Кнопки</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="СтраницаКнопкиРасширеннаяПодсказка" id="145"/>
+											<ChildItems>
+												<Table name="КнопкиШага" id="146">
+													<Representation>List</Representation>
+													<TitleLocation>None</TitleLocation>
+													<Height>5</Height>
+													<DataPath>КнопкиШага</DataPath>
+													<RowFilter xsi:nil="true"/>
+													<ContextMenu name="КнопкиШагаКонтекстноеМеню" id="147"/>
+													<AutoCommandBar name="КнопкиШагаКоманднаяПанель" id="148">
+													</AutoCommandBar>
+													<ExtendedTooltip name="КнопкиШагаРасширеннаяПодсказка" id="149"/>
+													<SearchStringAddition name="КнопкиШагаСтрокаПоиска" id="150">
+														<AdditionSource>
+															<Item>КнопкиШага</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="КнопкиШагаСтрокаПоискаКонтекстноеМеню" id="151"/>
+														<ExtendedTooltip name="КнопкиШагаСтрокаПоискаРасширеннаяПодсказка" id="152"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="КнопкиШагаСостояниеПросмотра" id="153">
+														<AdditionSource>
+															<Item>КнопкиШага</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="КнопкиШагаСостояниеПросмотраКонтекстноеМеню" id="154"/>
+														<ExtendedTooltip name="КнопкиШагаСостояниеПросмотраРасширеннаяПодсказка" id="155"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="КнопкиШагаУправлениеПоиском" id="156">
+														<AdditionSource>
+															<Item>КнопкиШага</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="КнопкиШагаУправлениеПоискомКонтекстноеМеню" id="157"/>
+														<ExtendedTooltip name="КнопкиШагаУправлениеПоискомРасширеннаяПодсказка" id="158"/>
+													</SearchControlAddition>
+													<Events>
+														<Event name="OnChange">СвойствоТаблицыПриИзменении</Event>
+													</Events>
+													<ChildItems>
+														<InputField name="КнопкиШагаЗаголовок" id="159">
+															<DataPath>КнопкиШага.Заголовок</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Кнопка</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="КнопкиШагаЗаголовокКонтекстноеМеню" id="160"/>
+															<ExtendedTooltip name="КнопкиШагаЗаголовокРасширеннаяПодсказка" id="161"/>
+														</InputField>
+														<InputField name="КнопкиШагаВид" id="162">
+															<DataPath>КнопкиШага.Вид</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Вид</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="КнопкиШагаВидКонтекстноеМеню" id="163"/>
+															<ExtendedTooltip name="КнопкиШагаВидРасширеннаяПодсказка" id="164"/>
+														</InputField>
+														<InputField name="КнопкиШагаДействие" id="165">
+															<DataPath>КнопкиШага.Действие</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Действие</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="КнопкиШагаДействиеКонтекстноеМеню" id="166"/>
+															<ExtendedTooltip name="КнопкиШагаДействиеРасширеннаяПодсказка" id="167"/>
+														</InputField>
+														<InputField name="КнопкиШагаИдПерехода" id="168">
+															<DataPath>КнопкиШага.ИдПерехода</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Линия</v8:content>
+																</v8:item>
+															</Title>
+															<ListChoiceMode>true</ListChoiceMode>
+															<ContextMenu name="КнопкиШагаИдПереходаКонтекстноеМеню" id="169"/>
+															<ExtendedTooltip name="КнопкиШагаИдПереходаРасширеннаяПодсказка" id="170"/>
+														</InputField>
+														<CheckBoxField name="КнопкиШагаКомментарийОбязателен" id="171">
+															<DataPath>КнопкиШага.КомментарийОбязателен</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Коммент.</v8:content>
+																</v8:item>
+															</Title>
+															<TitleLocation>Right</TitleLocation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="КнопкиШагаКомментарийОбязателенКонтекстноеМеню" id="172"/>
+															<ExtendedTooltip name="КнопкиШагаКомментарийОбязателенРасширеннаяПодсказка" id="173"/>
+														</CheckBoxField>
+														<CheckBoxField name="КнопкиШагаПодтверждение" id="174">
+															<DataPath>КнопкиШага.Подтверждение</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Подтв.</v8:content>
+																</v8:item>
+															</Title>
+															<TitleLocation>Right</TitleLocation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="КнопкиШагаПодтверждениеКонтекстноеМеню" id="175"/>
+															<ExtendedTooltip name="КнопкиШагаПодтверждениеРасширеннаяПодсказка" id="176"/>
+														</CheckBoxField>
+														<InputField name="КнопкиШагаТекстПодтверждения" id="177">
+															<DataPath>КнопкиШага.ТекстПодтверждения</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Текст подтверждения</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="КнопкиШагаТекстПодтвержденияКонтекстноеМеню" id="178"/>
+															<ExtendedTooltip name="КнопкиШагаТекстПодтвержденияРасширеннаяПодсказка" id="179"/>
+														</InputField>
+														<InputField name="КнопкиШагаОбработчик" id="180">
+															<DataPath>КнопкиШага.Обработчик</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Обработчик</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="КнопкиШагаОбработчикКонтекстноеМеню" id="181"/>
+															<ExtendedTooltip name="КнопкиШагаОбработчикРасширеннаяПодсказка" id="182"/>
+														</InputField>
+													</ChildItems>
+												</Table>
+												<LabelDecoration name="ПодсказкаКнопки" id="183">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Без настроенных кнопок каждая линия из задачи становится кнопкой (заголовок — подпись линии), при одной линии — «Выполнено».</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ПодсказкаКнопкиКонтекстноеМеню" id="184"/>
+													<ExtendedTooltip name="ПодсказкаКнопкиРасширеннаяПодсказка" id="185"/>
+												</LabelDecoration>
+											</ChildItems>
+										</Page>
+										<Page name="СтраницаЛиния" id="186">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Линия</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="СтраницаЛинияРасширеннаяПодсказка" id="187"/>
+											<ChildItems>
+												<LabelField name="Лин_Наименование" id="188">
+													<DataPath>Лин_Наименование</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Линия</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="Лин_НаименованиеКонтекстноеМеню" id="189"/>
+													<ExtendedTooltip name="Лин_НаименованиеРасширеннаяПодсказка" id="190"/>
+												</LabelField>
+												<CheckBoxField name="Лин_ПоУмолчанию" id="191">
+													<DataPath>Лин_ПоУмолчанию</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>По умолчанию (ветка «Нет» у Условия)</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="Лин_ПоУмолчаниюКонтекстноеМеню" id="192"/>
+													<ExtendedTooltip name="Лин_ПоУмолчаниюРасширеннаяПодсказка" id="193"/>
+													<Events>
+														<Event name="OnChange">СвойствоПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<InputField name="Лин_ИдКнопки" id="194">
+													<DataPath>Лин_ИдКнопки</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Результат задачи</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Ветка выбирается, если задача выполнена этой кнопкой</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ListChoiceMode>true</ListChoiceMode>
+													<ContextMenu name="Лин_ИдКнопкиКонтекстноеМеню" id="195"/>
+													<ExtendedTooltip name="Лин_ИдКнопкиРасширеннаяПодсказка" id="196"/>
+													<Events>
+														<Event name="OnChange">СвойствоПриИзменении</Event>
+													</Events>
+												</InputField>
+												<InputField name="Лин_ВидУсловия" id="197">
+													<DataPath>Лин_ВидУсловия</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Условие</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="Лин_ВидУсловияКонтекстноеМеню" id="198"/>
+													<ExtendedTooltip name="Лин_ВидУсловияРасширеннаяПодсказка" id="199"/>
+													<Events>
+														<Event name="OnChange">СвойствоПриИзменении</Event>
+													</Events>
+												</InputField>
+												<InputField name="Лин_ОбработчикУсловия" id="200">
+													<DataPath>Лин_ОбработчикУсловия</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Обработчик условия</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="Лин_ОбработчикУсловияКонтекстноеМеню" id="201"/>
+													<ExtendedTooltip name="Лин_ОбработчикУсловияРасширеннаяПодсказка" id="202"/>
+													<Events>
+														<Event name="OnChange">СвойствоПриИзменении</Event>
+													</Events>
+												</InputField>
+												<CheckBoxField name="Лин_ЭтоВозврат" id="203">
+													<DataPath>Лин_ЭтоВозврат</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Это возврат (учитывать в статистике)</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="Лин_ЭтоВозвратКонтекстноеМеню" id="204"/>
+													<ExtendedTooltip name="Лин_ЭтоВозвратРасширеннаяПодсказка" id="205"/>
+													<Events>
+														<Event name="OnChange">СвойствоПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<InputField name="Лин_Порядок" id="206">
+													<DataPath>Лин_Порядок</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Порядок проверки</v8:content>
+														</v8:item>
+													</Title>
+													<Width>5</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="Лин_ПорядокКонтекстноеМеню" id="207"/>
+													<ExtendedTooltip name="Лин_ПорядокРасширеннаяПодсказка" id="208"/>
+													<Events>
+														<Event name="OnChange">СвойствоПриИзменении</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</Page>
+									</ChildItems>
+								</Pages>
+								<Button name="ФормаЗаписатьСвойства" id="209">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ЗаписатьСвойства</CommandName>
+									<ExtendedTooltip name="ФормаЗаписатьСвойстваРасширеннаяПодсказка" id="210"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
 					</ChildItems>
-				</Table>
+				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
-		<InputField name="ТекстПроверки" id="55">
+		<InputField name="ТекстПроверки" id="211">
 			<DataPath>ТекстПроверки</DataPath>
 			<ReadOnly>true</ReadOnly>
 			<Title>
@@ -225,8 +910,8 @@
 			<TitleLocation>Top</TitleLocation>
 			<Height>4</Height>
 			<MultiLine>true</MultiLine>
-			<ContextMenu name="ТекстПроверкиКонтекстноеМеню" id="56"/>
-			<ExtendedTooltip name="ТекстПроверкиРасширеннаяПодсказка" id="57"/>
+			<ContextMenu name="ТекстПроверкиКонтекстноеМеню" id="212"/>
+			<ExtendedTooltip name="ТекстПроверкиРасширеннаяПодсказка" id="213"/>
 		</InputField>
 	</ChildItems>
 	<Attributes>
@@ -351,7 +1036,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Шаг</v8:content>
+							<v8:content>Элемент</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -384,7 +1069,435 @@
 						<v8:Type>xs:boolean</v8:Type>
 					</Type>
 				</Column>
+				<Column name="Вид" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЭтоЛиния" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это линия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
 			</Columns>
+		</Attribute>
+		<Attribute name="ТипПредмета" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предмет процесса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>255</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭлементШага" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шаг</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogObject.кбп_ЭлементыСхем</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИсполнителиШага" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исполнители</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="СпособАдресации" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Способ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.кбп_СпособыАдресации</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Роль" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Роль</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.кбп_РолиИсполнителей</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Пользователь" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пользователь</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПутьОбъектаАдресации1" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект адресации 1</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>255</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПутьОбъектаАдресации2" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект адресации 2</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>255</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="РеквизитПредмета" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реквизит предмета</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>255</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Обработчик" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обработчик</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.кбп_ОбработчикиПроцессов</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="КнопкиШага" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кнопки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИдКнопки" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ид кнопки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>36</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Заголовок" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кнопка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Вид" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.кбп_ВидыКнопок</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Действие" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Действие</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.кбп_ВидыДействий</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИдПерехода" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Линия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>36</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Подтверждение" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подтверждение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТекстПодтверждения" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текст подтверждения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>500</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КомментарийОбязателен" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий обязателен</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Обработчик" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обработчик</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.кбп_ОбработчикиПроцессов</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТекущийИд" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий элемент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>36</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийВид" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид текущего элемента</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>10</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СвойстваИзменены" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свойства изменены</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокСвойств" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заголовок свойств</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Лин_Наименование" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Линия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Лин_ПоУмолчанию" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Лин_ИдКнопки" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат задачи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>36</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Лин_ВидУсловия" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Условие</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.кбп_ВидыУсловий</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Лин_ОбработчикУсловия" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обработчик условия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.кбп_ОбработчикиПроцессов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Лин_ЭтоВозврат" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это возврат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Лин_Порядок" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порядок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>
@@ -462,7 +1575,23 @@
 			<Action>ИзменитьСхему</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
-		<Command name="Редактирование" id="5">
+		<Command name="ЗапуститьПроцесс" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить процесс</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить процесс по опубликованной версии схемы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапуститьПроцесс</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Редактирование" id="6">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -483,7 +1612,7 @@
 			<Representation>TextPicture</Representation>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
-		<Command name="СвойстваЭлемента" id="6">
+		<Command name="СвойстваЭлемента" id="7">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -493,13 +1622,13 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Открыть настройки выделенного элемента схемы</v8:content>
+					<v8:content>Показать свойства выделенного элемента схемы</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>СвойстваЭлемента</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
-		<Command name="Перечитать" id="7">
+		<Command name="Перечитать" id="8">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -520,7 +1649,7 @@
 			<Representation>TextPicture</Representation>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
-		<Command name="СтруктураСхемы" id="8">
+		<Command name="СтруктураСхемы" id="9">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -534,6 +1663,27 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СтруктураСхемы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаписатьСвойства" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать свойства</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать свойства выбранного шага или линии</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Write</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаписатьСвойства</Action>
+			<Representation>TextPicture</Representation>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>

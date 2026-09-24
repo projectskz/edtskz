@@ -1,0 +1,639 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Мои задачи</v8:content>
+		</v8:item>
+	</Title>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаОбновить" id="1">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Обновить</CommandName>
+				<ExtendedTooltip name="ФормаОбновитьРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ФормаОткрытьЗадачу" id="3">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОткрытьЗадачу</CommandName>
+				<ExtendedTooltip name="ФормаОткрытьЗадачуРасширеннаяПодсказка" id="4"/>
+			</Button>
+			<Button name="ФормаЗапуститьПроцесс" id="5">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗапуститьПроцесс</CommandName>
+				<ExtendedTooltip name="ФормаЗапуститьПроцессРасширеннаяПодсказка" id="6"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Страницы" id="7">
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<Page name="СтраницаЗадачи" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Мои задачи</v8:content>
+						</v8:item>
+					</Title>
+					<TitleDataPath>ЗаголовокЗадачи</TitleDataPath>
+					<ExtendedTooltip name="СтраницаЗадачиРасширеннаяПодсказка" id="10"/>
+					<ChildItems>
+						<CheckBoxField name="ПоказыватьВыполненные" id="11">
+							<DataPath>ПоказыватьВыполненные</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Показывать выполненные за 30 дней</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПоказыватьВыполненныеКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="ПоказыватьВыполненныеРасширеннаяПодсказка" id="13"/>
+							<Events>
+								<Event name="OnChange">ПоказыватьВыполненныеПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<Table name="Задачи" id="14">
+							<Representation>List</Representation>
+							<TitleLocation>None</TitleLocation>
+							<ReadOnly>true</ReadOnly>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<DataPath>Задачи</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ЗадачиКонтекстноеМеню" id="15"/>
+							<AutoCommandBar name="ЗадачиКоманднаяПанель" id="16">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ЗадачиРасширеннаяПодсказка" id="17"/>
+							<SearchStringAddition name="ЗадачиСтрокаПоиска" id="18">
+								<AdditionSource>
+									<Item>Задачи</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗадачиСтрокаПоискаКонтекстноеМеню" id="19"/>
+								<ExtendedTooltip name="ЗадачиСтрокаПоискаРасширеннаяПодсказка" id="20"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЗадачиСостояниеПросмотра" id="21">
+								<AdditionSource>
+									<Item>Задачи</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗадачиСостояниеПросмотраКонтекстноеМеню" id="22"/>
+								<ExtendedTooltip name="ЗадачиСостояниеПросмотраРасширеннаяПодсказка" id="23"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЗадачиУправлениеПоиском" id="24">
+								<AdditionSource>
+									<Item>Задачи</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗадачиУправлениеПоискомКонтекстноеМеню" id="25"/>
+								<ExtendedTooltip name="ЗадачиУправлениеПоискомРасширеннаяПодсказка" id="26"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ЗадачиВыбор</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ЗадачиНаименование" id="27">
+									<DataPath>Задачи.Наименование</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Задача</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ЗадачиНаименованиеКонтекстноеМеню" id="28"/>
+									<ExtendedTooltip name="ЗадачиНаименованиеРасширеннаяПодсказка" id="29"/>
+								</InputField>
+								<InputField name="ЗадачиПредставлениеПредмета" id="30">
+									<DataPath>Задачи.ПредставлениеПредмета</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Предмет</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ЗадачиПредставлениеПредметаКонтекстноеМеню" id="31"/>
+									<ExtendedTooltip name="ЗадачиПредставлениеПредметаРасширеннаяПодсказка" id="32"/>
+								</InputField>
+								<InputField name="ЗадачиПроцесс" id="33">
+									<DataPath>Задачи.Процесс</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Процесс</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ЗадачиПроцессКонтекстноеМеню" id="34"/>
+									<ExtendedTooltip name="ЗадачиПроцессРасширеннаяПодсказка" id="35"/>
+								</InputField>
+								<InputField name="ЗадачиСрок" id="36">
+									<DataPath>Задачи.Срок</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Срок</v8:content>
+										</v8:item>
+									</Title>
+									<Width>12</Width>
+									<ContextMenu name="ЗадачиСрокКонтекстноеМеню" id="37"/>
+									<ExtendedTooltip name="ЗадачиСрокРасширеннаяПодсказка" id="38"/>
+								</InputField>
+								<InputField name="ЗадачиСостояние" id="39">
+									<DataPath>Задачи.Состояние</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Состояние</v8:content>
+										</v8:item>
+									</Title>
+									<Width>10</Width>
+									<ContextMenu name="ЗадачиСостояниеКонтекстноеМеню" id="40"/>
+									<ExtendedTooltip name="ЗадачиСостояниеРасширеннаяПодсказка" id="41"/>
+								</InputField>
+								<InputField name="ЗадачиАвтор" id="42">
+									<DataPath>Задачи.Автор</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Автор процесса</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ЗадачиАвторКонтекстноеМеню" id="43"/>
+									<ExtendedTooltip name="ЗадачиАвторРасширеннаяПодсказка" id="44"/>
+								</InputField>
+								<InputField name="ЗадачиДатаСоздания" id="45">
+									<DataPath>Задачи.ДатаСоздания</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Получена</v8:content>
+										</v8:item>
+									</Title>
+									<Width>12</Width>
+									<ContextMenu name="ЗадачиДатаСозданияКонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="ЗадачиДатаСозданияРасширеннаяПодсказка" id="47"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПроцессы" id="48">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Мои процессы</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаПроцессыРасширеннаяПодсказка" id="49"/>
+					<ChildItems>
+						<Table name="Процессы" id="50">
+							<Representation>List</Representation>
+							<TitleLocation>None</TitleLocation>
+							<ReadOnly>true</ReadOnly>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<DataPath>Процессы</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПроцессыКонтекстноеМеню" id="51"/>
+							<AutoCommandBar name="ПроцессыКоманднаяПанель" id="52">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ПроцессыРасширеннаяПодсказка" id="53"/>
+							<SearchStringAddition name="ПроцессыСтрокаПоиска" id="54">
+								<AdditionSource>
+									<Item>Процессы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПроцессыСтрокаПоискаКонтекстноеМеню" id="55"/>
+								<ExtendedTooltip name="ПроцессыСтрокаПоискаРасширеннаяПодсказка" id="56"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПроцессыСостояниеПросмотра" id="57">
+								<AdditionSource>
+									<Item>Процессы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПроцессыСостояниеПросмотраКонтекстноеМеню" id="58"/>
+								<ExtendedTooltip name="ПроцессыСостояниеПросмотраРасширеннаяПодсказка" id="59"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПроцессыУправлениеПоиском" id="60">
+								<AdditionSource>
+									<Item>Процессы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПроцессыУправлениеПоискомКонтекстноеМеню" id="61"/>
+								<ExtendedTooltip name="ПроцессыУправлениеПоискомРасширеннаяПодсказка" id="62"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ПроцессыВыбор</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ПроцессыСсылка" id="63">
+									<DataPath>Процессы.Ссылка</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Процесс</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПроцессыСсылкаКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="ПроцессыСсылкаРасширеннаяПодсказка" id="65"/>
+								</InputField>
+								<InputField name="ПроцессыСостояние" id="66">
+									<DataPath>Процессы.Состояние</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Состояние</v8:content>
+										</v8:item>
+									</Title>
+									<Width>10</Width>
+									<ContextMenu name="ПроцессыСостояниеКонтекстноеМеню" id="67"/>
+									<ExtendedTooltip name="ПроцессыСостояниеРасширеннаяПодсказка" id="68"/>
+								</InputField>
+								<InputField name="ПроцессыТекущиеШаги" id="69">
+									<DataPath>Процессы.ТекущиеШаги</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сейчас у</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПроцессыТекущиеШагиКонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="ПроцессыТекущиеШагиРасширеннаяПодсказка" id="71"/>
+								</InputField>
+								<InputField name="ПроцессыДатаСтарта" id="72">
+									<DataPath>Процессы.ДатаСтарта</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Запущен</v8:content>
+										</v8:item>
+									</Title>
+									<Width>12</Width>
+									<ContextMenu name="ПроцессыДатаСтартаКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="ПроцессыДатаСтартаРасширеннаяПодсказка" id="74"/>
+								</InputField>
+								<InputField name="ПроцессыДатаЗавершения" id="75">
+									<DataPath>Процессы.ДатаЗавершения</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Завершён</v8:content>
+										</v8:item>
+									</Title>
+									<Width>12</Width>
+									<ContextMenu name="ПроцессыДатаЗавершенияКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="ПроцессыДатаЗавершенияРасширеннаяПодсказка" id="77"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.кбп_МоиЗадачи</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Задачи" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задачи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ссылка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задача</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.кбп_Задачи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Наименование" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задача</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Процесс" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Процесс</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.кбп_Процессы</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеПредмета" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предмет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Срок" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Срок</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Состояние" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.кбп_СостоянияЗадач</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Автор" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Автор процесса</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДатаСоздания" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получена</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Просрочена" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Просрочена</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Активна" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Активна</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Процессы" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процессы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ссылка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Процесс</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.кбп_Процессы</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Схема" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Схема</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.кбп_СхемыПроцессов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеПредмета" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предмет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Состояние" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.кбп_СостоянияПроцессов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДатаСтарта" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запущен</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаЗавершения" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Завершён</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТекущиеШаги" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сейчас у</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПоказыватьВыполненные" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать выполненные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокЗадачи" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заголовок страницы задач</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Обновить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить списки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Обновить</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьЗадачу" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть задачу или процесс</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Change</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьЗадачу</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗапуститьПроцесс" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить процесс…</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить новый процесс по схеме</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапуститьПроцесс</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>
