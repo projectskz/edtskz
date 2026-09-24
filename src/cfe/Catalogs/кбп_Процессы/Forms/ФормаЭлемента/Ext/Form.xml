@@ -471,7 +471,7 @@
 							</SearchControlAddition>
 							<ChildItems>
 								<InputField name="ПеременныеПеременная" id="123">
-									<DataPath>Переменные.Переменная</DataPath>
+									<DataPath>Объект.Переменные.Переменная</DataPath>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -482,7 +482,7 @@
 									<ExtendedTooltip name="ПеременныеПеременнаяРасширеннаяПодсказка" id="125"/>
 								</InputField>
 								<InputField name="ПеременныеЗначение" id="126">
-									<DataPath>Переменные.Значение</DataPath>
+									<DataPath>Объект.Переменные.Значение</DataPath>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>

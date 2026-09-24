@@ -392,7 +392,9 @@ MDHEAD = ('<?xml version="1.0" encoding="UTF-8"?>\n<MetaDataObject xmlns="http:/
 
 
 def form_md(owner_md, form_name, synonym):
-    """Файл метаданных формы (…/Forms/<Имя>.xml). owner_md — «DataProcessor.X» / «Catalog.X»."""
+    """Файл метаданных формы (…/Forms/<Имя>.xml). owner_md — «DataProcessor.X» / «Catalog.X».
+    ExtendedPresentation есть только у форм обработок и отчётов (у форм справочников Конфигуратор его отвергает)."""
+    ext = "\t\t\t<ExtendedPresentation/>\n" if owner_md.split(".")[0] in ("DataProcessor", "Report") else ""
     return MDHEAD + f'''	<Form uuid="{uid(owner_md, "Form", form_name)}">
 		<Properties>
 			<Name>{form_name}</Name>
@@ -404,8 +406,7 @@ def form_md(owner_md, form_name, synonym):
 			<UsePurposes>
 				<v8:Value xsi:type="app:ApplicationUsePurpose">PlatformApplication</v8:Value>
 			</UsePurposes>
-			<ExtendedPresentation/>
-		</Properties>
+{ext}		</Properties>
 	</Form>
 </MetaDataObject>
 '''

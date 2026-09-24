@@ -21,15 +21,17 @@ BSL = Path(sys.argv[1]) if len(sys.argv) > 1 else None
 REF_USER = t_cfg("CatalogRef.Пользователи")
 
 
-def cols(table_name, spec, **common):
-    """Колонки таблицы формы: [(имя, заголовок, вид, доп. свойства)]; вид — field/check/label."""
+def cols(table_name, spec, path=None, **common):
+    """Колонки таблицы формы: [(имя, заголовок, вид, доп. свойства)]; вид — field/check/label.
+    path — путь к данным таблицы, если он не совпадает с именем (например, «Объект.Переменные»)."""
+    path = path or table_name
     items = []
     for name, title, kind, *extra in spec:
         kw = dict(common)
         if extra:
             kw.update(extra[0])
         make = {"field": field, "check": check, "label": label}[kind]
-        items.append(make(f"{table_name}{name}", f"{table_name}.{name}", title, **kw))
+        items.append(make(f"{table_name}{name}", f"{path}.{name}", title, **kw))
     return items
 
 
@@ -396,7 +398,7 @@ def process_form():
     variables = table("Переменные", "Объект.Переменные", cols("Переменные", [
         ("Переменная", "Переменная", "field"),
         ("Значение", "Значение", "field"),
-    ]), bar=[], ReadOnly=True, ChangeRowSet=False, ChangeRowOrder=False, TitleLocation="None", Height=4)
+    ], path="Объект.Переменные"), bar=[], ReadOnly=True, ChangeRowSet=False, ChangeRowOrder=False, TitleLocation="None", Height=4)
     items = [
         group("Шапка", [
             label("Схема", "Объект.Схема", "Схема", Hiperlink=True),
