@@ -3,10 +3,10 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 		<ChildItems>
-			<Button name="ФормаПрервать" id="1">
+			<Button name="ФормаПрерватьПроцесс" id="1">
 				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.Прервать</CommandName>
-				<ExtendedTooltip name="ФормаПрерватьРасширеннаяПодсказка" id="2"/>
+				<CommandName>Form.Command.ПрерватьПроцесс</CommandName>
+				<ExtendedTooltip name="ФормаПрерватьПроцессРасширеннаяПодсказка" id="2"/>
 			</Button>
 			<Button name="ФормаОбновить" id="3">
 				<Type>CommandBarButton</Type>
@@ -736,7 +736,7 @@
 		</Attribute>
 	</Attributes>
 	<Commands>
-		<Command name="Прервать" id="1">
+		<Command name="ПрерватьПроцесс" id="1">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -749,7 +749,7 @@
 					<v8:content>Прервать процесс и отменить его задачи</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>Прервать</Action>
+			<Action>ПрерватьПроцесс</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ДобавитьКомментарий" id="2">
