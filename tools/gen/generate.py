@@ -540,6 +540,8 @@ RIGHTS = {
                                           "InteractiveSetDeletionMark", "InteractiveClearDeletionMark", "InputByString"],
     ("InformationRegister", "Ч"): ["Read", "View"],
     ("InformationRegister", "И"): ["Read", "Update", "View", "Edit"],
+    ("DataProcessor", "Ч"): ["Use", "View"],
+    ("DataProcessor", "И"): ["Use", "View"],
     ("Document", "Ч"): ["Read", "View", "InputByString"],
     ("Document", "И"): ["Read", "Insert", "Update", "Delete", "View", "InteractiveInsert", "Edit",
                         "InteractiveSetDeletionMark", "InteractiveClearDeletionMark", "InputByString"],
@@ -553,7 +555,8 @@ RIGHTS = {
 def parse_role_groups(text):
     """Таблица групп прав из п. 11 → {группа: [md-имена]}."""
     kinds = {"справочник": "Catalog", "справочники": "Catalog", "ПВХ": "ChartOfCharacteristicTypes",
-             "регистр": "InformationRegister", "регистры": "InformationRegister", "документ": "Document"}
+             "регистр": "InformationRegister", "регистры": "InformationRegister", "документ": "Document",
+             "обработка": "DataProcessor", "обработки": "DataProcessor"}
     sec = text.split("## 11. Роли", 1)[1].split("\n## ", 1)[0]
     rows, _ = parse_table(sec.splitlines(), next(i for i, l in enumerate(sec.splitlines()) if l.startswith("| Группа")))
     groups = {}
@@ -852,6 +855,7 @@ def main():
     if subsystem:
         content = [f"Catalog.{c}" for c in ("кбп_Задачи", "кбп_Процессы", "кбп_СхемыПроцессов", "кбп_РолиИсполнителей",
                                             "кбп_ШаблоныСообщений")] + ["Document.кбп_Замещение"]
+        content.insert(2, "DataProcessor.кбп_КонструкторСхем")
         add("Subsystem", subsystem["name"], f"Subsystems/{subsystem['name']}.xml", gen_subsystem(subsystem, content))
 
     check_references(files, names)
@@ -887,7 +891,8 @@ def check_references(files, names):
             if (kind_of.get(kind), name) not in names:
                 errors.add(f"{rel}: нет объекта для типа {kind}.{name}")
         for kind, name in re.findall(r'MDObjectRef">(\w+)\.([^<]+)<', content):
-            if (kind, name) not in names and not (kind == "Role"):
+            # обработки создаются вне генератора (src/cfe), на них можно ссылаться
+            if (kind, name) not in names and kind not in ("Role", "DataProcessor"):
                 errors.add(f"{rel}: нет объекта {kind}.{name}")
     if errors:
         sys.exit("Ошибки ссылок:\n" + "\n".join(sorted(errors)))

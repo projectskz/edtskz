@@ -126,6 +126,7 @@
 			<Enum>кбп_ОбластиЗамещения</Enum>
 			<Enum>кбп_СтатусыОчереди</Enum>
 			<Enum>кбп_ВидыОтложенныхДействий</Enum>
+			<DataProcessor>кбп_КонструкторСхем</DataProcessor>
 			<InformationRegister>кбп_ПереходыСхем</InformationRegister>
 			<InformationRegister>кбп_КнопкиШагов</InformationRegister>
 			<InformationRegister>кбп_ИсполнителиШагов</InformationRegister>

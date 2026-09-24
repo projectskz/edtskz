@@ -743,6 +743,17 @@
 		</right>
 	</object>
 	<object>
+		<name>DataProcessor.кбп_КонструкторСхем</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Subsystem.кбп_БизнесПроцессы</name>
 		<right>
 			<name>View</name>
