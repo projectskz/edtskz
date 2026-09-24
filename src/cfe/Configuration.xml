@@ -132,6 +132,7 @@
 			<Enum>кбп_ВидыОтложенныхДействий</Enum>
 			<DataProcessor>кбп_КонструкторСхем</DataProcessor>
 			<DataProcessor>кбп_МоиЗадачи</DataProcessor>
+			<DataProcessor>кбп_ПанельАдминистратора</DataProcessor>
 			<InformationRegister>кбп_ПереходыСхем</InformationRegister>
 			<InformationRegister>кбп_КнопкиШагов</InformationRegister>
 			<InformationRegister>кбп_ИсполнителиШагов</InformationRegister>

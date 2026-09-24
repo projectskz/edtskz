@@ -24,6 +24,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.кбп_РолиИсполнителей</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.кбп_ШаблоныСообщений</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.кбп_Замещение</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.кбп_ПанельАдминистратора</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>
