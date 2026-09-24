@@ -266,6 +266,17 @@ def generated_types(md_path, pairs, indent):
     return out + f"{t}</InternalInfo>\n"
 
 
+# Длина номера строки ТЧ: 9 допустимо только с режима совместимости 8.3.27, ниже — строго 5.
+LINE_NUMBER_LENGTH = ["5"]
+
+
+def compat_version(compat):
+    m = re.fullmatch(r"Version(\d+)_(\d+)_(\d+)", compat)
+    if not m:
+        sys.exit(f"Неверный режим совместимости: {compat} (ожидается вида Version8_3_24)")
+    return tuple(int(x) for x in m.groups())
+
+
 def tabular_section_xml(ts, owner_md, kind_prefix, indent):
     md = f"{owner_md}.TabularSection.{ts['name']}"
     t = "\t" * indent
@@ -281,7 +292,7 @@ def tabular_section_xml(ts, owner_md, kind_prefix, indent):
             + el("ToolTip", None, p) + el("FillChecking", "DontCheck", p))
     if kind_prefix in ("Catalog", "ChartOfCharacteristicTypes"):
         out += el("Use", "ForItem", p)
-    out += el("LineNumberLength", "9", p) + f"{t}\t</Properties>\n{t}\t<ChildObjects>\n"
+    out += el("LineNumberLength", LINE_NUMBER_LENGTH[0], p) + f"{t}\t</Properties>\n{t}\t<ChildObjects>\n"
     for row in ts["rows"]:
         out += attribute_xml("Attribute", row, md, "ts", indent + 2, md + ".Attribute")
     return out + f"{t}\t</ChildObjects>\n{t}</TabularSection>\n"
@@ -776,6 +787,7 @@ def main():
     ap.add_argument("--force-modules", action="store_true", help="перезаписать Ext/ (модули, права)")
     args = ap.parse_args()
     out = Path(args.out)
+    LINE_NUMBER_LENGTH[0] = "9" if compat_version(args.compat) >= (8, 3, 27) else "5"
 
     text = SPEC.read_text(encoding="utf-8")
     objects = parse_spec(SPEC)
