@@ -249,3 +249,9 @@ for path, (f, lines, raw) in list(modules.items()) + list(forms.items()):
     for m in re.finditer(rf"(?:Процедура|Функция)\s+({ID})", "\n".join(lines)):
         if m.group(1) in KW:
             print(path, "имя процедуры — ключевое слово:", m.group(1))
+
+# --- ЗаполнитьЗначенияСвойств с исключаемыми свойствами: их не должно быть в списке, если в источнике их нет ---
+for path, (f, lines, raw) in list(modules.items()) + list(forms.items()):
+    for i, l in enumerate(raw.split("\n"), 1):
+        if re.search(r'ЗаполнитьЗначенияСвойств\([^,]+,[^,]+,\s*[^,]*,\s*"', l):
+            print(path, i, "ЗаполнитьЗначенияСвойств с исключениями: проверить, что исключаемые свойства есть в источнике:", l.strip())
